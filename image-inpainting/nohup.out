@@ -1,0 +1,1238 @@
+]0;IPython: Inpainting/src2019-03-22 15:45:25.469787: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-22 15:45:27.620412: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-03-22 15:45:27.620472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-22 15:45:28.861329: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-22 15:45:28.861399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-22 15:45:28.861426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-22 15:45:28.861980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4471 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /home/huanghe/anaconda2/envs/tensorflow2.7/lib/python2.7/site-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+train.protein_3_22.py:127: DeprecationWarning: 
+.ix is deprecated. Please use
+.loc for label based indexing or
+.iloc for positional indexing
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated
+  trainset = trainset.ix[np.random.permutation(len(trainset))]
+/home/huanghe/anaconda2/envs/tensorflow2.7/lib/python2.7/site-packages/skimage/transform/_warps.py:105: UserWarning: The default mode, 'constant', will be changed to 'reflect' in skimage 0.15.
+  warn("The default mode, 'constant', will be changed to 'reflect' in "
+/home/huanghe/anaconda2/envs/tensorflow2.7/lib/python2.7/site-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
+  warn("Anti-aliasing will be enabled by default in skimage 0.15 to "
+train.protein_3_22.py:174: DeprecationWarning: `imresize` is deprecated!
+`imresize` is deprecated in SciPy 1.0.0, and will be removed in 1.3.0.
+Use Pillow instead: ``numpy.array(Image.fromarray(arr).resize())``.
+  rec_2=misc.imresize(rec_hid[:,:,0],[y,xx],interp='nearest')
+train.protein_3_22.py:175: DeprecationWarning: `imresize` is deprecated!
+`imresize` is deprecated in SciPy 1.0.0, and will be removed in 1.3.0.
+Use Pillow instead: ``numpy.array(Image.fromarray(arr).resize())``.
+  rec_3=misc.imresize(rec_hid[:,:,1],[y,xx],interp='nearest')
+train.protein_3_22.py:176: DeprecationWarning: `imresize` is deprecated!
+`imresize` is deprecated in SciPy 1.0.0, and will be removed in 1.3.0.
+Use Pillow instead: ``numpy.array(Image.fromarray(arr).resize())``.
+  rec_4=misc.imresize(rec_hid[:,:,2],[y,xx],interp='nearest')
+========================================================================
+1090.3862 -127.17059
+1000000.0 -100000.0
+1000000.0 -100000.0
+1000000.0 -100000.0
+1000000.0 -100000.0
+1000000.0 -100000.0
+1000000.0 0.0
+1000000.0 0.0
+1000000.0 0.0
+1000000.0 0.0
+203430.3 -185464.84
+1.0 -1.0
+1401.7506 5043.4604
+=========================================================================
+Iter: 0 Gen Loss: 5191.9077 Recon Loss: 5197.1025 Gen ADV Loss: 1.4261582 Dis Loss: 1.1450249 |||| -0.28350255 -0.38783544 0.44433773
+Iter: 1 Gen Loss: 1349.2224 Recon Loss: 1350.5736 Gen ADV Loss: -1.5864153 Dis Loss: 0.30510154 |||| 1.3963443 1.1710763 7.1002917
+Iter: 2 Gen Loss: 5342.247 Recon Loss: 5347.596 Gen ADV Loss: -2.533687 Dis Loss: -2.9807732 |||| 7.968094 4.126372 13.22884
+Iter: 3 Gen Loss: 1280.0477 Recon Loss: 1281.3351 Gen ADV Loss: -7.1556587 Dis Loss: -1.1535088 |||| 4.3135653 6.0953064 11.417201
+Iter: 4 Gen Loss: 5251.705 Recon Loss: 5256.969 Gen ADV Loss: -8.566436 Dis Loss: -5.758554 |||| 13.523656 6.6060424 10.558015
+Iter: 5 Gen Loss: 1305.336 Recon Loss: 1306.6517 Gen ADV Loss: -10.3888445 Dis Loss: -3.278227 |||| 8.5630045 6.6710443 14.254776
+Iter: 6 Gen Loss: 5216.3296 Recon Loss: 5221.5605 Gen ADV Loss: -10.808107 Dis Loss: -7.5671215 |||| 17.140789 5.538531 15.22757
+Iter: 7 Gen Loss: 1200.5684 Recon Loss: 1201.7843 Gen ADV Loss: -15.580172 Dis Loss: -5.0491385 |||| 12.104827 7.3029976 20.426771
+Iter: 8 Gen Loss: 4992.7983 Recon Loss: 4997.8115 Gen ADV Loss: -17.096867 Dis Loss: -9.149565 |||| 20.305677 9.912478 20.3497
+Iter: 9 Gen Loss: 1352.4327 Recon Loss: 1353.8024 Gen ADV Loss: -17.351053 Dis Loss: -6.79494 |||| 15.59643 8.039873 22.20413
+Iter: 10 Gen Loss: 5226.8804 Recon Loss: 5232.1284 Gen ADV Loss: -17.426857 Dis Loss: -10.043736 |||| 22.094023 10.3445 21.276535
+Iter: 11 Gen Loss: 1130.2776 Recon Loss: 1131.4281 Gen ADV Loss: -20.515196 Dis Loss: -7.751827 |||| 17.510204 13.077545 25.405577
+Iter: 12 Gen Loss: 5087.8535 Recon Loss: 5092.9673 Gen ADV Loss: -22.50714 Dis Loss: -11.8192425 |||| 25.645033 13.60511 24.50375
+Iter: 13 Gen Loss: 1332.1378 Recon Loss: 1333.4926 Gen ADV Loss: -22.668665 Dis Loss: -9.251519 |||| 20.509586 14.371607 26.882019
+Iter: 14 Gen Loss: 5251.7583 Recon Loss: 5257.037 Gen ADV Loss: -23.281116 Dis Loss: -12.626102 |||| 27.258755 18.67125 25.871372
+Iter: 15 Gen Loss: 1325.8215 Recon Loss: 1327.1711 Gen ADV Loss: -23.947966 Dis Loss: -10.722471 |||| 23.451488 18.68653 28.14573
+Iter: 16 Gen Loss: 4935.8667 Recon Loss: 4940.8315 Gen ADV Loss: -25.22097 Dis Loss: -13.789924 |||| 29.586395 19.862034 27.417286
+Iter: 17 Gen Loss: 1306.0321 Recon Loss: 1307.3646 Gen ADV Loss: -26.568768 Dis Loss: -12.027159 |||| 26.06087 21.190596 29.472483
+Iter: 18 Gen Loss: 5149.304 Recon Loss: 5154.4844 Gen ADV Loss: -27.497349 Dis Loss: -14.871425 |||| 31.749401 24.70317 29.873228
+Iter: 19 Gen Loss: 1346.3169 Recon Loss: 1347.6915 Gen ADV Loss: -28.580296 Dis Loss: -13.181855 |||| 28.370258 22.13033 32.482014
+Iter: 20 Gen Loss: 4930.6396 Recon Loss: 4935.603 Gen ADV Loss: -29.480776 Dis Loss: -15.711735 |||| 33.430023 24.85813 32.80602
+Iter: 21 Gen Loss: 1312.4794 Recon Loss: 1313.8221 Gen ADV Loss: -30.47415 Dis Loss: -14.203324 |||| 30.413197 26.14861 34.616493
+Iter: 22 Gen Loss: 5328.1963 Recon Loss: 5333.56 Gen ADV Loss: -31.539547 Dis Loss: -16.88913 |||| 35.784813 26.416311 35.836086
+Iter: 23 Gen Loss: 1267.8129 Recon Loss: 1269.1124 Gen ADV Loss: -32.137806 Dis Loss: -15.241209 |||| 32.488968 27.19197 36.747356
+Iter: 24 Gen Loss: 5203.8247 Recon Loss: 5209.0654 Gen ADV Loss: -33.02361 Dis Loss: -17.720743 |||| 37.448036 30.255892 35.983322
+Iter: 25 Gen Loss: 1305.6836 Recon Loss: 1307.0226 Gen ADV Loss: -33.593506 Dis Loss: -16.194199 |||| 34.394947 28.029234 38.68389
+Iter: 26 Gen Loss: 5026.4316 Recon Loss: 5031.4956 Gen ADV Loss: -34.208157 Dis Loss: -18.576244 |||| 39.15903 30.307327 38.309566
+Iter: 27 Gen Loss: 1193.3959 Recon Loss: 1194.6249 Gen ADV Loss: -35.9513 Dis Loss: -17.120459 |||| 36.247467 31.709892 39.433376
+Iter: 28 Gen Loss: 5021.795 Recon Loss: 5026.8574 Gen ADV Loss: -37.14614 Dis Loss: -19.48717 |||| 40.980896 31.01083 41.669678
+Iter: 29 Gen Loss: 1338.548 Recon Loss: 1339.924 Gen ADV Loss: -37.554935 Dis Loss: -18.026438 |||| 38.05943 31.097593 42.43947
+Iter: 30 Gen Loss: 5037.6416 Recon Loss: 5042.72 Gen ADV Loss: -37.790546 Dis Loss: -20.287264 |||| 42.58108 35.86483 41.34559
+Iter: 31 Gen Loss: 1286.0717 Recon Loss: 1287.397 Gen ADV Loss: -39.563858 Dis Loss: -18.936224 |||| 39.879 34.79462 44.66607
+Iter: 32 Gen Loss: 5127.0957 Recon Loss: 5132.2656 Gen ADV Loss: -39.113533 Dis Loss: -21.158089 |||| 44.322735 34.12373 46.36153
+Iter: 33 Gen Loss: 1193.9379 Recon Loss: 1195.1721 Gen ADV Loss: -40.645546 Dis Loss: -20.007349 |||| 42.02125 35.82741 45.315987
+Iter: 34 Gen Loss: 5426.7803 Recon Loss: 5432.2524 Gen ADV Loss: -41.310677 Dis Loss: -22.10928 |||| 46.22511 39.557724 46.27359
+Iter: 35 Gen Loss: 1328.917 Recon Loss: 1330.289 Gen ADV Loss: -43.198162 Dis Loss: -21.06254 |||| 44.131638 40.0989 47.180473
+Iter: 36 Gen Loss: 5269.4136 Recon Loss: 5274.731 Gen ADV Loss: -43.790066 Dis Loss: -23.166529 |||| 48.33961 41.842697 48.117985
+Iter: 37 Gen Loss: 1339.507 Recon Loss: 1340.8912 Gen ADV Loss: -44.98349 Dis Loss: -21.792315 |||| 45.591183 41.53723 48.780476
+Iter: 38 Gen Loss: 4915.7866 Recon Loss: 4920.7515 Gen ADV Loss: -45.230335 Dis Loss: -24.013052 |||| 50.03266 42.275673 50.326218
+Iter: 39 Gen Loss: 1382.1895 Recon Loss: 1383.6178 Gen ADV Loss: -46.440804 Dis Loss: -22.823536 |||| 47.65363 43.114506 51.233482
+Iter: 40 Gen Loss: 4850.7915 Recon Loss: 4855.6924 Gen ADV Loss: -46.65516 Dis Loss: -24.694408 |||| 51.39538 45.99879 50.867886
+Iter: 41 Gen Loss: 1279.9705 Recon Loss: 1281.2979 Gen ADV Loss: -47.67959 Dis Loss: -23.711348 |||| 49.429245 43.130604 53.746204
+Iter: 42 Gen Loss: 5287.8096 Recon Loss: 5293.149 Gen ADV Loss: -48.027313 Dis Loss: -25.375586 |||| 52.75772 44.185368 55.62807
+Iter: 43 Gen Loss: 1144.3877 Recon Loss: 1145.5817 Gen ADV Loss: -50.090195 Dis Loss: -24.338432 |||| 50.68342 47.386227 53.96893
+Iter: 44 Gen Loss: 5142.3066 Recon Loss: 5147.503 Gen ADV Loss: -50.243256 Dis Loss: -26.293678 |||| 54.59391 46.788067 55.178623
+Iter: 45 Gen Loss: 1370.6152 Recon Loss: 1372.0365 Gen ADV Loss: -50.78357 Dis Loss: -24.978338 |||| 51.96323 47.20791 59.01307
+Iter: 46 Gen Loss: 5237.4087 Recon Loss: 5242.701 Gen ADV Loss: -51.1314 Dis Loss: -27.14417 |||| 56.2949 49.811657 56.78674
+Iter: 47 Gen Loss: 1253.3369 Recon Loss: 1254.642 Gen ADV Loss: -52.114902 Dis Loss: -26.178493 |||| 54.363537 48.471992 58.68816
+Iter: 48 Gen Loss: 5170.9526 Recon Loss: 5176.18 Gen ADV Loss: -52.624035 Dis Loss: -28.003006 |||| 58.01257 47.9673 70.39077
+Iter: 49 Gen Loss: 1239.2751 Recon Loss: 1240.5679 Gen ADV Loss: -53.881817 Dis Loss: -27.068005 |||| 56.142563 50.777157 59.608406
+Iter: 50 Gen Loss: 4762.51 Recon Loss: 4767.3296 Gen ADV Loss: -54.409622 Dis Loss: -28.90582 |||| 59.818195 53.72099 61.563675
+Iter: 51 Gen Loss: 1356.0681 Recon Loss: 1357.4802 Gen ADV Loss: -56.35096 Dis Loss: -28.010971 |||| 58.028496 55.76061 59.427433
+Iter: 52 Gen Loss: 5070.585 Recon Loss: 5075.7163 Gen ADV Loss: -57.2958 Dis Loss: -29.968 |||| 61.942554 55.98674 60.43699
+Iter: 53 Gen Loss: 1330.7568 Recon Loss: 1332.1451 Gen ADV Loss: -57.81324 Dis Loss: -28.906742 |||| 59.820038 56.85826 62.933754
+Iter: 54 Gen Loss: 5106.6865 Recon Loss: 5111.8545 Gen ADV Loss: -58.270294 Dis Loss: -30.61156 |||| 63.22968 57.065605 63.334457
+Iter: 55 Gen Loss: 1241.084 Recon Loss: 1242.3839 Gen ADV Loss: -59.349827 Dis Loss: -29.767447 |||| 61.541447 58.229176 64.01212
+Iter: 56 Gen Loss: 5124.3994 Recon Loss: 5129.587 Gen ADV Loss: -60.1106 Dis Loss: -31.644182 |||| 65.29493 59.27924 64.769295
+Iter: 57 Gen Loss: 1343.6274 Recon Loss: 1345.0319 Gen ADV Loss: -61.15839 Dis Loss: -30.649773 |||| 63.306103 60.421825 66.02667
+Iter: 58 Gen Loss: 5042.787 Recon Loss: 5047.895 Gen ADV Loss: -62.140594 Dis Loss: -32.50678 |||| 67.020096 59.504013 66.82649
+Iter: 59 Gen Loss: 1293.3174 Recon Loss: 1294.6736 Gen ADV Loss: -63.22859 Dis Loss: -31.519218 |||| 65.045 61.993797 67.90876
+Iter: 60 Gen Loss: 5072.26 Recon Loss: 5077.399 Gen ADV Loss: -63.92618 Dis Loss: -33.32359 |||| 68.65375 63.20715 68.30562
+Iter: 61 Gen Loss: 1271.3016 Recon Loss: 1272.6375 Gen ADV Loss: -64.88063 Dis Loss: -32.31149 |||| 66.629555 63.31738 68.61259
+Iter: 62 Gen Loss: 4929.8267 Recon Loss: 4934.8247 Gen ADV Loss: -65.34803 Dis Loss: -34.059704 |||| 70.12598 63.475773 70.39254
+Iter: 63 Gen Loss: 1227.2103 Recon Loss: 1228.5032 Gen ADV Loss: -66.06918 Dis Loss: -33.086 |||| 68.17855 60.839375 73.729515
+Iter: 64 Gen Loss: 5258.7817 Recon Loss: 5264.111 Gen ADV Loss: -66.92835 Dis Loss: -34.93149 |||| 71.869545 59.450134 71.45417
+Iter: 65 Gen Loss: 1356.692 Recon Loss: 1358.116 Gen ADV Loss: -67.63883 Dis Loss: -34.056957 |||| 70.12047 64.12972 73.47564
+Iter: 66 Gen Loss: 5290.245 Recon Loss: 5295.6074 Gen ADV Loss: -68.70968 Dis Loss: -35.73589 |||| 73.47833 67.741646 72.81433
+Iter: 67 Gen Loss: 1324.8567 Recon Loss: 1326.2515 Gen ADV Loss: -70.32079 Dis Loss: -34.904915 |||| 71.81638 67.1341 72.813484
+Iter: 68 Gen Loss: 4899.0146 Recon Loss: 4903.988 Gen ADV Loss: -71.17309 Dis Loss: -36.44165 |||| 74.889854 67.59658 74.190575
+Iter: 69 Gen Loss: 1093.8619 Recon Loss: 1095.0273 Gen ADV Loss: -72.23399 Dis Loss: -35.663033 |||| 73.33262 71.43486 74.248566
+Iter: 70 Gen Loss: 5729.6123 Recon Loss: 5735.4185 Gen ADV Loss: -72.85924 Dis Loss: -37.489567 |||| 76.985695 70.263084 76.19591
+Iter: 71 Gen Loss: 1234.1356 Recon Loss: 1235.4429 Gen ADV Loss: -73.738594 Dis Loss: -36.397816 |||| 74.80219 67.51984 77.32606
+Iter: 72 Gen Loss: 5195.138 Recon Loss: 5200.4106 Gen ADV Loss: -74.32534 Dis Loss: -38.057426 |||| 78.121414 67.295044 77.392395
+Iter: 73 Gen Loss: 1280.8676 Recon Loss: 1282.2228 Gen ADV Loss: -74.973206 Dis Loss: -37.38366 |||| 76.773865 68.88889 80.15495
+Iter: 74 Gen Loss: 5016.905 Recon Loss: 5022.0005 Gen ADV Loss: -75.666756 Dis Loss: -38.753815 |||| 79.514175 69.74099 82.03823
+Iter: 75 Gen Loss: 1354.8202 Recon Loss: 1356.251 Gen ADV Loss: -76.48393 Dis Loss: -38.00838 |||| 78.023315 71.21421 81.945656
+Iter: 76 Gen Loss: 5054.623 Recon Loss: 5059.7573 Gen ADV Loss: -76.63804 Dis Loss: -39.867645 |||| 81.74185 65.13715 82.80152
+Iter: 77 Gen Loss: 1230.0 Recon Loss: 1231.3066 Gen ADV Loss: -77.26646 Dis Loss: -38.72395 |||| 79.45446 63.311802 83.598625
+Iter: 78 Gen Loss: 4906.2754 Recon Loss: 4911.2627 Gen ADV Loss: -78.13414 Dis Loss: -40.440315 |||| 82.88718 68.9809 82.78868
+Iter: 79 Gen Loss: 1251.2574 Recon Loss: 1252.5874 Gen ADV Loss: -79.33759 Dis Loss: -39.81216 |||| 81.63089 74.25102 83.72217
+Iter: 80 Gen Loss: 5008.632 Recon Loss: 5013.7236 Gen ADV Loss: -79.982285 Dis Loss: -41.299046 |||| 84.60466 78.91645 84.033714
+Iter: 81 Gen Loss: 1184.7661 Recon Loss: 1186.0308 Gen ADV Loss: -80.60821 Dis Loss: -40.663273 |||| 83.333115 73.52173 88.19932
+Iter: 82 Gen Loss: 5129.4214 Recon Loss: 5134.6353 Gen ADV Loss: -81.05072 Dis Loss: -42.19019 |||| 86.38694 71.57627 85.41686
+Iter: 83 Gen Loss: 1309.6793 Recon Loss: 1311.0708 Gen ADV Loss: -82.40509 Dis Loss: -41.514305 |||| 85.03518 76.755165 88.357124
+Iter: 84 Gen Loss: 5452.6733 Recon Loss: 5458.213 Gen ADV Loss: -83.41024 Dis Loss: -43.125698 |||| 88.257965 78.194 87.87385
+Iter: 85 Gen Loss: 1368.4586 Recon Loss: 1369.9108 Gen ADV Loss: -84.25151 Dis Loss: -42.356956 |||| 86.72048 79.536 90.05182
+Iter: 86 Gen Loss: 5040.4243 Recon Loss: 5045.5527 Gen ADV Loss: -85.178055 Dis Loss: -43.95584 |||| 89.91825 83.07534 90.9991
+Iter: 87 Gen Loss: 1450.6267 Recon Loss: 1452.163 Gen ADV Loss: -86.06211 Dis Loss: -43.15896 |||| 88.324486 82.48668 91.78788
+Iter: 88 Gen Loss: 4920.282 Recon Loss: 4925.2925 Gen ADV Loss: -86.82136 Dis Loss: -44.72745 |||| 91.46148 81.00287 91.697395
+Iter: 89 Gen Loss: 1345.2449 Recon Loss: 1346.6774 Gen ADV Loss: -87.74526 Dis Loss: -43.960224 |||| 89.92702 83.12776 93.94041
+Iter: 90 Gen Loss: 5022.116 Recon Loss: 5027.23 Gen ADV Loss: -88.18004 Dis Loss: -45.5493 |||| 93.10516 85.47632 95.26906
+Iter: 91 Gen Loss: 1248.9701 Recon Loss: 1250.3075 Gen ADV Loss: -89.1549 Dis Loss: -44.689438 |||| 91.38544 81.995804 94.8547
+Iter: 92 Gen Loss: 5270.6987 Recon Loss: 5276.0625 Gen ADV Loss: -89.96562 Dis Loss: -46.331337 |||| 94.66924 81.48433 94.93547
+Iter: 93 Gen Loss: 1371.6173 Recon Loss: 1373.0792 Gen ADV Loss: -90.901184 Dis Loss: -45.6566 |||| 93.31976 82.283585 97.80142
+Iter: 94 Gen Loss: 5114.6997 Recon Loss: 5119.909 Gen ADV Loss: -91.6882 Dis Loss: -47.02551 |||| 96.05759 82.40825 96.09408
+Iter: 95 Gen Loss: 1331.4349 Recon Loss: 1332.858 Gen ADV Loss: -92.22601 Dis Loss: -46.387245 |||| 94.78106 83.54479 96.7991
+Iter: 96 Gen Loss: 5089.617 Recon Loss: 5094.8027 Gen ADV Loss: -92.96377 Dis Loss: -47.931564 |||| 97.86969 85.35597 97.48498
+Iter: 97 Gen Loss: 1278.6259 Recon Loss: 1279.9973 Gen ADV Loss: -93.53643 Dis Loss: -47.22603 |||| 96.45862 84.523575 101.93384
+Iter: 98 Gen Loss: 5086.3228 Recon Loss: 5091.5063 Gen ADV Loss: -94.27801 Dis Loss: -48.760193 |||| 99.526955 90.51709 99.586876
+Iter: 99 Gen Loss: 1272.0294 Recon Loss: 1273.3958 Gen ADV Loss: -95.00018 Dis Loss: -48.064434 |||| 98.13544 87.97991 101.61673
+========================================================================
+11.439645 -0.98190445
+8.7621975 -0.86115485
+6.1386914 -0.43505406
+3.9117534 -0.5188018
+4.298846 -0.35332364
+6.027621 -0.53214526
+14.344872 0.0
+19.142403 0.0
+17.208965 0.0
+6.0991488 0.0
+7.741557 0.020512488
+0.99999964 0.020509612
+1306.3474 -46.230106
+=========================================================================
+Iter: 100 Gen Loss: 4966.659 Recon Loss: 4971.725 Gen ADV Loss: -96.2356 Dis Loss: -49.476185 |||| 100.95894 89.94646 100.11363
+Iter: 101 Gen Loss: 1283.023 Recon Loss: 1284.402 Gen ADV Loss: -96.73029 Dis Loss: -48.83043 |||| 99.66742 90.125275 102.51708
+Iter: 102 Gen Loss: 4926.6523 Recon Loss: 4931.6797 Gen ADV Loss: -97.63487 Dis Loss: -50.37058 |||| 102.74772 92.752045 101.01068
+Iter: 103 Gen Loss: 1337.9984 Recon Loss: 1339.4344 Gen ADV Loss: -98.678154 Dis Loss: -49.68518 |||| 101.37693 87.39779 105.19812
+Iter: 104 Gen Loss: 5111.9204 Recon Loss: 5117.1353 Gen ADV Loss: -99.645294 Dis Loss: -51.102833 |||| 104.21223 85.62687 102.551926
+Iter: 105 Gen Loss: 1357.9613 Recon Loss: 1359.4191 Gen ADV Loss: -100.54613 Dis Loss: -50.534473 |||| 103.07551 92.42763 107.20399
+Iter: 106 Gen Loss: 4994.585 Recon Loss: 4999.6836 Gen ADV Loss: -101.5344 Dis Loss: -51.92553 |||| 105.85762 98.01329 105.76378
+Iter: 107 Gen Loss: 1263.5999 Recon Loss: 1264.9645 Gen ADV Loss: -102.0418 Dis Loss: -51.294712 |||| 104.596 90.560905 109.121284
+Iter: 108 Gen Loss: 5110.047 Recon Loss: 5115.2627 Gen ADV Loss: -103.018364 Dis Loss: -52.706 |||| 107.41857 89.68913 107.297066
+Iter: 109 Gen Loss: 1268.2123 Recon Loss: 1269.5828 Gen ADV Loss: -103.30147 Dis Loss: -52.078503 |||| 106.163574 99.91229 112.354935
+Iter: 110 Gen Loss: 5033.94 Recon Loss: 5039.0806 Gen ADV Loss: -104.18381 Dis Loss: -53.397415 |||| 108.80141 97.9361 109.336975
+Iter: 111 Gen Loss: 1351.482 Recon Loss: 1352.9375 Gen ADV Loss: -104.89666 Dis Loss: -52.78668 |||| 107.57991 99.776505 113.63842
+Iter: 112 Gen Loss: 4935.436 Recon Loss: 4940.48 Gen ADV Loss: -105.85618 Dis Loss: -54.21675 |||| 110.44006 102.21384 111.871956
+Iter: 113 Gen Loss: 1265.8386 Recon Loss: 1267.21 Gen ADV Loss: -106.462555 Dis Loss: -53.579433 |||| 109.16544 96.66885 115.323204
+Iter: 114 Gen Loss: 5284.92 Recon Loss: 5290.315 Gen ADV Loss: -107.49029 Dis Loss: -55.075302 |||| 112.157166 102.34813 111.1706
+Iter: 115 Gen Loss: 1317.0269 Recon Loss: 1318.4513 Gen ADV Loss: -108.44277 Dis Loss: -54.46478 |||| 110.93613 100.10954 113.767456
+Iter: 116 Gen Loss: 5392.714 Recon Loss: 5398.2188 Gen ADV Loss: -109.24552 Dis Loss: -55.775784 |||| 113.558136 106.49667 111.98163
+Iter: 117 Gen Loss: 1330.2312 Recon Loss: 1331.6702 Gen ADV Loss: -109.774704 Dis Loss: -55.219196 |||| 112.44496 104.069 119.20034
+Iter: 118 Gen Loss: 4902.5186 Recon Loss: 4907.534 Gen ADV Loss: -110.32929 Dis Loss: -56.528088 |||| 115.06273 104.06564 116.14637
+Iter: 119 Gen Loss: 1199.2948 Recon Loss: 1200.6041 Gen ADV Loss: -111.194756 Dis Loss: -55.988144 |||| 113.98285 94.74187 119.99802
+Iter: 120 Gen Loss: 5236.8403 Recon Loss: 5242.1924 Gen ADV Loss: -112.4242 Dis Loss: -57.304058 |||| 116.614685 105.90392 115.76999
+Iter: 121 Gen Loss: 1361.0929 Recon Loss: 1362.5658 Gen ADV Loss: -112.83257 Dis Loss: -56.779846 |||| 115.56625 104.85541 123.6277
+Iter: 122 Gen Loss: 4838.9717 Recon Loss: 4843.927 Gen ADV Loss: -113.68844 Dis Loss: -58.31669 |||| 118.63994 105.973915 117.83394
+Iter: 123 Gen Loss: 1208.7125 Recon Loss: 1210.0344 Gen ADV Loss: -114.32129 Dis Loss: -57.506584 |||| 117.01975 101.32461 123.88554
+Iter: 124 Gen Loss: 4916.094 Recon Loss: 4921.1274 Gen ADV Loss: -114.7989 Dis Loss: -58.84821 |||| 119.70298 109.591125 119.46863
+Iter: 125 Gen Loss: 1343.7483 Recon Loss: 1345.2068 Gen ADV Loss: -115.820564 Dis Loss: -58.42767 |||| 118.8619 106.77336 119.52965
+Iter: 126 Gen Loss: 5252.7837 Recon Loss: 5258.1567 Gen ADV Loss: -117.09078 Dis Loss: -59.83731 |||| 121.6812 115.85516 120.79238
+Iter: 127 Gen Loss: 1318.4191 Recon Loss: 1319.8538 Gen ADV Loss: -117.58953 Dis Loss: -59.248276 |||| 120.50311 109.59424 124.234985
+Iter: 128 Gen Loss: 4929.6416 Recon Loss: 4934.6924 Gen ADV Loss: -118.64193 Dis Loss: -60.49404 |||| 122.994644 114.08464 122.31144
+Iter: 129 Gen Loss: 1148.155 Recon Loss: 1149.4209 Gen ADV Loss: -119.14515 Dis Loss: -60.03138 |||| 122.069336 109.86127 127.28734
+Iter: 130 Gen Loss: 5442.952 Recon Loss: 5448.518 Gen ADV Loss: -120.23304 Dis Loss: -61.37546 |||| 124.757484 117.61651 123.20305
+Iter: 131 Gen Loss: 1266.6309 Recon Loss: 1268.0166 Gen ADV Loss: -120.52473 Dis Loss: -60.82682 |||| 123.66022 111.569725 129.90984
+Iter: 132 Gen Loss: 5312.318 Recon Loss: 5317.755 Gen ADV Loss: -121.46481 Dis Loss: -62.07953 |||| 126.16563 112.912895 124.41878
+Iter: 133 Gen Loss: 1290.4227 Recon Loss: 1291.834 Gen ADV Loss: -122.03358 Dis Loss: -61.560658 |||| 125.127884 109.80324 133.4944
+Iter: 134 Gen Loss: 5411.3228 Recon Loss: 5416.8604 Gen ADV Loss: -123.319626 Dis Loss: -62.855057 |||| 127.71667 120.47359 127.021194
+Iter: 135 Gen Loss: 1273.7087 Recon Loss: 1275.1049 Gen ADV Loss: -123.70969 Dis Loss: -62.389923 |||| 126.78641 117.897934 131.85628
+Iter: 136 Gen Loss: 4911.651 Recon Loss: 4916.689 Gen ADV Loss: -124.74041 Dis Loss: -63.66376 |||| 129.33408 123.9305 128.90547
+Iter: 137 Gen Loss: 1368.0343 Recon Loss: 1369.5266 Gen ADV Loss: -125.48416 Dis Loss: -63.111534 |||| 128.22964 113.6295 131.02113
+Iter: 138 Gen Loss: 4802.125 Recon Loss: 4807.0557 Gen ADV Loss: -126.54027 Dis Loss: -64.446556 |||| 130.89966 115.682205 129.67828
+Iter: 139 Gen Loss: 1180.5411 Recon Loss: 1181.8472 Gen ADV Loss: -126.83795 Dis Loss: -63.879322 |||| 129.7652 124.33702 136.78294
+Iter: 140 Gen Loss: 5359.1924 Recon Loss: 5364.6816 Gen ADV Loss: -127.46489 Dis Loss: -65.17535 |||| 132.35725 127.0865 131.95027
+Iter: 141 Gen Loss: 1335.8098 Recon Loss: 1337.2725 Gen ADV Loss: -128.04373 Dis Loss: -64.58917 |||| 131.18489 117.3754 137.48445
+Iter: 142 Gen Loss: 5198.5405 Recon Loss: 5203.8706 Gen ADV Loss: -129.36736 Dis Loss: -65.87554 |||| 133.75764 119.5213 132.48062
+Iter: 143 Gen Loss: 1257.932 Recon Loss: 1259.3184 Gen ADV Loss: -129.85927 Dis Loss: -65.39299 |||| 132.79254 128.2001 142.83206
+Iter: 144 Gen Loss: 5007.1094 Recon Loss: 5012.249 Gen ADV Loss: -130.44646 Dis Loss: -66.64117 |||| 135.2889 129.78171 135.37433
+Iter: 145 Gen Loss: 1383.1199 Recon Loss: 1384.633 Gen ADV Loss: -131.30995 Dis Loss: -66.24807 |||| 134.50267 124.61331 140.51003
+Iter: 146 Gen Loss: 4999.9844 Recon Loss: 5005.1187 Gen ADV Loss: -132.24867 Dis Loss: -67.32156 |||| 136.6497 124.35321 136.15042
+Iter: 147 Gen Loss: 1373.0223 Recon Loss: 1374.5269 Gen ADV Loss: -132.8595 Dis Loss: -66.97237 |||| 135.95128 127.56756 145.70323
+Iter: 148 Gen Loss: 5194.259 Recon Loss: 5199.59 Gen ADV Loss: -134.20436 Dis Loss: -68.18544 |||| 138.37744 132.90483 138.57567
+Iter: 149 Gen Loss: 1180.6085 Recon Loss: 1181.9221 Gen ADV Loss: -134.53177 Dis Loss: -67.737 |||| 137.48056 128.8715 148.0624
+Iter: 150 Gen Loss: 5161.538 Recon Loss: 5166.8374 Gen ADV Loss: -135.2927 Dis Loss: -68.93089 |||| 139.86835 128.80933 139.4502
+Iter: 151 Gen Loss: 1260.7845 Recon Loss: 1262.1798 Gen ADV Loss: -135.91498 Dis Loss: -68.50912 |||| 139.02478 119.654434 145.33022
+Iter: 152 Gen Loss: 4997.725 Recon Loss: 5002.8623 Gen ADV Loss: -137.18774 Dis Loss: -69.74438 |||| 141.49532 129.60269 141.13708
+Iter: 153 Gen Loss: 1274.0322 Recon Loss: 1275.4424 Gen ADV Loss: -137.54776 Dis Loss: -69.26589 |||| 140.53835 132.00966 149.4448
+Iter: 154 Gen Loss: 5383.452 Recon Loss: 5388.976 Gen ADV Loss: -138.07002 Dis Loss: -70.62142 |||| 143.24939 133.57329 144.26561
+Iter: 155 Gen Loss: 1164.553 Recon Loss: 1165.8545 Gen ADV Loss: -138.47284 Dis Loss: -69.92201 |||| 141.85056 128.22672 157.02469
+Iter: 156 Gen Loss: 5207.8027 Recon Loss: 5213.152 Gen ADV Loss: -139.40103 Dis Loss: -71.243256 |||| 144.49304 123.911285 143.53864
+Iter: 157 Gen Loss: 1388.9884 Recon Loss: 1390.5167 Gen ADV Loss: -140.67511 Dis Loss: -70.835495 |||| 143.67758 134.81479 148.17946
+Iter: 158 Gen Loss: 5197.4966 Recon Loss: 5202.838 Gen ADV Loss: -141.55118 Dis Loss: -72.09668 |||| 146.19997 139.15599 145.37695
+Iter: 159 Gen Loss: 1250.4272 Recon Loss: 1251.8181 Gen ADV Loss: -141.78748 Dis Loss: -71.52501 |||| 145.05656 132.76944 151.29279
+Iter: 160 Gen Loss: 4875.913 Recon Loss: 4880.934 Gen ADV Loss: -143.01637 Dis Loss: -72.71515 |||| 147.43689 138.25664 146.77371
+Iter: 161 Gen Loss: 1242.6454 Recon Loss: 1244.03 Gen ADV Loss: -143.41618 Dis Loss: -72.36484 |||| 146.73622 128.493 151.77112
+Iter: 162 Gen Loss: 5088.837 Recon Loss: 5094.0728 Gen ADV Loss: -144.57954 Dis Loss: -73.545586 |||| 149.09775 140.1431 148.88394
+Iter: 163 Gen Loss: 1267.9243 Recon Loss: 1269.3354 Gen ADV Loss: -144.77142 Dis Loss: -73.08075 |||| 148.16806 138.20052 156.96945
+Iter: 164 Gen Loss: 5199.148 Recon Loss: 5204.4956 Gen ADV Loss: -145.8388 Dis Loss: -74.333145 |||| 150.67287 141.93927 149.40868
+Iter: 165 Gen Loss: 1340.5192 Recon Loss: 1342.0049 Gen ADV Loss: -146.57907 Dis Loss: -73.86604 |||| 149.73865 139.18668 155.24617
+Iter: 166 Gen Loss: 5485.572 Recon Loss: 5491.2075 Gen ADV Loss: -147.66112 Dis Loss: -74.981285 |||| 151.96913 144.94353 152.53471
+Iter: 167 Gen Loss: 1287.0785 Recon Loss: 1288.5118 Gen ADV Loss: -147.86292 Dis Loss: -74.60723 |||| 151.22107 142.3605 159.76062
+Iter: 168 Gen Loss: 5276.5815 Recon Loss: 5282.009 Gen ADV Loss: -148.65208 Dis Loss: -75.77176 |||| 153.55011 144.68767 151.80975
+Iter: 169 Gen Loss: 1202.4111 Recon Loss: 1203.761 Gen ADV Loss: -149.17743 Dis Loss: -75.354904 |||| 152.71637 139.71202 153.92795
+Iter: 170 Gen Loss: 5001.625 Recon Loss: 5006.7793 Gen ADV Loss: -150.48213 Dis Loss: -76.526344 |||| 155.05923 143.89241 153.63284
+Iter: 171 Gen Loss: 1237.4022 Recon Loss: 1238.789 Gen ADV Loss: -151.17372 Dis Loss: -76.066475 |||| 154.13953 146.55379 156.92282
+Iter: 172 Gen Loss: 5233.7705 Recon Loss: 5239.1587 Gen ADV Loss: -152.25189 Dis Loss: -77.24912 |||| 156.50482 151.33284 155.76201
+Iter: 173 Gen Loss: 1333.1824 Recon Loss: 1334.666 Gen ADV Loss: -152.33606 Dis Loss: -76.84633 |||| 155.69922 139.26541 160.27158
+Iter: 174 Gen Loss: 4807.551 Recon Loss: 4812.513 Gen ADV Loss: -153.51944 Dis Loss: -77.89247 |||| 157.7915 146.89142 156.73816
+Iter: 175 Gen Loss: 1310.9928 Recon Loss: 1312.456 Gen ADV Loss: -154.06674 Dis Loss: -77.52862 |||| 157.0638 145.04758 159.18564
+Iter: 176 Gen Loss: 5100.674 Recon Loss: 5105.9316 Gen ADV Loss: -155.25737 Dis Loss: -78.56455 |||| 159.13568 155.73196 158.54034
+Iter: 177 Gen Loss: 1230.923 Recon Loss: 1232.3066 Gen ADV Loss: -154.76535 Dis Loss: -78.20212 |||| 158.41078 132.44588 163.00308
+Iter: 178 Gen Loss: 5183.088 Recon Loss: 5188.4297 Gen ADV Loss: -156.56506 Dis Loss: -79.349075 |||| 160.70471 144.97493 161.21875
+Iter: 179 Gen Loss: 1276.9497 Recon Loss: 1278.3809 Gen ADV Loss: -156.25249 Dis Loss: -78.93381 |||| 159.87418 129.11504 163.8551
+Iter: 180 Gen Loss: 5128.944 Recon Loss: 5134.2324 Gen ADV Loss: -157.91487 Dis Loss: -80.2286 |||| 162.46376 141.33589 162.01396
+Iter: 181 Gen Loss: 1326.337 Recon Loss: 1327.8196 Gen ADV Loss: -158.19629 Dis Loss: -79.73197 |||| 161.47054 138.44742 165.74458
+Iter: 182 Gen Loss: 5300.548 Recon Loss: 5306.01 Gen ADV Loss: -159.32938 Dis Loss: -80.84593 |||| 163.69844 152.19029 162.0552
+Iter: 183 Gen Loss: 1185.7633 Recon Loss: 1187.1066 Gen ADV Loss: -159.56683 Dis Loss: -80.54039 |||| 163.08737 143.85493 169.53094
+Iter: 184 Gen Loss: 5196.2144 Recon Loss: 5201.5737 Gen ADV Loss: -160.92322 Dis Loss: -81.49421 |||| 164.995 153.07532 164.77899
+Iter: 185 Gen Loss: 1215.1443 Recon Loss: 1216.5184 Gen ADV Loss: -161.06967 Dis Loss: -81.16013 |||| 164.32683 147.07895 167.29596
+Iter: 186 Gen Loss: 5031.0845 Recon Loss: 5036.28 Gen ADV Loss: -162.51674 Dis Loss: -82.44858 |||| 166.90372 156.72176 166.48676
+Iter: 187 Gen Loss: 1349.7749 Recon Loss: 1351.2859 Gen ADV Loss: -163.02557 Dis Loss: -81.98618 |||| 165.97893 148.01582 171.26874
+Iter: 188 Gen Loss: 5599.3623 Recon Loss: 5605.1274 Gen ADV Loss: -163.71916 Dis Loss: -83.10342 |||| 168.21338 157.52365 166.9686
+Iter: 189 Gen Loss: 1191.5638 Recon Loss: 1192.9178 Gen ADV Loss: -164.55042 Dis Loss: -82.75778 |||| 167.52214 161.05945 173.48886
+Iter: 190 Gen Loss: 5060.5786 Recon Loss: 5065.8066 Gen ADV Loss: -165.51173 Dis Loss: -83.83759 |||| 169.68175 164.8159 170.73468
+Iter: 191 Gen Loss: 1307.6389 Recon Loss: 1309.1104 Gen ADV Loss: -165.91539 Dis Loss: -83.46021 |||| 168.92699 153.5737 173.59541
+Iter: 192 Gen Loss: 4732.958 Recon Loss: 4737.8594 Gen ADV Loss: -167.06337 Dis Loss: -84.60313 |||| 171.21281 161.83337 171.03937
+Iter: 193 Gen Loss: 1283.3911 Recon Loss: 1284.84 Gen ADV Loss: -167.63618 Dis Loss: -84.283554 |||| 170.57367 160.60762 177.36711
+Iter: 194 Gen Loss: 4844.304 Recon Loss: 4849.3184 Gen ADV Loss: -168.39047 Dis Loss: -85.37168 |||| 172.74991 167.60394 173.15906
+Iter: 195 Gen Loss: 1263.3757 Recon Loss: 1264.806 Gen ADV Loss: -169.05182 Dis Loss: -85.00349 |||| 172.01355 162.45956 183.7399
+Iter: 196 Gen Loss: 5088.0435 Recon Loss: 5093.303 Gen ADV Loss: -169.72285 Dis Loss: -86.03305 |||| 174.07266 162.44254 173.92671
+Iter: 197 Gen Loss: 1292.4232 Recon Loss: 1293.8837 Gen ADV Loss: -170.20473 Dis Loss: -85.71243 |||| 173.43143 161.80424 182.68777
+Iter: 198 Gen Loss: 4975.7275 Recon Loss: 4980.876 Gen ADV Loss: -171.11848 Dis Loss: -86.83292 |||| 175.67238 167.48512 175.0463
+Iter: 199 Gen Loss: 1348.6047 Recon Loss: 1350.123 Gen ADV Loss: -171.7046 Dis Loss: -86.48489 |||| 174.97635 162.59364 182.90051
+========================================================================
+7.548311 -0.64518166
+7.067347 -0.63864166
+5.3753796 -0.39542973
+5.1991754 -0.45134354
+4.8014545 -0.3802981
+4.977338 -0.45387393
+13.348347 0.0
+21.788177 0.0
+20.323906 0.0
+5.8141217 0.0
+7.637166 0.030621698
+0.9999995 0.03061213
+1305.9756 -84.244545
+=========================================================================
+Iter: 200 Gen Loss: 4997.612 Recon Loss: 5002.784 Gen ADV Loss: -172.8676 Dis Loss: -87.58201 |||| 177.17058 169.3842 177.82819
+Iter: 201 Gen Loss: 1387.0239 Recon Loss: 1388.582 Gen ADV Loss: -173.19458 Dis Loss: -87.22261 |||| 176.45178 161.66641 180.33041
+Iter: 202 Gen Loss: 4754.184 Recon Loss: 4759.1143 Gen ADV Loss: -174.3074 Dis Loss: -88.26998 |||| 178.54654 168.88031 178.40677
+Iter: 203 Gen Loss: 1161.8141 Recon Loss: 1163.1483 Gen ADV Loss: -174.81343 Dis Loss: -87.88224 |||| 177.77106 168.5165 184.6101
+Iter: 204 Gen Loss: 5299.201 Recon Loss: 5304.6777 Gen ADV Loss: -175.53505 Dis Loss: -88.9558 |||| 179.9182 172.71931 179.41348
+Iter: 205 Gen Loss: 1200.4836 Recon Loss: 1201.8574 Gen ADV Loss: -175.6461 Dis Loss: -88.60272 |||| 179.212 159.00363 186.19974
+Iter: 206 Gen Loss: 5121.791 Recon Loss: 5127.0913 Gen ADV Loss: -176.77234 Dis Loss: -89.68365 |||| 181.37387 169.16925 181.07352
+Iter: 207 Gen Loss: 1282.415 Recon Loss: 1283.8727 Gen ADV Loss: -177.45323 Dis Loss: -89.34792 |||| 180.70242 163.1623 183.06163
+Iter: 208 Gen Loss: 5032.3945 Recon Loss: 5037.607 Gen ADV Loss: -178.59717 Dis Loss: -90.376656 |||| 182.75989 177.00906 181.94635
+Iter: 209 Gen Loss: 1182.1309 Recon Loss: 1183.4894 Gen ADV Loss: -178.7499 Dis Loss: -90.082954 |||| 182.17247 176.18417 190.13431
+Iter: 210 Gen Loss: 4876.5566 Recon Loss: 4881.614 Gen ADV Loss: -179.46727 Dis Loss: -91.0391 |||| 184.08478 175.92657 183.23941
+Iter: 211 Gen Loss: 1354.0216 Recon Loss: 1355.5535 Gen ADV Loss: -179.96895 Dis Loss: -90.75177 |||| 183.51013 164.36594 187.58893
+Iter: 212 Gen Loss: 5340.186 Recon Loss: 5345.709 Gen ADV Loss: -181.03539 Dis Loss: -91.77842 |||| 185.56343 173.26804 185.10634
+Iter: 213 Gen Loss: 1183.8182 Recon Loss: 1185.181 Gen ADV Loss: -181.43571 Dis Loss: -91.45998 |||| 184.92653 178.72469 191.0301
+Iter: 214 Gen Loss: 5039.698 Recon Loss: 5044.9214 Gen ADV Loss: -182.34178 Dis Loss: -92.37927 |||| 186.76509 181.93076 190.08301
+Iter: 215 Gen Loss: 1225.6724 Recon Loss: 1227.0785 Gen ADV Loss: -182.81886 Dis Loss: -92.068405 |||| 186.14337 168.23793 188.49019
+Iter: 216 Gen Loss: 5017.7344 Recon Loss: 5022.9375 Gen ADV Loss: -183.95601 Dis Loss: -93.12903 |||| 188.26463 170.18134 187.6556
+Iter: 217 Gen Loss: 1270.7778 Recon Loss: 1272.2305 Gen ADV Loss: -184.2594 Dis Loss: -92.82314 |||| 187.65286 183.87862 192.89758
+Iter: 218 Gen Loss: 4897.816 Recon Loss: 4902.9 Gen ADV Loss: -185.19684 Dis Loss: -93.80506 |||| 189.61668 184.62508 192.56361
+Iter: 219 Gen Loss: 1428.4952 Recon Loss: 1430.107 Gen ADV Loss: -185.54895 Dis Loss: -93.56522 |||| 189.13701 183.39091 194.70045
+Iter: 220 Gen Loss: 5617.9805 Recon Loss: 5623.7866 Gen ADV Loss: -186.70135 Dis Loss: -94.52542 |||| 191.05742 184.67603 191.08199
+Iter: 221 Gen Loss: 1205.8704 Recon Loss: 1207.2611 Gen ADV Loss: -187.2985 Dis Loss: -94.23335 |||| 190.47327 186.2583 197.73299
+Iter: 222 Gen Loss: 4595.6826 Recon Loss: 4600.468 Gen ADV Loss: -188.31673 Dis Loss: -95.29282 |||| 192.59224 185.82565 192.43492
+Iter: 223 Gen Loss: 1266.094 Recon Loss: 1267.5465 Gen ADV Loss: -188.81335 Dis Loss: -95.01788 |||| 192.04236 181.13889 198.06004
+Iter: 224 Gen Loss: 4899.3755 Recon Loss: 4904.4653 Gen ADV Loss: -189.66603 Dis Loss: -96.03943 |||| 194.08543 180.73695 193.20369
+Iter: 225 Gen Loss: 1223.9606 Recon Loss: 1225.3722 Gen ADV Loss: -190.19138 Dis Loss: -95.73371 |||| 193.474 187.57928 199.09782
+Iter: 226 Gen Loss: 5007.3687 Recon Loss: 5012.5684 Gen ADV Loss: -191.12512 Dis Loss: -96.77766 |||| 195.56189 188.30608 195.12431
+Iter: 227 Gen Loss: 1273.1226 Recon Loss: 1274.585 Gen ADV Loss: -191.74661 Dis Loss: -96.4886 |||| 194.98376 182.93713 202.06216
+Iter: 228 Gen Loss: 5255.815 Recon Loss: 5261.2646 Gen ADV Loss: -192.29817 Dis Loss: -97.52507 |||| 197.05672 184.49535 196.15875
+Iter: 229 Gen Loss: 1325.1633 Recon Loss: 1326.6791 Gen ADV Loss: -192.99583 Dis Loss: -97.16681 |||| 196.34018 187.70027 202.30481
+Iter: 230 Gen Loss: 5112.3047 Recon Loss: 5117.6123 Gen ADV Loss: -193.7671 Dis Loss: -98.20977 |||| 198.42613 189.47614 197.64735
+Iter: 231 Gen Loss: 1249.0752 Recon Loss: 1250.5164 Gen ADV Loss: -194.52557 Dis Loss: -97.864624 |||| 197.73581 193.79971 207.63663
+Iter: 232 Gen Loss: 4771.2065 Recon Loss: 4776.174 Gen ADV Loss: -195.3843 Dis Loss: -98.91975 |||| 199.84607 194.33337 199.80164
+Iter: 233 Gen Loss: 1316.879 Recon Loss: 1318.3893 Gen ADV Loss: -195.82835 Dis Loss: -98.637184 |||| 199.28093 192.16843 205.80722
+Iter: 234 Gen Loss: 5366.619 Recon Loss: 5372.184 Gen ADV Loss: -196.611 Dis Loss: -99.658104 |||| 201.32278 195.64435 199.94261
+Iter: 235 Gen Loss: 1249.6803 Recon Loss: 1251.1248 Gen ADV Loss: -197.21364 Dis Loss: -99.298355 |||| 200.6033 196.31563 208.80327
+Iter: 236 Gen Loss: 5193.6475 Recon Loss: 5199.0405 Gen ADV Loss: -198.22404 Dis Loss: -100.33555 |||| 202.67766 197.95157 202.85626
+Iter: 237 Gen Loss: 1229.57 Recon Loss: 1230.9956 Gen ADV Loss: -198.55397 Dis Loss: -99.99352 |||| 201.99362 197.3505 209.24405
+Iter: 238 Gen Loss: 5172.8354 Recon Loss: 5178.209 Gen ADV Loss: -199.26553 Dis Loss: -100.98488 |||| 203.97632 197.1691 202.3248
+Iter: 239 Gen Loss: 1326.5142 Recon Loss: 1328.0382 Gen ADV Loss: -199.9863 Dis Loss: -100.65855 |||| 203.32367 196.49336 210.43495
+Iter: 240 Gen Loss: 4987.2725 Recon Loss: 4992.4614 Gen ADV Loss: -200.74286 Dis Loss: -101.73305 |||| 205.47269 199.8499 206.21718
+Iter: 241 Gen Loss: 1307.6151 Recon Loss: 1309.1217 Gen ADV Loss: -201.46716 Dis Loss: -101.36415 |||| 204.73488 199.56082 214.51718
+Iter: 242 Gen Loss: 5194.0327 Recon Loss: 5199.4307 Gen ADV Loss: -202.41565 Dis Loss: -102.32814 |||| 206.66287 200.48529 206.83293
+Iter: 243 Gen Loss: 1287.5845 Recon Loss: 1289.0721 Gen ADV Loss: -202.69402 Dis Loss: -102.0426 |||| 206.0918 200.28827 217.78648
+Iter: 244 Gen Loss: 4901.416 Recon Loss: 4906.522 Gen ADV Loss: -203.67899 Dis Loss: -103.08358 |||| 208.1737 202.09099 207.92816
+Iter: 245 Gen Loss: 1301.7367 Recon Loss: 1303.2401 Gen ADV Loss: -204.30379 Dis Loss: -102.71455 |||| 207.43564 199.44649 213.98593
+Iter: 246 Gen Loss: 4899.753 Recon Loss: 4904.859 Gen ADV Loss: -204.96904 Dis Loss: -103.68172 |||| 209.37 202.66374 210.21329
+Iter: 247 Gen Loss: 1300.84 Recon Loss: 1302.3439 Gen ADV Loss: -205.6414 Dis Loss: -103.45928 |||| 208.92513 202.62552 214.37228
+Iter: 248 Gen Loss: 4968.1807 Recon Loss: 4973.3564 Gen ADV Loss: -206.86859 Dis Loss: -104.42525 |||| 210.85709 205.48433 211.9138
+Iter: 249 Gen Loss: 1224.2656 Recon Loss: 1225.694 Gen ADV Loss: -206.96448 Dis Loss: -104.07578 |||| 210.15814 204.11754 219.17072
+Iter: 250 Gen Loss: 5407.691 Recon Loss: 5413.3076 Gen ADV Loss: -208.1429 Dis Loss: -105.05221 |||| 212.11098 207.32169 212.485
+Iter: 251 Gen Loss: 1184.5001 Recon Loss: 1185.8899 Gen ADV Loss: -208.10582 Dis Loss: -104.82712 |||| 211.6608 205.81837 227.32423
+Iter: 252 Gen Loss: 5092.858 Recon Loss: 5098.1606 Gen ADV Loss: -208.76396 Dis Loss: -105.73658 |||| 213.47975 205.07755 215.32744
+Iter: 253 Gen Loss: 1273.7518 Recon Loss: 1275.2324 Gen ADV Loss: -209.60138 Dis Loss: -105.42555 |||| 212.85768 205.15092 224.57187
+Iter: 254 Gen Loss: 5273.7837 Recon Loss: 5279.269 Gen ADV Loss: -210.57402 Dis Loss: -106.411354 |||| 214.8293 206.5207 215.59058
+Iter: 255 Gen Loss: 1318.2725 Recon Loss: 1319.7992 Gen ADV Loss: -211.13376 Dis Loss: -106.14958 |||| 214.30574 210.13606 222.35815
+Iter: 256 Gen Loss: 5085.504 Recon Loss: 5090.8022 Gen ADV Loss: -211.97034 Dis Loss: -107.1315 |||| 216.2696 211.83257 217.42587
+Iter: 257 Gen Loss: 1401.1058 Recon Loss: 1402.7166 Gen ADV Loss: -212.29913 Dis Loss: -106.826866 |||| 215.66031 208.27693 221.60625
+Iter: 258 Gen Loss: 5245.091 Recon Loss: 5250.5503 Gen ADV Loss: -213.29547 Dis Loss: -107.81203 |||| 217.63066 210.59085 217.88318
+Iter: 259 Gen Loss: 1334.9962 Recon Loss: 1336.5419 Gen ADV Loss: -213.51546 Dis Loss: -107.52809 |||| 217.06279 210.34016 224.65854
+Iter: 260 Gen Loss: 5153.6226 Recon Loss: 5158.991 Gen ADV Loss: -214.25558 Dis Loss: -108.48176 |||| 218.9701 212.28415 227.11584
+Iter: 261 Gen Loss: 1241.5614 Recon Loss: 1243.015 Gen ADV Loss: -214.96301 Dis Loss: -108.252556 |||| 218.5117 212.65378 224.9011
+Iter: 262 Gen Loss: 5433.687 Recon Loss: 5439.338 Gen ADV Loss: -216.03912 Dis Loss: -109.1446 |||| 220.2958 212.5097 222.20839
+Iter: 263 Gen Loss: 1284.8239 Recon Loss: 1286.3223 Gen ADV Loss: -216.58118 Dis Loss: -108.94213 |||| 219.89085 215.63933 223.69351
+Iter: 264 Gen Loss: 5333.0464 Recon Loss: 5338.598 Gen ADV Loss: -217.59737 Dis Loss: -109.7952 |||| 221.59698 216.10709 224.67778
+Iter: 265 Gen Loss: 1333.8457 Recon Loss: 1335.394 Gen ADV Loss: -217.43599 Dis Loss: -109.63749 |||| 221.28162 205.83784 227.29099
+Iter: 266 Gen Loss: 4890.2295 Recon Loss: 4895.339 Gen ADV Loss: -218.38152 Dis Loss: -110.479225 |||| 222.96504 213.08408 224.21227
+Iter: 267 Gen Loss: 1326.1538 Recon Loss: 1327.696 Gen ADV Loss: -218.9801 Dis Loss: -110.2828 |||| 222.57217 211.84958 228.19376
+Iter: 268 Gen Loss: 5074.05 Recon Loss: 5079.3447 Gen ADV Loss: -219.99712 Dis Loss: -111.23462 |||| 224.47581 217.82327 226.12892
+Iter: 269 Gen Loss: 1163.6964 Recon Loss: 1165.0774 Gen ADV Loss: -220.37108 Dis Loss: -110.90017 |||| 223.80693 215.25208 239.59508
+Iter: 270 Gen Loss: 5252.126 Recon Loss: 5257.6 Gen ADV Loss: -221.16284 Dis Loss: -111.87089 |||| 225.74837 216.48376 227.28235
+Iter: 271 Gen Loss: 1220.9683 Recon Loss: 1222.4078 Gen ADV Loss: -221.61725 Dis Loss: -111.50664 |||| 225.01987 205.58894 229.89638
+Iter: 272 Gen Loss: 5255.09 Recon Loss: 5260.569 Gen ADV Loss: -222.50948 Dis Loss: -112.55822 |||| 227.12305 217.21005 226.97566
+Iter: 273 Gen Loss: 1327.1948 Recon Loss: 1328.742 Gen ADV Loss: -222.79588 Dis Loss: -112.25228 |||| 226.51114 217.15295 231.48857
+Iter: 274 Gen Loss: 5025.0454 Recon Loss: 5030.2954 Gen ADV Loss: -224.03577 Dis Loss: -113.23157 |||| 228.46973 223.00778 228.90723
+Iter: 275 Gen Loss: 1322.1699 Recon Loss: 1323.7136 Gen ADV Loss: -224.49722 Dis Loss: -112.941505 |||| 227.88959 218.21307 233.23894
+Iter: 276 Gen Loss: 5002.892 Recon Loss: 5008.1216 Gen ADV Loss: -225.39832 Dis Loss: -113.86684 |||| 229.74023 221.91058 229.79172
+Iter: 277 Gen Loss: 1191.4193 Recon Loss: 1192.8335 Gen ADV Loss: -225.84981 Dis Loss: -113.603004 |||| 229.2126 224.13254 240.91968
+Iter: 278 Gen Loss: 5168.978 Recon Loss: 5174.3745 Gen ADV Loss: -226.31903 Dis Loss: -114.62779 |||| 231.26218 224.05455 234.26836
+Iter: 279 Gen Loss: 1345.5249 Recon Loss: 1347.0942 Gen ADV Loss: -226.85898 Dis Loss: -114.25297 |||| 230.51253 221.58899 243.72452
+Iter: 280 Gen Loss: 5018.7656 Recon Loss: 5024.0127 Gen ADV Loss: -227.7658 Dis Loss: -115.25102 |||| 232.50865 220.29018 232.85033
+Iter: 281 Gen Loss: 1243.4081 Recon Loss: 1244.8771 Gen ADV Loss: -228.65027 Dis Loss: -114.993546 |||| 231.99368 224.38263 237.73059
+Iter: 282 Gen Loss: 5051.5664 Recon Loss: 5056.848 Gen ADV Loss: -229.47897 Dis Loss: -115.96114 |||| 233.92886 227.52142 233.99428
+Iter: 283 Gen Loss: 1328.439 Recon Loss: 1329.994 Gen ADV Loss: -229.57545 Dis Loss: -115.64122 |||| 233.28905 225.44072 244.11029
+Iter: 284 Gen Loss: 5154.3623 Recon Loss: 5159.748 Gen ADV Loss: -230.531 Dis Loss: -116.6359 |||| 235.2784 225.38963 237.16129
+Iter: 285 Gen Loss: 1270.645 Recon Loss: 1272.1436 Gen ADV Loss: -231.00082 Dis Loss: -116.31743 |||| 234.64145 222.59427 242.79503
+Iter: 286 Gen Loss: 5153.6597 Recon Loss: 5159.0464 Gen ADV Loss: -232.04855 Dis Loss: -117.29744 |||| 236.60144 227.53757 237.67387
+Iter: 287 Gen Loss: 1263.8723 Recon Loss: 1265.3655 Gen ADV Loss: -232.25745 Dis Loss: -116.96665 |||| 235.93991 225.2301 244.8285
+Iter: 288 Gen Loss: 5214.181 Recon Loss: 5219.63 Gen ADV Loss: -233.33122 Dis Loss: -117.99202 |||| 237.9906 225.8926 237.66057
+Iter: 289 Gen Loss: 1239.04 Recon Loss: 1240.5098 Gen ADV Loss: -233.78761 Dis Loss: -117.6766 |||| 237.35977 228.71898 244.41298
+Iter: 290 Gen Loss: 4877.618 Recon Loss: 4882.7314 Gen ADV Loss: -234.72787 Dis Loss: -118.582214 |||| 239.17102 231.24808 240.6366
+Iter: 291 Gen Loss: 1333.001 Recon Loss: 1334.5659 Gen ADV Loss: -234.98293 Dis Loss: -118.30873 |||| 238.62407 230.64983 247.86229
+Iter: 292 Gen Loss: 5099.1997 Recon Loss: 5104.5356 Gen ADV Loss: -235.8178 Dis Loss: -119.25408 |||| 240.51474 229.12096 241.38104
+Iter: 293 Gen Loss: 1273.5688 Recon Loss: 1275.0754 Gen ADV Loss: -236.23206 Dis Loss: -118.979485 |||| 239.96556 234.36871 244.86511
+Iter: 294 Gen Loss: 5187.6177 Recon Loss: 5193.0435 Gen ADV Loss: -237.21149 Dis Loss: -119.92929 |||| 241.86517 235.66768 245.82747
+Iter: 295 Gen Loss: 1215.9744 Recon Loss: 1217.4248 Gen ADV Loss: -237.64375 Dis Loss: -119.6238 |||| 241.2542 235.42905 250.11876
+Iter: 296 Gen Loss: 5322.814 Recon Loss: 5328.376 Gen ADV Loss: -238.52219 Dis Loss: -120.620224 |||| 243.24704 233.73256 245.05304
+Iter: 297 Gen Loss: 1195.4537 Recon Loss: 1196.8849 Gen ADV Loss: -238.95021 Dis Loss: -120.27769 |||| 242.56195 236.28174 249.31624
+Iter: 298 Gen Loss: 5450.053 Recon Loss: 5455.7437 Gen ADV Loss: -239.9635 Dis Loss: -121.24862 |||| 244.50385 236.32664 245.15106
+Iter: 299 Gen Loss: 1216.5603 Recon Loss: 1218.0137 Gen ADV Loss: -239.93878 Dis Loss: -120.90313 |||| 243.81287 235.55774 254.50554
+========================================================================
+7.690423 -0.73937565
+7.084116 -0.7592982
+5.5220323 -0.42012545
+4.6138806 -0.4864811
+3.9074097 -0.35461116
+4.8576193 -0.4591616
+8.787567 0.0
+9.005205 0.0
+7.4083896 0.0
+4.1010427 0.0
+8.840347 0.025270801
+0.99999994 0.025265424
+1305.7579 -116.78463
+=========================================================================
+Iter: 300 Gen Loss: 4973.758 Recon Loss: 4978.973 Gen ADV Loss: -241.13916 Dis Loss: -121.85977 |||| 245.72617 238.55103 246.77054
+Iter: 301 Gen Loss: 1338.9491 Recon Loss: 1340.5264 Gen ADV Loss: -241.57181 Dis Loss: -121.556595 |||| 245.11977 239.34991 253.41304
+Iter: 302 Gen Loss: 4994.065 Recon Loss: 4999.302 Gen ADV Loss: -242.45735 Dis Loss: -122.40108 |||| 246.80873 240.87741 249.38531
+Iter: 303 Gen Loss: 1303.0663 Recon Loss: 1304.6091 Gen ADV Loss: -243.09525 Dis Loss: -122.19431 |||| 246.39522 242.15895 254.06508
+Iter: 304 Gen Loss: 5247.374 Recon Loss: 5252.866 Gen ADV Loss: -243.94199 Dis Loss: -123.195465 |||| 248.39752 243.48145 252.15294
+Iter: 305 Gen Loss: 1227.296 Recon Loss: 1228.764 Gen ADV Loss: -244.28564 Dis Loss: -122.844 |||| 247.69463 241.75139 256.7416
+Iter: 306 Gen Loss: 4838.3145 Recon Loss: 4843.3984 Gen ADV Loss: -245.59177 Dis Loss: -123.73526 |||| 249.47711 242.92293 249.89017
+Iter: 307 Gen Loss: 1290.4508 Recon Loss: 1291.9832 Gen ADV Loss: -245.54066 Dis Loss: -123.53456 |||| 249.07574 245.23302 257.69833
+Iter: 308 Gen Loss: 5325.8975 Recon Loss: 5331.47 Gen ADV Loss: -246.56367 Dis Loss: -124.45902 |||| 250.92464 245.91975 261.4933
+Iter: 309 Gen Loss: 1330.8853 Recon Loss: 1332.459 Gen ADV Loss: -246.61533 Dis Loss: -124.1501 |||| 250.30676 244.65065 260.16208
+Iter: 310 Gen Loss: 4707.7554 Recon Loss: 4712.7104 Gen ADV Loss: -247.37477 Dis Loss: -125.06827 |||| 252.14316 242.48557 252.48651
+Iter: 311 Gen Loss: 1282.1606 Recon Loss: 1283.6871 Gen ADV Loss: -247.99506 Dis Loss: -124.8335 |||| 251.6736 245.15956 261.3956
+Iter: 312 Gen Loss: 5040.875 Recon Loss: 5046.164 Gen ADV Loss: -248.73317 Dis Loss: -125.73142 |||| 253.46944 246.95995 255.635
+Iter: 313 Gen Loss: 1256.3386 Recon Loss: 1257.84 Gen ADV Loss: -248.8402 Dis Loss: -125.46301 |||| 252.93262 245.16707 267.016
+Iter: 314 Gen Loss: 4850.213 Recon Loss: 4855.313 Gen ADV Loss: -250.11533 Dis Loss: -126.36678 |||| 254.74011 243.31151 256.75693
+Iter: 315 Gen Loss: 1259.4232 Recon Loss: 1260.9294 Gen ADV Loss: -250.62848 Dis Loss: -126.11513 |||| 254.23688 245.58255 264.0477
+Iter: 316 Gen Loss: 5384.8696 Recon Loss: 5390.5063 Gen ADV Loss: -251.43167 Dis Loss: -127.02382 |||| 256.05426 249.89644 261.77307
+Iter: 317 Gen Loss: 1316.9755 Recon Loss: 1318.5404 Gen ADV Loss: -251.71513 Dis Loss: -126.73305 |||| 255.47272 248.33986 269.85532
+Iter: 318 Gen Loss: 4825.1846 Recon Loss: 4830.2617 Gen ADV Loss: -252.62132 Dis Loss: -127.679306 |||| 257.36526 249.70303 258.34415
+Iter: 319 Gen Loss: 1335.8424 Recon Loss: 1337.4277 Gen ADV Loss: -253.31279 Dis Loss: -127.418564 |||| 256.84372 248.1197 269.4401
+Iter: 320 Gen Loss: 4698.0645 Recon Loss: 4703.016 Gen ADV Loss: -254.03815 Dis Loss: -128.30775 |||| 258.62213 252.59596 260.71094
+Iter: 321 Gen Loss: 1335.0037 Recon Loss: 1336.5889 Gen ADV Loss: -254.01283 Dis Loss: -128.0545 |||| 258.1156 248.4914 272.54434
+Iter: 322 Gen Loss: 4900.349 Recon Loss: 4905.5044 Gen ADV Loss: -255.17647 Dis Loss: -128.89993 |||| 259.80646 253.2747 262.2338
+Iter: 323 Gen Loss: 1210.1675 Recon Loss: 1211.6299 Gen ADV Loss: -256.05145 Dis Loss: -128.71078 |||| 259.4282 252.58842 267.09467
+Iter: 324 Gen Loss: 5052.988 Recon Loss: 5058.297 Gen ADV Loss: -256.44894 Dis Loss: -129.60062 |||| 261.2079 251.60657 263.11423
+Iter: 325 Gen Loss: 1336.7177 Recon Loss: 1338.3074 Gen ADV Loss: -256.86096 Dis Loss: -129.3106 |||| 260.62784 251.15869 275.50653
+Iter: 326 Gen Loss: 5048.014 Recon Loss: 5053.3193 Gen ADV Loss: -257.50272 Dis Loss: -130.18594 |||| 262.37848 255.71954 265.93887
+Iter: 327 Gen Loss: 1311.9489 Recon Loss: 1313.5151 Gen ADV Loss: -258.3054 Dis Loss: -129.94778 |||| 261.90216 255.56563 272.5143
+Iter: 328 Gen Loss: 4904.2373 Recon Loss: 4909.4004 Gen ADV Loss: -259.4494 Dis Loss: -130.80699 |||| 263.62057 257.26093 269.59717
+Iter: 329 Gen Loss: 1237.0327 Recon Loss: 1238.5254 Gen ADV Loss: -259.67447 Dis Loss: -130.51276 |||| 263.0321 256.12946 277.29764
+Iter: 330 Gen Loss: 5150.3794 Recon Loss: 5155.79 Gen ADV Loss: -260.12195 Dis Loss: -131.50005 |||| 265.0067 257.62518 271.39914
+Iter: 331 Gen Loss: 1322.0658 Recon Loss: 1323.6445 Gen ADV Loss: -260.67346 Dis Loss: -131.09158 |||| 264.18982 256.10373 278.807
+Iter: 332 Gen Loss: 5376.1655 Recon Loss: 5381.8037 Gen ADV Loss: -261.5144 Dis Loss: -132.05515 |||| 266.1169 259.58228 267.12903
+Iter: 333 Gen Loss: 1206.1893 Recon Loss: 1207.6534 Gen ADV Loss: -261.94324 Dis Loss: -131.66824 |||| 265.34314 259.38794 272.83722
+Iter: 334 Gen Loss: 5290.3486 Recon Loss: 5295.9014 Gen ADV Loss: -262.36426 Dis Loss: -132.69144 |||| 267.3895 259.90002 273.314
+Iter: 335 Gen Loss: 1239.7648 Recon Loss: 1241.2634 Gen ADV Loss: -263.12128 Dis Loss: -132.32652 |||| 266.65964 255.38982 279.02414
+Iter: 336 Gen Loss: 5401.7554 Recon Loss: 5407.421 Gen ADV Loss: -263.88245 Dis Loss: -133.24562 |||| 268.49783 258.84534 268.76266
+Iter: 337 Gen Loss: 1267.9491 Recon Loss: 1269.4773 Gen ADV Loss: -264.3947 Dis Loss: -132.90994 |||| 267.82645 259.69183 276.90472
+Iter: 338 Gen Loss: 4801.608 Recon Loss: 4806.6743 Gen ADV Loss: -265.25995 Dis Loss: -133.93849 |||| 269.88354 264.25858 272.8265
+Iter: 339 Gen Loss: 1193.902 Recon Loss: 1195.3573 Gen ADV Loss: -265.57172 Dis Loss: -133.64073 |||| 269.28806 256.07556 285.3921
+Iter: 340 Gen Loss: 4842.7314 Recon Loss: 4847.8394 Gen ADV Loss: -266.28635 Dis Loss: -134.51874 |||| 271.0441 262.8715 272.42706
+Iter: 341 Gen Loss: 1414.1538 Recon Loss: 1415.8308 Gen ADV Loss: -266.85913 Dis Loss: -134.28598 |||| 270.57852 261.84067 277.57034
+Iter: 342 Gen Loss: 5128.5933 Recon Loss: 5133.989 Gen ADV Loss: -267.71637 Dis Loss: -135.20786 |||| 272.42233 265.72427 274.10028
+Iter: 343 Gen Loss: 1386.5977 Recon Loss: 1388.2483 Gen ADV Loss: -268.05408 Dis Loss: -134.96394 |||| 271.93448 264.42383 282.4831
+Iter: 344 Gen Loss: 4886.6934 Recon Loss: 4891.848 Gen ADV Loss: -268.94 Dis Loss: -135.8602 |||| 273.727 266.31387 278.2561
+Iter: 345 Gen Loss: 1373.6241 Recon Loss: 1375.2631 Gen ADV Loss: -269.30017 Dis Loss: -135.6001 |||| 273.20682 265.64914 286.65756
+Iter: 346 Gen Loss: 4808.9917 Recon Loss: 4814.07 Gen ADV Loss: -270.0921 Dis Loss: -136.50177 |||| 275.01013 268.83813 275.44708
+Iter: 347 Gen Loss: 1219.7704 Recon Loss: 1221.2562 Gen ADV Loss: -270.52872 Dis Loss: -136.1927 |||| 274.392 266.18988 287.6103
+Iter: 348 Gen Loss: 5106.2866 Recon Loss: 5111.664 Gen ADV Loss: -271.4611 Dis Loss: -137.16222 |||| 276.33105 270.31415 277.4682
+Iter: 349 Gen Loss: 1308.3146 Recon Loss: 1309.8903 Gen ADV Loss: -272.1464 Dis Loss: -136.81717 |||| 275.64096 269.40363 282.81467
+Iter: 350 Gen Loss: 5090.1694 Recon Loss: 5095.5317 Gen ADV Loss: -273.0402 Dis Loss: -137.7489 |||| 277.5044 269.53183 277.86603
+Iter: 351 Gen Loss: 1281.9708 Recon Loss: 1283.5214 Gen ADV Loss: -273.58002 Dis Loss: -137.441 |||| 276.88858 265.59247 281.85452
+Iter: 352 Gen Loss: 5522.15 Recon Loss: 5527.946 Gen ADV Loss: -274.2917 Dis Loss: -138.37758 |||| 278.76175 273.07394 284.36487
+Iter: 353 Gen Loss: 1182.0532 Recon Loss: 1183.5045 Gen ADV Loss: -274.26425 Dis Loss: -138.04008 |||| 278.08673 265.9046 285.75613
+Iter: 354 Gen Loss: 5397.269 Recon Loss: 5402.941 Gen ADV Loss: -275.1848 Dis Loss: -138.9864 |||| 279.97937 271.76846 279.07364
+Iter: 355 Gen Loss: 1315.8883 Recon Loss: 1317.4747 Gen ADV Loss: -275.53735 Dis Loss: -138.68884 |||| 279.38428 263.11218 289.03998
+Iter: 356 Gen Loss: 4980.273 Recon Loss: 4985.5283 Gen ADV Loss: -276.21503 Dis Loss: -139.65665 |||| 281.31985 273.58276 282.18243
+Iter: 357 Gen Loss: 1236.6613 Recon Loss: 1238.1694 Gen ADV Loss: -276.63913 Dis Loss: -139.30261 |||| 280.61188 269.78583 294.37515
+Iter: 358 Gen Loss: 4772.3345 Recon Loss: 4777.3823 Gen ADV Loss: -277.32925 Dis Loss: -140.14026 |||| 282.2872 275.68182 285.93408
+Iter: 359 Gen Loss: 1246.6187 Recon Loss: 1248.1383 Gen ADV Loss: -278.05078 Dis Loss: -139.93698 |||| 281.8806 275.32175 293.0252
+Iter: 360 Gen Loss: 5348.691 Recon Loss: 5354.3174 Gen ADV Loss: -279.02612 Dis Loss: -140.83932 |||| 283.6853 275.92682 285.97604
+Iter: 361 Gen Loss: 1275.0001 Recon Loss: 1276.5491 Gen ADV Loss: -279.0835 Dis Loss: -140.52638 |||| 283.05942 276.1297 293.40778
+Iter: 362 Gen Loss: 5261.139 Recon Loss: 5266.679 Gen ADV Loss: -280.25912 Dis Loss: -141.37262 |||| 284.75183 279.75745 292.44528
+Iter: 363 Gen Loss: 1273.9572 Recon Loss: 1275.5065 Gen ADV Loss: -280.57632 Dis Loss: -141.16911 |||| 284.34482 278.16965 292.83228
+Iter: 364 Gen Loss: 5123.0645 Recon Loss: 5128.468 Gen ADV Loss: -281.49683 Dis Loss: -141.99284 |||| 285.9923 278.9996 289.51743
+Iter: 365 Gen Loss: 1362.6787 Recon Loss: 1364.318 Gen ADV Loss: -281.73456 Dis Loss: -141.73476 |||| 285.47614 280.2098 293.9348
+Iter: 366 Gen Loss: 4798.1157 Recon Loss: 4803.195 Gen ADV Loss: -282.49594 Dis Loss: -142.66579 |||| 287.33817 279.60306 291.77463
+Iter: 367 Gen Loss: 1243.817 Recon Loss: 1245.3386 Gen ADV Loss: -282.9973 Dis Loss: -142.35724 |||| 286.7211 280.50473 295.20868
+Iter: 368 Gen Loss: 5336.807 Recon Loss: 5342.4263 Gen ADV Loss: -283.75894 Dis Loss: -143.26662 |||| 288.53986 282.01175 293.8124
+Iter: 369 Gen Loss: 1275.6833 Recon Loss: 1277.2378 Gen ADV Loss: -283.9132 Dis Loss: -142.97025 |||| 287.9471 278.34308 299.04373
+Iter: 370 Gen Loss: 5033.163 Recon Loss: 5038.48 Gen ADV Loss: -285.1227 Dis Loss: -143.87306 |||| 289.75275 284.06305 294.47665
+Iter: 371 Gen Loss: 1317.5618 Recon Loss: 1319.1597 Gen ADV Loss: -285.54965 Dis Loss: -143.59293 |||| 289.19247 280.562 299.17657
+Iter: 372 Gen Loss: 5052.6973 Recon Loss: 5058.0347 Gen ADV Loss: -286.09454 Dis Loss: -144.48015 |||| 290.9669 283.63858 294.78516
+Iter: 373 Gen Loss: 1238.9537 Recon Loss: 1240.474 Gen ADV Loss: -286.4759 Dis Loss: -144.19864 |||| 290.4039 281.1411 302.23373
+Iter: 374 Gen Loss: 5377.2104 Recon Loss: 5382.8735 Gen ADV Loss: -287.32816 Dis Loss: -145.10701 |||| 292.22067 283.3436 294.91174
+Iter: 375 Gen Loss: 1299.3021 Recon Loss: 1300.8838 Gen ADV Loss: -287.51935 Dis Loss: -144.76228 |||| 291.5312 282.6046 302.39252
+Iter: 376 Gen Loss: 5065.473 Recon Loss: 5070.8257 Gen ADV Loss: -288.5735 Dis Loss: -145.67291 |||| 293.35245 285.9728 299.51547
+Iter: 377 Gen Loss: 1332.4017 Recon Loss: 1334.0177 Gen ADV Loss: -288.65152 Dis Loss: -145.41331 |||| 292.83325 281.1327 304.53625
+Iter: 378 Gen Loss: 5274.624 Recon Loss: 5280.187 Gen ADV Loss: -289.7888 Dis Loss: -146.28809 |||| 294.58282 286.852 297.143
+Iter: 379 Gen Loss: 1311.493 Recon Loss: 1313.0895 Gen ADV Loss: -290.03015 Dis Loss: -145.98709 |||| 293.98083 284.90936 306.7784
+Iter: 380 Gen Loss: 4759.327 Recon Loss: 4764.375 Gen ADV Loss: -290.63452 Dis Loss: -146.86969 |||| 295.74597 286.65692 301.06525
+Iter: 381 Gen Loss: 1217.4756 Recon Loss: 1218.9792 Gen ADV Loss: -291.42432 Dis Loss: -146.55887 |||| 295.12433 286.2374 308.56113
+Iter: 382 Gen Loss: 5295.501 Recon Loss: 5301.087 Gen ADV Loss: -291.96967 Dis Loss: -147.4593 |||| 296.92526 289.19083 298.4534
+Iter: 383 Gen Loss: 1304.5485 Recon Loss: 1306.1404 Gen ADV Loss: -292.47363 Dis Loss: -147.17445 |||| 296.35553 289.1198 307.67374
+Iter: 384 Gen Loss: 5201.7554 Recon Loss: 5207.2485 Gen ADV Loss: -293.06128 Dis Loss: -148.09041 |||| 298.1875 286.62735 301.69406
+Iter: 385 Gen Loss: 1276.3351 Recon Loss: 1277.8999 Gen ADV Loss: -293.68106 Dis Loss: -147.77141 |||| 297.54947 286.48764 314.97232
+Iter: 386 Gen Loss: 4686.842 Recon Loss: 4691.8213 Gen ADV Loss: -294.40158 Dis Loss: -148.6566 |||| 299.3199 291.93417 307.7768
+Iter: 387 Gen Loss: 1337.787 Recon Loss: 1339.4144 Gen ADV Loss: -294.7969 Dis Loss: -148.35646 |||| 298.7195 286.80304 310.75677
+Iter: 388 Gen Loss: 4901.908 Recon Loss: 4907.104 Gen ADV Loss: -295.55798 Dis Loss: -149.21031 |||| 300.42722 292.85526 302.53485
+Iter: 389 Gen Loss: 1267.449 Recon Loss: 1269.0073 Gen ADV Loss: -296.08563 Dis Loss: -148.95934 |||| 299.9253 287.67142 314.4533
+Iter: 390 Gen Loss: 5501.451 Recon Loss: 5507.2485 Gen ADV Loss: -296.67377 Dis Loss: -149.89178 |||| 301.7902 293.0072 306.7728
+Iter: 391 Gen Loss: 1211.9366 Recon Loss: 1213.4404 Gen ADV Loss: -297.2192 Dis Loss: -149.5512 |||| 301.109 287.98492 316.46164
+Iter: 392 Gen Loss: 5323.1978 Recon Loss: 5328.8174 Gen ADV Loss: -297.78455 Dis Loss: -150.46481 |||| 302.93625 289.55753 305.2687
+Iter: 393 Gen Loss: 1326.8145 Recon Loss: 1328.434 Gen ADV Loss: -297.96634 Dis Loss: -150.1585 |||| 302.32367 287.94278 315.5182
+Iter: 394 Gen Loss: 5060.7744 Recon Loss: 5066.1323 Gen ADV Loss: -298.9132 Dis Loss: -151.08058 |||| 304.1678 296.59824 310.9256
+Iter: 395 Gen Loss: 1373.2343 Recon Loss: 1374.9015 Gen ADV Loss: -299.1616 Dis Loss: -150.7201 |||| 303.44684 294.45584 310.02722
+Iter: 396 Gen Loss: 5252.851 Recon Loss: 5258.4023 Gen ADV Loss: -300.02365 Dis Loss: -151.68706 |||| 305.38077 298.79715 316.367
+Iter: 397 Gen Loss: 1162.5159 Recon Loss: 1163.9731 Gen ADV Loss: -300.18512 Dis Loss: -151.30312 |||| 304.61288 293.2167 318.87686
+Iter: 398 Gen Loss: 5097.9355 Recon Loss: 5103.333 Gen ADV Loss: -301.19443 Dis Loss: -152.23996 |||| 306.48657 298.8527 312.42416
+Iter: 399 Gen Loss: 1247.2642 Recon Loss: 1248.808 Gen ADV Loss: -301.9157 Dis Loss: -151.88828 |||| 305.78317 296.08432 318.71945
+========================================================================
+8.029616 -0.7462487
+8.375727 -0.8411614
+7.7153125 -0.5379241
+5.0698 -0.49335486
+5.309551 -0.36917105
+6.516879 -0.6788609
+11.439875 0.0
+16.910288 0.0
+14.302412 0.0
+5.1075964 0.0
+12.585152 0.026831359
+1.0 0.026824921
+1305.444 -147.37743
+=========================================================================
+Iter: 400 Gen Loss: 5066.106 Recon Loss: 5071.473 Gen ADV Loss: -302.53577 Dis Loss: -152.80424 |||| 307.61517 300.59973 312.4567
+Iter: 401 Gen Loss: 1245.5094 Recon Loss: 1247.0525 Gen ADV Loss: -303.0053 Dis Loss: -152.46194 |||| 306.9305 297.23907 317.50247
+Iter: 402 Gen Loss: 5279.7964 Recon Loss: 5285.3784 Gen ADV Loss: -303.57623 Dis Loss: -153.3433 |||| 308.69324 299.07446 312.1414
+Iter: 403 Gen Loss: 1303.6846 Recon Loss: 1305.2872 Gen ADV Loss: -304.29526 Dis Loss: -153.05055 |||| 308.10776 295.8451 324.4737
+Iter: 404 Gen Loss: 4864.314 Recon Loss: 4869.4814 Gen ADV Loss: -304.89514 Dis Loss: -153.86372 |||| 309.73404 301.4532 320.29007
+Iter: 405 Gen Loss: 1227.8698 Recon Loss: 1229.3975 Gen ADV Loss: -305.25107 Dis Loss: -153.66644 |||| 309.33954 296.6194 321.154
+Iter: 406 Gen Loss: 5189.006 Recon Loss: 5194.4995 Gen ADV Loss: -306.02817 Dis Loss: -154.48593 |||| 310.9785 303.0835 315.7311
+Iter: 407 Gen Loss: 1353.1077 Recon Loss: 1354.762 Gen ADV Loss: -306.5562 Dis Loss: -154.19806 |||| 310.40277 300.15454 323.286
+Iter: 408 Gen Loss: 5236.4927 Recon Loss: 5242.035 Gen ADV Loss: -307.07983 Dis Loss: -155.10417 |||| 312.215 304.33054 315.55853
+Iter: 409 Gen Loss: 1242.4464 Recon Loss: 1243.991 Gen ADV Loss: -307.49603 Dis Loss: -154.75835 |||| 311.5233 299.69092 325.85306
+Iter: 410 Gen Loss: 5217.645 Recon Loss: 5223.1694 Gen ADV Loss: -307.92798 Dis Loss: -155.72177 |||| 313.4502 302.47174 318.15732
+Iter: 411 Gen Loss: 1307.7837 Recon Loss: 1309.395 Gen ADV Loss: -308.90063 Dis Loss: -155.20786 |||| 312.42233 297.9662 321.517
+Iter: 412 Gen Loss: 5274.4985 Recon Loss: 5280.0806 Gen ADV Loss: -308.89917 Dis Loss: -156.26524 |||| 314.5371 302.64172 314.86014
+Iter: 413 Gen Loss: 1335.0955 Recon Loss: 1336.7351 Gen ADV Loss: -310.00195 Dis Loss: -155.86742 |||| 313.74146 305.54376 319.7888
+Iter: 414 Gen Loss: 5001.047 Recon Loss: 5006.3564 Gen ADV Loss: -310.2255 Dis Loss: -156.77646 |||| 315.55954 307.6945 324.32855
+Iter: 415 Gen Loss: 1243.6746 Recon Loss: 1245.2236 Gen ADV Loss: -310.94537 Dis Loss: -156.47984 |||| 314.9663 304.24176 324.25635
+Iter: 416 Gen Loss: 5096.773 Recon Loss: 5102.1797 Gen ADV Loss: -311.39566 Dis Loss: -157.29662 |||| 316.59985 307.2787 319.78903
+Iter: 417 Gen Loss: 1266.8046 Recon Loss: 1268.3776 Gen ADV Loss: -311.78754 Dis Loss: -157.06984 |||| 316.14624 307.01315 325.02258
+Iter: 418 Gen Loss: 5472.1387 Recon Loss: 5477.9224 Gen ADV Loss: -312.7065 Dis Loss: -157.98605 |||| 317.97876 309.68213 321.87228
+Iter: 419 Gen Loss: 1316.0299 Recon Loss: 1317.6538 Gen ADV Loss: -313.3964 Dis Loss: -157.66988 |||| 317.34637 304.3411 322.6947
+Iter: 420 Gen Loss: 5084.507 Recon Loss: 5089.903 Gen ADV Loss: -313.38785 Dis Loss: -158.50877 |||| 319.0242 309.78705 320.52597
+Iter: 421 Gen Loss: 1207.735 Recon Loss: 1209.2515 Gen ADV Loss: -314.36856 Dis Loss: -158.24854 |||| 318.5037 305.3034 329.98108
+Iter: 422 Gen Loss: 4900.6045 Recon Loss: 4905.8174 Gen ADV Loss: -314.5814 Dis Loss: -159.17795 |||| 320.36255 311.77185 325.11057
+Iter: 423 Gen Loss: 1242.3142 Recon Loss: 1243.8666 Gen ADV Loss: -315.50958 Dis Loss: -158.83232 |||| 319.6713 307.61807 335.7233
+Iter: 424 Gen Loss: 5288.955 Recon Loss: 5294.5586 Gen ADV Loss: -316.19556 Dis Loss: -159.74428 |||| 321.49515 311.1237 324.18277
+Iter: 425 Gen Loss: 1246.1464 Recon Loss: 1247.7031 Gen ADV Loss: -316.21167 Dis Loss: -159.44383 |||| 320.8943 305.64023 336.91565
+Iter: 426 Gen Loss: 5120.345 Recon Loss: 5125.7803 Gen ADV Loss: -316.67252 Dis Loss: -160.3508 |||| 322.70822 312.30185 332.44577
+Iter: 427 Gen Loss: 1294.6163 Recon Loss: 1296.2231 Gen ADV Loss: -317.62796 Dis Loss: -160.01746 |||| 322.0415 306.75354 337.42685
+Iter: 428 Gen Loss: 5267.925 Recon Loss: 5273.509 Gen ADV Loss: -318.08228 Dis Loss: -160.98433 |||| 323.97534 316.07587 325.92548
+Iter: 429 Gen Loss: 1196.6063 Recon Loss: 1198.1163 Gen ADV Loss: -318.9635 Dis Loss: -160.53293 |||| 323.0725 308.75235 339.11142
+Iter: 430 Gen Loss: 5032.472 Recon Loss: 5037.822 Gen ADV Loss: -319.26947 Dis Loss: -161.502 |||| 325.0106 315.80087 328.27045
+Iter: 431 Gen Loss: 1370.8701 Recon Loss: 1372.5553 Gen ADV Loss: -319.86346 Dis Loss: -161.11972 |||| 324.24603 312.1006 339.18695
+Iter: 432 Gen Loss: 4885.415 Recon Loss: 4890.619 Gen ADV Loss: -320.69305 Dis Loss: -162.10596 |||| 326.2185 313.40982 328.51532
+Iter: 433 Gen Loss: 1267.5275 Recon Loss: 1269.1101 Gen ADV Loss: -320.8013 Dis Loss: -161.70604 |||| 325.41873 312.21924 338.04962
+Iter: 434 Gen Loss: 4827.877 Recon Loss: 4833.0234 Gen ADV Loss: -320.98764 Dis Loss: -162.55519 |||| 327.11703 316.17834 340.9521
+Iter: 435 Gen Loss: 1241.4126 Recon Loss: 1242.9705 Gen ADV Loss: -322.1267 Dis Loss: -162.22981 |||| 326.4663 313.5594 343.39944
+Iter: 436 Gen Loss: 4773.122 Recon Loss: 4778.216 Gen ADV Loss: -322.84637 Dis Loss: -163.15085 |||| 328.30835 317.2621 332.82306
+Iter: 437 Gen Loss: 1400.2085 Recon Loss: 1401.9266 Gen ADV Loss: -323.50327 Dis Loss: -162.80127 |||| 327.6092 314.5569 337.78235
+Iter: 438 Gen Loss: 5237.6494 Recon Loss: 5243.209 Gen ADV Loss: -323.96396 Dis Loss: -163.72624 |||| 329.45908 320.39355 335.4537
+Iter: 439 Gen Loss: 1295.2338 Recon Loss: 1296.848 Gen ADV Loss: -324.56357 Dis Loss: -163.37549 |||| 328.75757 312.13956 344.52344
+Iter: 440 Gen Loss: 4841.62 Recon Loss: 4846.7847 Gen ADV Loss: -325.1202 Dis Loss: -164.32776 |||| 330.66217 320.0996 333.50787
+Iter: 441 Gen Loss: 1197.4948 Recon Loss: 1199.0125 Gen ADV Loss: -325.86734 Dis Loss: -163.95186 |||| 329.91037 315.73297 343.81885
+Iter: 442 Gen Loss: 5385.7637 Recon Loss: 5391.474 Gen ADV Loss: -326.09766 Dis Loss: -164.89285 |||| 331.79236 320.43063 336.29663
+Iter: 443 Gen Loss: 1309.3177 Recon Loss: 1310.9482 Gen ADV Loss: -326.8802 Dis Loss: -164.53726 |||| 331.08118 318.29016 340.19745
+Iter: 444 Gen Loss: 5102.3574 Recon Loss: 5107.785 Gen ADV Loss: -327.1699 Dis Loss: -165.45264 |||| 332.91187 321.06418 335.1254
+Iter: 445 Gen Loss: 1262.3018 Recon Loss: 1263.886 Gen ADV Loss: -327.6513 Dis Loss: -165.08163 |||| 332.16986 315.00995 348.46582
+Iter: 446 Gen Loss: 5121.492 Recon Loss: 5126.9395 Gen ADV Loss: -327.7818 Dis Loss: -166.00963 |||| 334.0259 321.18274 348.329
+Iter: 447 Gen Loss: 1221.3074 Recon Loss: 1222.8518 Gen ADV Loss: -328.9564 Dis Loss: -165.55977 |||| 333.1262 318.47867 344.6584
+Iter: 448 Gen Loss: 5323.2134 Recon Loss: 5328.8643 Gen ADV Loss: -329.3804 Dis Loss: -166.64252 |||| 335.2917 322.37714 337.58292
+Iter: 449 Gen Loss: 1334.6235 Recon Loss: 1336.2828 Gen ADV Loss: -330.29385 Dis Loss: -166.23193 |||| 334.47046 324.2277 344.0722
+Iter: 450 Gen Loss: 5198.034 Recon Loss: 5203.561 Gen ADV Loss: -330.51602 Dis Loss: -167.14265 |||| 336.29196 329.0737 341.23123
+Iter: 451 Gen Loss: 1300.553 Recon Loss: 1302.1792 Gen ADV Loss: -331.45483 Dis Loss: -166.76733 |||| 335.54126 324.03412 344.712
+Iter: 452 Gen Loss: 5228.4746 Recon Loss: 5234.0327 Gen ADV Loss: -331.57397 Dis Loss: -167.66522 |||| 337.3371 328.40018 340.2109
+Iter: 453 Gen Loss: 1266.5836 Recon Loss: 1268.177 Gen ADV Loss: -332.57318 Dis Loss: -167.33894 |||| 336.68454 324.8768 347.52615
+Iter: 454 Gen Loss: 5324.6187 Recon Loss: 5330.2744 Gen ADV Loss: -332.82114 Dis Loss: -168.29456 |||| 338.5958 323.29245 340.45364
+Iter: 455 Gen Loss: 1216.0737 Recon Loss: 1217.6176 Gen ADV Loss: -333.4731 Dis Loss: -167.86249 |||| 337.73163 324.0578 347.85345
+Iter: 456 Gen Loss: 5172.842 Recon Loss: 5178.3467 Gen ADV Loss: -333.9457 Dis Loss: -168.87157 |||| 339.74976 331.43286 344.98428
+Iter: 457 Gen Loss: 1203.039 Recon Loss: 1204.5704 Gen ADV Loss: -334.3013 Dis Loss: -168.41975 |||| 338.84616 320.5473 355.0282
+Iter: 458 Gen Loss: 4995.3335 Recon Loss: 5000.6616 Gen ADV Loss: -334.85318 Dis Loss: -169.42491 |||| 340.85645 332.50232 343.3613
+Iter: 459 Gen Loss: 1387.74 Recon Loss: 1389.4576 Gen ADV Loss: -335.70746 Dis Loss: -168.99777 |||| 340.0022 321.66336 351.61588
+Iter: 460 Gen Loss: 4804.4663 Recon Loss: 4809.6045 Gen ADV Loss: -336.15204 Dis Loss: -169.97517 |||| 341.957 332.2801 344.4688
+Iter: 461 Gen Loss: 1321.1031 Recon Loss: 1322.7551 Gen ADV Loss: -336.69458 Dis Loss: -169.52689 |||| 341.06046 325.61087 350.90768
+Iter: 462 Gen Loss: 5504.4707 Recon Loss: 5510.3105 Gen ADV Loss: -336.96524 Dis Loss: -170.48572 |||| 342.9781 334.57962 346.82907
+Iter: 463 Gen Loss: 1366.6255 Recon Loss: 1368.3242 Gen ADV Loss: -337.89285 Dis Loss: -170.06163 |||| 342.12988 325.89355 353.78616
+Iter: 464 Gen Loss: 5230.0254 Recon Loss: 5235.592 Gen ADV Loss: -338.21967 Dis Loss: -171.09665 |||| 344.19995 330.48734 346.64926
+Iter: 465 Gen Loss: 1280.2427 Recon Loss: 1281.8563 Gen ADV Loss: -339.25403 Dis Loss: -170.6514 |||| 343.30945 332.53015 353.17355
+Iter: 466 Gen Loss: 4947.4087 Recon Loss: 4952.693 Gen ADV Loss: -338.8541 Dis Loss: -171.52953 |||| 345.06567 333.24533 349.53278
+Iter: 467 Gen Loss: 1375.7458 Recon Loss: 1377.4557 Gen ADV Loss: -340.0246 Dis Loss: -171.18259 |||| 344.3718 333.8621 352.7489
+Iter: 468 Gen Loss: 5251.645 Recon Loss: 5257.235 Gen ADV Loss: -340.0599 Dis Loss: -172.22874 |||| 346.4641 331.73907 348.7272
+Iter: 469 Gen Loss: 1237.6184 Recon Loss: 1239.1913 Gen ADV Loss: -341.29327 Dis Loss: -171.70862 |||| 345.42386 334.8716 353.47333
+Iter: 470 Gen Loss: 5296.6885 Recon Loss: 5302.3247 Gen ADV Loss: -341.23108 Dis Loss: -172.69351 |||| 347.39362 337.5535 357.98407
+Iter: 471 Gen Loss: 1268.4111 Recon Loss: 1270.0157 Gen ADV Loss: -342.1491 Dis Loss: -172.29572 |||| 346.59805 334.65842 356.614
+Iter: 472 Gen Loss: 5252.718 Recon Loss: 5258.311 Gen ADV Loss: -342.35986 Dis Loss: -173.23717 |||| 348.481 335.85464 350.7427
+Iter: 473 Gen Loss: 1378.5979 Recon Loss: 1380.3137 Gen ADV Loss: -343.09354 Dis Loss: -172.84341 |||| 347.69345 335.95456 354.1259
+Iter: 474 Gen Loss: 5286.1396 Recon Loss: 5291.767 Gen ADV Loss: -343.22928 Dis Loss: -173.81291 |||| 349.63248 339.99863 356.26736
+Iter: 475 Gen Loss: 1319.812 Recon Loss: 1321.4701 Gen ADV Loss: -344.28815 Dis Loss: -173.37564 |||| 348.75787 333.74948 359.74026
+Iter: 476 Gen Loss: 4915.599 Recon Loss: 4920.8564 Gen ADV Loss: -344.41766 Dis Loss: -174.32936 |||| 350.66534 339.60803 352.14886
+Iter: 477 Gen Loss: 1316.1005 Recon Loss: 1317.756 Gen ADV Loss: -345.38882 Dis Loss: -173.90904 |||| 349.8247 331.7999 364.41953
+Iter: 478 Gen Loss: 5274.9023 Recon Loss: 5280.52 Gen ADV Loss: -345.30173 Dis Loss: -174.90843 |||| 351.8235 341.91852 358.9043
+Iter: 479 Gen Loss: 1143.8496 Recon Loss: 1145.3335 Gen ADV Loss: -346.17892 Dis Loss: -174.41464 |||| 350.8359 333.13223 362.43375
+Iter: 480 Gen Loss: 5106.597 Recon Loss: 5112.0474 Gen ADV Loss: -346.40945 Dis Loss: -175.39098 |||| 352.78857 342.86905 355.28748
+Iter: 481 Gen Loss: 1245.4928 Recon Loss: 1247.0795 Gen ADV Loss: -347.11322 Dis Loss: -174.99142 |||| 351.9895 334.0852 366.3379
+Iter: 482 Gen Loss: 5009.2134 Recon Loss: 5014.5674 Gen ADV Loss: -347.15033 Dis Loss: -175.96474 |||| 353.93607 342.75116 365.63785
+Iter: 483 Gen Loss: 1243.7654 Recon Loss: 1245.3512 Gen ADV Loss: -348.2018 Dis Loss: -175.5096 |||| 353.0258 332.2304 373.43466
+Iter: 484 Gen Loss: 5163.293 Recon Loss: 5168.8027 Gen ADV Loss: -348.76505 Dis Loss: -176.40926 |||| 354.82513 344.98987 363.204
+Iter: 485 Gen Loss: 1416.6244 Recon Loss: 1418.3846 Gen ADV Loss: -349.66376 Dis Loss: -176.04225 |||| 354.09116 337.1624 367.45462
+Iter: 486 Gen Loss: 5126.3223 Recon Loss: 5131.7964 Gen ADV Loss: -349.95398 Dis Loss: -177.036 |||| 356.0786 346.3062 363.23886
+Iter: 487 Gen Loss: 1315.6754 Recon Loss: 1317.3358 Gen ADV Loss: -350.85184 Dis Loss: -176.56932 |||| 355.1453 341.11798 369.1037
+Iter: 488 Gen Loss: 5570.3403 Recon Loss: 5576.2603 Gen ADV Loss: -351.4049 Dis Loss: -177.61899 |||| 357.24463 346.12827 362.32
+Iter: 489 Gen Loss: 1293.1877 Recon Loss: 1294.8264 Gen ADV Loss: -351.60135 Dis Loss: -177.14204 |||| 356.29074 339.795 371.38464
+Iter: 490 Gen Loss: 5040.074 Recon Loss: 5045.4634 Gen ADV Loss: -351.77832 Dis Loss: -178.13435 |||| 358.27533 348.97067 365.87866
+Iter: 491 Gen Loss: 1377.8948 Recon Loss: 1379.6193 Gen ADV Loss: -352.70465 Dis Loss: -177.67845 |||| 357.3635 339.18173 372.57755
+Iter: 492 Gen Loss: 4803.2417 Recon Loss: 4808.395 Gen ADV Loss: -352.90402 Dis Loss: -178.54774 |||| 359.10214 348.90707 371.8259
+Iter: 493 Gen Loss: 1326.8491 Recon Loss: 1328.5234 Gen ADV Loss: -353.58466 Dis Loss: -178.18938 |||| 358.38538 338.33908 375.67087
+Iter: 494 Gen Loss: 5128.138 Recon Loss: 5133.618 Gen ADV Loss: -354.0738 Dis Loss: -179.15186 |||| 360.31033 349.79358 367.33475
+Iter: 495 Gen Loss: 1249.415 Recon Loss: 1251.0131 Gen ADV Loss: -354.89258 Dis Loss: -178.71274 |||| 359.43216 344.48105 369.6861
+Iter: 496 Gen Loss: 5147.942 Recon Loss: 5153.4424 Gen ADV Loss: -354.94385 Dis Loss: -179.7449 |||| 361.49646 350.9025 363.14923
+Iter: 497 Gen Loss: 1345.2556 Recon Loss: 1346.9506 Gen ADV Loss: -355.82266 Dis Loss: -179.22792 |||| 360.4625 341.9943 372.51624
+Iter: 498 Gen Loss: 5184.2217 Recon Loss: 5189.76 Gen ADV Loss: -356.3327 Dis Loss: -180.37451 |||| 362.75565 354.24042 367.16568
+Iter: 499 Gen Loss: 1262.882 Recon Loss: 1264.4955 Gen ADV Loss: -356.76944 Dis Loss: -179.74028 |||| 361.48724 336.7348 383.3255
+========================================================================
+8.053427 -0.9572712
+9.470411 -0.82069904
+8.063317 -0.9224866
+4.739531 -0.5199456
+4.3823066 -0.3845986
+4.6929116 -0.50977325
+11.183559 0.0
+13.830819 0.0
+7.8596134 0.0
+5.1750174 0.0
+13.889889 0.027089281
+1.0 0.027082657
+1305.3988 -173.92175
+=========================================================================
+Iter: 500 Gen Loss: 5107.62 Recon Loss: 5113.0825 Gen ADV Loss: -357.23364 Dis Loss: -180.80008 |||| 363.60684 352.9804 371.71466
+Iter: 501 Gen Loss: 1256.6412 Recon Loss: 1258.2493 Gen ADV Loss: -357.707 Dis Loss: -180.31532 |||| 362.63736 345.18842 374.67963
+Iter: 502 Gen Loss: 5353.9663 Recon Loss: 5359.6763 Gen ADV Loss: -358.35385 Dis Loss: -181.3131 |||| 364.63287 353.75638 367.22653
+Iter: 503 Gen Loss: 1244.6917 Recon Loss: 1246.2892 Gen ADV Loss: -359.11374 Dis Loss: -180.78545 |||| 363.5775 349.64612 376.1647
+Iter: 504 Gen Loss: 5273.624 Recon Loss: 5279.255 Gen ADV Loss: -359.14395 Dis Loss: -181.83873 |||| 365.6841 356.93613 369.6062
+Iter: 505 Gen Loss: 1264.8491 Recon Loss: 1266.4673 Gen ADV Loss: -359.6243 Dis Loss: -181.26073 |||| 364.52808 343.065 379.79294
+Iter: 506 Gen Loss: 5057.549 Recon Loss: 5062.964 Gen ADV Loss: -359.93774 Dis Loss: -182.26732 |||| 366.54126 356.42383 368.7235
+Iter: 507 Gen Loss: 1224.457 Recon Loss: 1226.0365 Gen ADV Loss: -361.31787 Dis Loss: -181.78322 |||| 365.57312 341.10654 385.21307
+Iter: 508 Gen Loss: 5102.0107 Recon Loss: 5107.472 Gen ADV Loss: -361.7517 Dis Loss: -182.89313 |||| 367.7929 356.85855 372.05292
+Iter: 509 Gen Loss: 1209.2642 Recon Loss: 1210.829 Gen ADV Loss: -361.93146 Dis Loss: -182.355 |||| 366.71667 345.91562 383.51187
+Iter: 510 Gen Loss: 5279.8584 Recon Loss: 5285.498 Gen ADV Loss: -361.8305 Dis Loss: -183.4354 |||| 368.87744 356.5975 369.55466
+Iter: 511 Gen Loss: 1363.5521 Recon Loss: 1365.2725 Gen ADV Loss: -362.994 Dis Loss: -182.91261 |||| 367.8319 347.12027 384.52457
+Iter: 512 Gen Loss: 4983.0933 Recon Loss: 4988.437 Gen ADV Loss: -363.464 Dis Loss: -184.05505 |||| 370.11676 360.7731 374.59302
+Iter: 513 Gen Loss: 1276.36 Recon Loss: 1277.9943 Gen ADV Loss: -364.2943 Dis Loss: -183.45532 |||| 368.91727 349.54486 381.85657
+Iter: 514 Gen Loss: 5007.306 Recon Loss: 5012.6753 Gen ADV Loss: -364.27692 Dis Loss: -184.55524 |||| 371.11716 362.28925 373.43494
+Iter: 515 Gen Loss: 1275.3574 Recon Loss: 1276.9918 Gen ADV Loss: -365.39856 Dis Loss: -183.94678 |||| 369.9002 352.63193 380.25964
+Iter: 516 Gen Loss: 4888.6963 Recon Loss: 4893.9478 Gen ADV Loss: -365.25803 Dis Loss: -185.14276 |||| 372.29214 359.65546 373.4288
+Iter: 517 Gen Loss: 1295.5244 Recon Loss: 1297.1799 Gen ADV Loss: -366.42685 Dis Loss: -184.51164 |||| 371.02994 352.5189 379.97348
+Iter: 518 Gen Loss: 5475.738 Recon Loss: 5481.578 Gen ADV Loss: -366.77502 Dis Loss: -185.70746 |||| 373.4216 362.11627 376.4301
+Iter: 519 Gen Loss: 1241.7701 Recon Loss: 1243.3729 Gen ADV Loss: -367.40485 Dis Loss: -185.06776 |||| 372.14224 350.61942 385.85703
+Iter: 520 Gen Loss: 4879.0034 Recon Loss: 4884.247 Gen ADV Loss: -367.30695 Dis Loss: -186.22314 |||| 374.4529 356.13327 376.41577
+Iter: 521 Gen Loss: 1402.1613 Recon Loss: 1403.9255 Gen ADV Loss: -368.46365 Dis Loss: -185.54977 |||| 373.1062 352.73712 385.16208
+Iter: 522 Gen Loss: 5109.023 Recon Loss: 5114.4976 Gen ADV Loss: -368.50867 Dis Loss: -186.88394 |||| 375.77457 362.14258 378.38028
+Iter: 523 Gen Loss: 1259.8445 Recon Loss: 1261.4674 Gen ADV Loss: -369.48938 Dis Loss: -186.11023 |||| 374.2271 353.8331 386.5243
+Iter: 524 Gen Loss: 5203.856 Recon Loss: 5209.4263 Gen ADV Loss: -369.14056 Dis Loss: -187.29993 |||| 376.60648 364.7223 381.16833
+Iter: 525 Gen Loss: 1331.02 Recon Loss: 1332.7147 Gen ADV Loss: -370.16953 Dis Loss: -186.55014 |||| 375.10696 356.86276 386.75336
+Iter: 526 Gen Loss: 5395.842 Recon Loss: 5401.605 Gen ADV Loss: -370.1696 Dis Loss: -187.92406 |||| 377.85474 365.57623 378.27094
+Iter: 527 Gen Loss: 1305.9692 Recon Loss: 1307.6403 Gen ADV Loss: -371.6318 Dis Loss: -187.09067 |||| 376.18802 357.08307 392.17624
+Iter: 528 Gen Loss: 5206.5605 Recon Loss: 5212.1353 Gen ADV Loss: -370.9957 Dis Loss: -188.50209 |||| 379.0108 365.01263 387.59763
+Iter: 529 Gen Loss: 1257.635 Recon Loss: 1259.2584 Gen ADV Loss: -372.34903 Dis Loss: -187.64882 |||| 377.30432 352.7935 394.48734
+Iter: 530 Gen Loss: 5023.6313 Recon Loss: 5029.024 Gen ADV Loss: -372.26456 Dis Loss: -188.91 |||| 379.8267 367.1833 382.11304
+Iter: 531 Gen Loss: 1298.2905 Recon Loss: 1299.956 Gen ADV Loss: -373.78445 Dis Loss: -188.167 |||| 378.34067 361.17444 387.90295
+Iter: 532 Gen Loss: 5091.2393 Recon Loss: 5096.701 Gen ADV Loss: -373.4332 Dis Loss: -189.50911 |||| 381.02487 368.7988 383.25824
+Iter: 533 Gen Loss: 1226.1848 Recon Loss: 1227.7789 Gen ADV Loss: -374.47525 Dis Loss: -188.6755 |||| 379.35764 359.77197 393.42935
+Iter: 534 Gen Loss: 5185.0806 Recon Loss: 5190.6367 Gen ADV Loss: -374.14862 Dis Loss: -190.01651 |||| 382.0397 370.1322 382.48944
+Iter: 535 Gen Loss: 1328.9028 Recon Loss: 1330.6008 Gen ADV Loss: -375.55826 Dis Loss: -189.15489 |||| 380.31647 358.18848 393.55844
+Iter: 536 Gen Loss: 4848.8945 Recon Loss: 4854.115 Gen ADV Loss: -375.02563 Dis Loss: -190.50946 |||| 383.0256 369.82596 387.6252
+Iter: 537 Gen Loss: 1310.3663 Recon Loss: 1312.0465 Gen ADV Loss: -376.3151 Dis Loss: -189.7614 |||| 381.52945 356.933 395.5701
+Iter: 538 Gen Loss: 5152.319 Recon Loss: 5157.844 Gen ADV Loss: -376.13358 Dis Loss: -191.02167 |||| 384.05002 372.0795 383.7292
+Iter: 539 Gen Loss: 1422.5302 Recon Loss: 1424.3236 Gen ADV Loss: -377.45752 Dis Loss: -190.22557 |||| 382.45773 361.28644 396.0714
+Iter: 540 Gen Loss: 5001.683 Recon Loss: 5007.059 Gen ADV Loss: -377.43585 Dis Loss: -191.4404 |||| 384.88742 373.0296 386.4902
+Iter: 541 Gen Loss: 1166.1536 Recon Loss: 1167.6914 Gen ADV Loss: -378.41043 Dis Loss: -190.68681 |||| 383.38028 361.04156 399.5471
+Iter: 542 Gen Loss: 4846.724 Recon Loss: 4851.946 Gen ADV Loss: -377.9505 Dis Loss: -191.978 |||| 385.96262 372.22232 389.49728
+Iter: 543 Gen Loss: 1229.8002 Recon Loss: 1231.4031 Gen ADV Loss: -379.73383 Dis Loss: -191.08055 |||| 384.16776 359.42398 402.37762
+Iter: 544 Gen Loss: 5143.987 Recon Loss: 5149.5073 Gen ADV Loss: -379.45084 Dis Loss: -192.4838 |||| 386.97427 365.59027 389.65765
+Iter: 545 Gen Loss: 1368.2916 Recon Loss: 1370.034 Gen ADV Loss: -380.74063 Dis Loss: -191.73828 |||| 385.48315 363.69806 399.7459
+Iter: 546 Gen Loss: 5466.991 Recon Loss: 5472.8354 Gen ADV Loss: -379.90613 Dis Loss: -193.03174 |||| 388.07013 375.49942 390.11002
+Iter: 547 Gen Loss: 1287.9926 Recon Loss: 1289.6553 Gen ADV Loss: -381.3099 Dis Loss: -192.24132 |||| 386.48935 359.97308 404.5151
+Iter: 548 Gen Loss: 5097.614 Recon Loss: 5103.09 Gen ADV Loss: -381.3283 Dis Loss: -193.51392 |||| 389.0345 375.74686 396.50058
+Iter: 549 Gen Loss: 1271.5498 Recon Loss: 1273.197 Gen ADV Loss: -382.46207 Dis Loss: -192.6514 |||| 387.30945 365.73358 403.62265
+Iter: 550 Gen Loss: 4882.9756 Recon Loss: 4888.238 Gen ADV Loss: -382.17554 Dis Loss: -193.97192 |||| 389.9505 377.9682 390.66632
+Iter: 551 Gen Loss: 1273.261 Recon Loss: 1274.911 Gen ADV Loss: -383.52963 Dis Loss: -193.29039 |||| 388.58746 366.78342 401.78186
+Iter: 552 Gen Loss: 4916.5337 Recon Loss: 4921.8306 Gen ADV Loss: -383.3289 Dis Loss: -194.57489 |||| 391.15643 379.15308 393.2666
+Iter: 553 Gen Loss: 1168.1918 Recon Loss: 1169.7373 Gen ADV Loss: -384.4304 Dis Loss: -193.75534 |||| 389.51736 368.23248 402.74893
+Iter: 554 Gen Loss: 5542.9365 Recon Loss: 5548.8613 Gen ADV Loss: -384.05197 Dis Loss: -195.03584 |||| 392.0783 380.5352 393.6055
+Iter: 555 Gen Loss: 1317.1678 Recon Loss: 1318.8634 Gen ADV Loss: -385.30383 Dis Loss: -194.30934 |||| 390.62537 365.75247 406.15463
+Iter: 556 Gen Loss: 5290.773 Recon Loss: 5296.446 Gen ADV Loss: -385.3663 Dis Loss: -195.62671 |||| 393.26007 381.15057 399.0218
+Iter: 557 Gen Loss: 1212.8895 Recon Loss: 1214.4818 Gen ADV Loss: -386.32654 Dis Loss: -194.67989 |||| 391.36646 361.85825 410.97403
+Iter: 558 Gen Loss: 5130.8926 Recon Loss: 5136.4067 Gen ADV Loss: -386.65427 Dis Loss: -196.12207 |||| 394.2508 381.73843 397.1789
+Iter: 559 Gen Loss: 1385.2523 Recon Loss: 1387.0182 Gen ADV Loss: -387.43167 Dis Loss: -195.25047 |||| 392.5076 374.43683 407.34348
+Iter: 560 Gen Loss: 4892.401 Recon Loss: 4897.677 Gen ADV Loss: -387.16837 Dis Loss: -196.63623 |||| 395.27908 383.53958 396.07074
+Iter: 561 Gen Loss: 1278.9635 Recon Loss: 1280.6241 Gen ADV Loss: -388.64523 Dis Loss: -195.74016 |||| 393.487 375.70517 404.9186
+Iter: 562 Gen Loss: 5201.3 Recon Loss: 5206.886 Gen ADV Loss: -388.40485 Dis Loss: -197.05034 |||| 396.10736 384.37592 402.3784
+Iter: 563 Gen Loss: 1310.4404 Recon Loss: 1312.1337 Gen ADV Loss: -389.75995 Dis Loss: -196.23315 |||| 394.47293 374.92386 405.32242
+Iter: 564 Gen Loss: 5107.373 Recon Loss: 5112.866 Gen ADV Loss: -389.03333 Dis Loss: -197.53328 |||| 397.07318 383.04904 397.94427
+Iter: 565 Gen Loss: 1240.2871 Recon Loss: 1241.9113 Gen ADV Loss: -390.97165 Dis Loss: -196.72833 |||| 395.46335 376.61783 406.10184
+Iter: 566 Gen Loss: 5194.067 Recon Loss: 5199.6475 Gen ADV Loss: -389.4072 Dis Loss: -198.2002 |||| 398.4071 384.04602 402.08365
+Iter: 567 Gen Loss: 1356.9377 Recon Loss: 1358.6788 Gen ADV Loss: -391.27576 Dis Loss: -197.26166 |||| 396.52997 373.21054 411.68225
+Iter: 568 Gen Loss: 4940.744 Recon Loss: 4946.072 Gen ADV Loss: -390.77905 Dis Loss: -198.51373 |||| 399.03418 388.43768 400.1266
+Iter: 569 Gen Loss: 1349.4169 Recon Loss: 1351.1516 Gen ADV Loss: -392.4836 Dis Loss: -197.78993 |||| 397.58652 376.81055 411.00473
+Iter: 570 Gen Loss: 4949.7285 Recon Loss: 4955.067 Gen ADV Loss: -392.3167 Dis Loss: -199.10443 |||| 400.21558 387.96954 402.7935
+Iter: 571 Gen Loss: 1302.8768 Recon Loss: 1304.5662 Gen ADV Loss: -393.56927 Dis Loss: -198.23024 |||| 398.46716 376.97708 412.9588
+Iter: 572 Gen Loss: 5230.3423 Recon Loss: 5235.9624 Gen ADV Loss: -393.13245 Dis Loss: -199.62608 |||| 401.25888 389.17398 402.24173
+Iter: 573 Gen Loss: 1244.387 Recon Loss: 1246.0183 Gen ADV Loss: -394.33243 Dis Loss: -198.70354 |||| 399.4138 371.9726 417.98376
+Iter: 574 Gen Loss: 5142.7524 Recon Loss: 5148.286 Gen ADV Loss: -393.94055 Dis Loss: -200.0591 |||| 402.12485 389.0843 405.67365
+Iter: 575 Gen Loss: 1345.8547 Recon Loss: 1347.5887 Gen ADV Loss: -395.42468 Dis Loss: -199.2433 |||| 400.49326 378.28555 414.42477
+Iter: 576 Gen Loss: 4995.253 Recon Loss: 5000.6396 Gen ADV Loss: -395.18716 Dis Loss: -200.36685 |||| 402.74042 389.5318 404.5973
+Iter: 577 Gen Loss: 1290.9639 Recon Loss: 1292.644 Gen ADV Loss: -396.45554 Dis Loss: -199.73274 |||| 401.47217 380.64435 412.32712
+Iter: 578 Gen Loss: 5395.268 Recon Loss: 5401.0557 Gen ADV Loss: -395.67804 Dis Loss: -201.09822 |||| 404.2031 392.644 408.19263
+Iter: 579 Gen Loss: 1277.222 Recon Loss: 1278.8892 Gen ADV Loss: -397.0449 Dis Loss: -200.218 |||| 402.44263 377.40094 420.20163
+Iter: 580 Gen Loss: 4955.6895 Recon Loss: 4961.038 Gen ADV Loss: -396.55353 Dis Loss: -201.49712 |||| 405.0009 391.3883 408.10345
+Iter: 581 Gen Loss: 1326.7467 Recon Loss: 1328.4644 Gen ADV Loss: -398.05933 Dis Loss: -200.70892 |||| 403.42453 380.22308 420.06882
+Iter: 582 Gen Loss: 5003.7974 Recon Loss: 5009.196 Gen ADV Loss: -397.7266 Dis Loss: -202.03156 |||| 406.06976 393.1547 409.1997
+Iter: 583 Gen Loss: 1249.9563 Recon Loss: 1251.5978 Gen ADV Loss: -398.93716 Dis Loss: -201.1518 |||| 404.31024 378.8356 421.3841
+Iter: 584 Gen Loss: 5219.722 Recon Loss: 5225.3374 Gen ADV Loss: -398.75156 Dis Loss: -202.50105 |||| 407.0088 395.6142 409.2647
+Iter: 585 Gen Loss: 1186.6245 Recon Loss: 1188.204 Gen ADV Loss: -400.28616 Dis Loss: -201.65623 |||| 405.31912 377.11856 421.01437
+Iter: 586 Gen Loss: 5494.7734 Recon Loss: 5500.665 Gen ADV Loss: -399.7707 Dis Loss: -203.11467 |||| 408.23602 393.78967 410.9323
+Iter: 587 Gen Loss: 1267.7782 Recon Loss: 1269.4395 Gen ADV Loss: -400.86206 Dis Loss: -201.9656 |||| 405.9379 381.9029 421.50107
+Iter: 588 Gen Loss: 4762.2075 Recon Loss: 4767.3667 Gen ADV Loss: -400.6874 Dis Loss: -203.457 |||| 408.92065 397.46222 409.0082
+Iter: 589 Gen Loss: 1281.8655 Recon Loss: 1283.5424 Gen ADV Loss: -402.313 Dis Loss: -202.58118 |||| 407.16898 387.1265 424.2085
+Iter: 590 Gen Loss: 5249.658 Recon Loss: 5255.306 Gen ADV Loss: -402.08383 Dis Loss: -203.90807 |||| 409.8228 398.95474 411.11124
+Iter: 591 Gen Loss: 1289.5781 Recon Loss: 1291.2634 Gen ADV Loss: -403.0579 Dis Loss: -203.07126 |||| 408.14917 387.40845 422.3075
+Iter: 592 Gen Loss: 5125.4697 Recon Loss: 5130.994 Gen ADV Loss: -402.61176 Dis Loss: -204.47646 |||| 410.9596 397.2089 411.0669
+Iter: 593 Gen Loss: 1229.843 Recon Loss: 1231.4696 Gen ADV Loss: -404.1153 Dis Loss: -203.49431 |||| 408.9953 383.8171 427.73837
+Iter: 594 Gen Loss: 4886.7715 Recon Loss: 4892.058 Gen ADV Loss: -403.69748 Dis Loss: -204.92262 |||| 411.8519 397.97797 415.6075
+Iter: 595 Gen Loss: 1330.8738 Recon Loss: 1332.6023 Gen ADV Loss: -405.0672 Dis Loss: -204.0249 |||| 410.0565 384.4369 430.37585
+Iter: 596 Gen Loss: 5529.6733 Recon Loss: 5535.6045 Gen ADV Loss: -404.55325 Dis Loss: -205.33722 |||| 412.68115 399.6658 414.35855
+Iter: 597 Gen Loss: 1195.293 Recon Loss: 1196.887 Gen ADV Loss: -406.20828 Dis Loss: -204.50793 |||| 411.0225 386.21722 427.55023
+Iter: 598 Gen Loss: 5375.256 Recon Loss: 5381.0327 Gen ADV Loss: -405.30933 Dis Loss: -205.81529 |||| 413.6373 400.68286 417.45383
+Iter: 599 Gen Loss: 1240.6511 Recon Loss: 1242.2911 Gen ADV Loss: -406.83145 Dis Loss: -204.98503 |||| 411.9767 384.84616 431.30283
+========================================================================
+9.036415 -0.98751557
+9.448399 -0.8166372
+6.542454 -0.70130664
+4.8424015 -0.5286161
+4.5173326 -0.4299048
+7.4199333 -0.6724228
+9.942161 0.0
+10.379969 0.0
+11.4834175 0.0
+9.070121 0.0
+26.157408 0.0269886
+1.0 0.026982049
+1305.657 -195.59813
+=========================================================================
+Iter: 600 Gen Loss: 5059.7246 Recon Loss: 5065.1865 Gen ADV Loss: -406.33548 Dis Loss: -206.35184 |||| 414.71036 403.0939 415.47787
+Iter: 601 Gen Loss: 1262.1366 Recon Loss: 1263.7988 Gen ADV Loss: -407.59924 Dis Loss: -205.47762 |||| 412.96194 385.84943 430.34833
+Iter: 602 Gen Loss: 4992.073 Recon Loss: 4997.4688 Gen ADV Loss: -407.16586 Dis Loss: -206.89503 |||| 415.79678 403.40543 418.33017
+Iter: 603 Gen Loss: 1289.2903 Recon Loss: 1290.9803 Gen ADV Loss: -408.34546 Dis Loss: -205.9924 |||| 413.99146 384.9849 433.87677
+Iter: 604 Gen Loss: 5357.7954 Recon Loss: 5363.5576 Gen ADV Loss: -408.15118 Dis Loss: -207.30107 |||| 416.6088 404.57758 419.20154
+Iter: 605 Gen Loss: 1242.7659 Recon Loss: 1244.4104 Gen ADV Loss: -409.4626 Dis Loss: -206.34558 |||| 414.6978 391.7307 433.29926
+Iter: 606 Gen Loss: 5292.965 Recon Loss: 5298.663 Gen ADV Loss: -408.7162 Dis Loss: -207.81396 |||| 417.6346 406.396 418.6806
+Iter: 607 Gen Loss: 1290.7181 Recon Loss: 1292.4111 Gen ADV Loss: -409.93643 Dis Loss: -206.92801 |||| 415.86273 390.66232 432.6641
+Iter: 608 Gen Loss: 5165.617 Recon Loss: 5171.1885 Gen ADV Loss: -409.67197 Dis Loss: -208.15231 |||| 418.31128 405.18378 424.13782
+Iter: 609 Gen Loss: 1415.5859 Recon Loss: 1417.405 Gen ADV Loss: -411.0642 Dis Loss: -207.43073 |||| 416.86816 394.58148 431.2586
+Iter: 610 Gen Loss: 5462.5723 Recon Loss: 5468.442 Gen ADV Loss: -410.55493 Dis Loss: -208.74162 |||| 419.48987 407.72455 420.808
+Iter: 611 Gen Loss: 1300.5096 Recon Loss: 1302.2152 Gen ADV Loss: -412.68137 Dis Loss: -207.74805 |||| 417.50272 392.98395 435.82123
+Iter: 612 Gen Loss: 4818.299 Recon Loss: 4823.5244 Gen ADV Loss: -411.42905 Dis Loss: -209.17836 |||| 420.36334 407.212 421.947
+Iter: 613 Gen Loss: 1267.6072 Recon Loss: 1269.2805 Gen ADV Loss: -413.42126 Dis Loss: -208.16986 |||| 418.3464 385.03302 442.11133
+Iter: 614 Gen Loss: 4996.571 Recon Loss: 5001.9766 Gen ADV Loss: -413.1495 Dis Loss: -209.74036 |||| 421.4874 407.8613 425.5591
+Iter: 615 Gen Loss: 1286.22 Recon Loss: 1287.913 Gen ADV Loss: -414.5168 Dis Loss: -208.76596 |||| 419.53857 395.8719 436.95557
+Iter: 616 Gen Loss: 4799.9585 Recon Loss: 4805.1685 Gen ADV Loss: -413.84976 Dis Loss: -210.10402 |||| 422.21472 410.0235 423.75632
+Iter: 617 Gen Loss: 1204.585 Recon Loss: 1206.197 Gen ADV Loss: -415.2567 Dis Loss: -209.22827 |||| 420.46323 393.38553 439.1205
+Iter: 618 Gen Loss: 5504.036 Recon Loss: 5509.9517 Gen ADV Loss: -414.89487 Dis Loss: -210.58636 |||| 423.1794 410.4556 427.46167
+Iter: 619 Gen Loss: 1269.1442 Recon Loss: 1270.8218 Gen ADV Loss: -416.2296 Dis Loss: -209.66489 |||| 421.3365 392.7921 443.19125
+Iter: 620 Gen Loss: 5140.8057 Recon Loss: 5146.3584 Gen ADV Loss: -415.32245 Dis Loss: -211.09483 |||| 424.1963 409.51096 422.612
+Iter: 621 Gen Loss: 1372.5985 Recon Loss: 1374.3806 Gen ADV Loss: -417.26697 Dis Loss: -210.20863 |||| 422.42392 394.75024 440.66562
+Iter: 622 Gen Loss: 4950.492 Recon Loss: 4955.8555 Gen ADV Loss: -416.7796 Dis Loss: -211.49168 |||| 424.99002 411.61246 429.75348
+Iter: 623 Gen Loss: 1216.8938 Recon Loss: 1218.5205 Gen ADV Loss: -417.69388 Dis Loss: -210.65132 |||| 423.30927 395.72705 444.35876
+Iter: 624 Gen Loss: 5267.0713 Recon Loss: 5272.751 Gen ADV Loss: -416.8026 Dis Loss: -212.01212 |||| 426.0309 413.67368 429.95682
+Iter: 625 Gen Loss: 1369.9645 Recon Loss: 1371.7452 Gen ADV Loss: -418.6357 Dis Loss: -211.13574 |||| 424.27817 398.0975 439.97455
+Iter: 626 Gen Loss: 5108.0713 Recon Loss: 5113.5938 Gen ADV Loss: -418.2322 Dis Loss: -212.47278 |||| 426.9523 415.7046 431.72992
+Iter: 627 Gen Loss: 1172.0012 Recon Loss: 1173.5844 Gen ADV Loss: -419.20386 Dis Loss: -211.59413 |||| 425.19498 399.75104 440.06207
+Iter: 628 Gen Loss: 5016.488 Recon Loss: 5021.9194 Gen ADV Loss: -419.3685 Dis Loss: -212.86253 |||| 427.73175 416.1147 431.52518
+Iter: 629 Gen Loss: 1302.6787 Recon Loss: 1304.3938 Gen ADV Loss: -420.42267 Dis Loss: -212.07462 |||| 426.1559 402.6886 438.07346
+Iter: 630 Gen Loss: 5235.8813 Recon Loss: 5241.533 Gen ADV Loss: -419.74557 Dis Loss: -213.34743 |||| 428.70157 409.49387 429.78616
+Iter: 631 Gen Loss: 1330.7236 Recon Loss: 1332.4675 Gen ADV Loss: -421.0852 Dis Loss: -212.43048 |||| 426.8677 401.74832 442.16766
+Iter: 632 Gen Loss: 5118.4224 Recon Loss: 5123.958 Gen ADV Loss: -421.1886 Dis Loss: -213.81538 |||| 429.63745 415.95547 435.3847
+Iter: 633 Gen Loss: 1286.6031 Recon Loss: 1288.3037 Gen ADV Loss: -421.99927 Dis Loss: -212.97386 |||| 427.9544 396.8673 449.97437
+Iter: 634 Gen Loss: 5171.3994 Recon Loss: 5176.9883 Gen ADV Loss: -421.7351 Dis Loss: -214.25519 |||| 430.51703 418.41342 430.37256
+Iter: 635 Gen Loss: 1271.0433 Recon Loss: 1272.7295 Gen ADV Loss: -423.24814 Dis Loss: -213.40868 |||| 428.82407 400.90936 447.92355
+Iter: 636 Gen Loss: 4938.596 Recon Loss: 4943.9536 Gen ADV Loss: -423.35822 Dis Loss: -214.73674 |||| 431.4801 418.90146 435.28006
+Iter: 637 Gen Loss: 1226.4384 Recon Loss: 1228.0807 Gen ADV Loss: -424.0598 Dis Loss: -213.81218 |||| 429.63107 395.18732 450.10632
+Iter: 638 Gen Loss: 5416.7554 Recon Loss: 5422.5923 Gen ADV Loss: -424.2376 Dis Loss: -215.22209 |||| 432.45087 419.12375 434.52716
+Iter: 639 Gen Loss: 1228.265 Recon Loss: 1229.9099 Gen ADV Loss: -424.8355 Dis Loss: -214.28479 |||| 430.5763 402.12546 449.1146
+Iter: 640 Gen Loss: 5349.82 Recon Loss: 5355.59 Gen ADV Loss: -424.45996 Dis Loss: -215.57933 |||| 433.1653 420.86243 435.04562
+Iter: 641 Gen Loss: 1269.487 Recon Loss: 1271.174 Gen ADV Loss: -425.6089 Dis Loss: -214.81664 |||| 431.63995 398.795 453.7837
+Iter: 642 Gen Loss: 5321.435 Recon Loss: 5327.1777 Gen ADV Loss: -425.40015 Dis Loss: -216.06723 |||| 434.1412 417.59006 439.28043
+Iter: 643 Gen Loss: 1331.5657 Recon Loss: 1333.3158 Gen ADV Loss: -426.79828 Dis Loss: -215.2576 |||| 432.52188 402.54636 454.11835
+Iter: 644 Gen Loss: 4770.131 Recon Loss: 4775.323 Gen ADV Loss: -426.62595 Dis Loss: -216.49065 |||| 434.98798 421.83908 436.65277
+Iter: 645 Gen Loss: 1154.1902 Recon Loss: 1155.7638 Gen ADV Loss: -427.68207 Dis Loss: -215.65247 |||| 433.31165 400.99118 453.50912
+Iter: 646 Gen Loss: 5040.7393 Recon Loss: 5046.2026 Gen ADV Loss: -427.48932 Dis Loss: -217.0465 |||| 436.0997 424.21597 437.6058
+Iter: 647 Gen Loss: 1254.7971 Recon Loss: 1256.4723 Gen ADV Loss: -428.57397 Dis Loss: -216.18735 |||| 434.38144 409.3473 450.23386
+Iter: 648 Gen Loss: 5215.319 Recon Loss: 5220.958 Gen ADV Loss: -428.1858 Dis Loss: -217.44228 |||| 436.8913 423.31683 436.50073
+Iter: 649 Gen Loss: 1243.6573 Recon Loss: 1245.3223 Gen ADV Loss: -429.61813 Dis Loss: -216.62617 |||| 435.25903 409.84885 453.70706
+Iter: 650 Gen Loss: 5142.369 Recon Loss: 5147.936 Gen ADV Loss: -428.77014 Dis Loss: -217.97194 |||| 437.95053 423.43082 443.32004
+Iter: 651 Gen Loss: 1321.4087 Recon Loss: 1323.1523 Gen ADV Loss: -430.48657 Dis Loss: -217.0093 |||| 436.02533 408.67258 458.85294
+Iter: 652 Gen Loss: 5151.5137 Recon Loss: 5157.0903 Gen ADV Loss: -429.66284 Dis Loss: -218.38837 |||| 438.78345 427.5592 439.11093
+Iter: 653 Gen Loss: 1271.085 Recon Loss: 1272.7789 Gen ADV Loss: -431.25882 Dis Loss: -217.47243 |||| 436.95157 409.76477 457.07385
+Iter: 654 Gen Loss: 4806.1636 Recon Loss: 4811.3955 Gen ADV Loss: -430.88486 Dis Loss: -218.73395 |||| 439.47458 427.28656 439.43005
+Iter: 655 Gen Loss: 1205.4442 Recon Loss: 1207.0732 Gen ADV Loss: -431.96457 Dis Loss: -217.9597 |||| 437.9261 410.65262 455.18164
+Iter: 656 Gen Loss: 5246.7275 Recon Loss: 5252.402 Gen ADV Loss: -432.05948 Dis Loss: -219.25084 |||| 440.50836 428.3493 442.6979
+Iter: 657 Gen Loss: 1368.6411 Recon Loss: 1370.4344 Gen ADV Loss: -433.14352 Dis Loss: -218.41333 |||| 438.83337 412.32025 456.10757
+Iter: 658 Gen Loss: 4613.001 Recon Loss: 4618.0415 Gen ADV Loss: -432.83813 Dis Loss: -219.71379 |||| 441.4343 428.64938 441.43448
+Iter: 659 Gen Loss: 1331.718 Recon Loss: 1333.4752 Gen ADV Loss: -433.7889 Dis Loss: -218.88597 |||| 439.77866 412.06903 455.78702
+Iter: 660 Gen Loss: 4914.774 Recon Loss: 4920.117 Gen ADV Loss: -433.36923 Dis Loss: -220.21263 |||| 442.4319 428.59924 444.6166
+Iter: 661 Gen Loss: 1264.7865 Recon Loss: 1266.4774 Gen ADV Loss: -434.59552 Dis Loss: -219.27196 |||| 440.55057 410.9727 463.36725
+Iter: 662 Gen Loss: 5216.5815 Recon Loss: 5222.228 Gen ADV Loss: -434.676 Dis Loss: -220.66335 |||| 443.3334 430.80048 445.38025
+Iter: 663 Gen Loss: 1186.1697 Recon Loss: 1187.7833 Gen ADV Loss: -435.97583 Dis Loss: -219.66792 |||| 441.34253 406.7985 461.75528
+Iter: 664 Gen Loss: 5006.0776 Recon Loss: 5011.5137 Gen ADV Loss: -435.16113 Dis Loss: -221.03865 |||| 444.08398 430.31052 446.5287
+Iter: 665 Gen Loss: 1238.6656 Recon Loss: 1240.3322 Gen ADV Loss: -436.35727 Dis Loss: -220.28384 |||| 442.57437 413.64075 459.09247
+Iter: 666 Gen Loss: 5195.6675 Recon Loss: 5201.294 Gen ADV Loss: -435.6584 Dis Loss: -221.5021 |||| 445.01093 429.55914 445.92276
+Iter: 667 Gen Loss: 1210.177 Recon Loss: 1211.816 Gen ADV Loss: -437.53958 Dis Loss: -220.64395 |||| 443.29462 419.33902 457.9901
+Iter: 668 Gen Loss: 5017.447 Recon Loss: 5022.8965 Gen ADV Loss: -436.9235 Dis Loss: -221.97533 |||| 445.9573 433.95938 446.8115
+Iter: 669 Gen Loss: 1371.7689 Recon Loss: 1373.5704 Gen ADV Loss: -438.23798 Dis Loss: -221.15015 |||| 444.30704 416.652 462.45767
+Iter: 670 Gen Loss: 4872.2407 Recon Loss: 4877.546 Gen ADV Loss: -437.75638 Dis Loss: -222.39886 |||| 446.8044 433.15924 450.0449
+Iter: 671 Gen Loss: 1258.8999 Recon Loss: 1260.5892 Gen ADV Loss: -438.99207 Dis Loss: -221.48708 |||| 444.9808 415.74768 462.24628
+Iter: 672 Gen Loss: 5251.466 Recon Loss: 5257.152 Gen ADV Loss: -438.74585 Dis Loss: -222.86525 |||| 447.73718 434.45566 449.38193
+Iter: 673 Gen Loss: 1313.5857 Recon Loss: 1315.3304 Gen ADV Loss: -439.76587 Dis Loss: -222.03938 |||| 446.08548 422.4234 460.9701
+Iter: 674 Gen Loss: 5305.4844 Recon Loss: 5311.2246 Gen ADV Loss: -439.28186 Dis Loss: -223.30072 |||| 448.60815 436.44812 447.9702
+Iter: 675 Gen Loss: 1249.1614 Recon Loss: 1250.8429 Gen ADV Loss: -441.01508 Dis Loss: -222.37752 |||| 446.76175 419.9882 466.709
+Iter: 676 Gen Loss: 5132.7144 Recon Loss: 5138.2827 Gen ADV Loss: -440.32883 Dis Loss: -223.67113 |||| 449.34888 435.48798 452.42212
+Iter: 677 Gen Loss: 1252.2845 Recon Loss: 1253.9701 Gen ADV Loss: -442.04248 Dis Loss: -222.76567 |||| 447.538 416.90524 471.54355
+Iter: 678 Gen Loss: 4927.031 Recon Loss: 4932.3936 Gen ADV Loss: -440.99658 Dis Loss: -224.15257 |||| 450.3118 436.88416 449.6952
+Iter: 679 Gen Loss: 1350.2366 Recon Loss: 1352.0205 Gen ADV Loss: -442.27856 Dis Loss: -223.31854 |||| 448.64377 422.1473 465.3879
+Iter: 680 Gen Loss: 5243.9414 Recon Loss: 5249.622 Gen ADV Loss: -441.55182 Dis Loss: -224.5728 |||| 451.15228 438.63184 451.33115
+Iter: 681 Gen Loss: 1399.3007 Recon Loss: 1401.1343 Gen ADV Loss: -442.84076 Dis Loss: -223.8345 |||| 449.67575 424.17993 464.54126
+Iter: 682 Gen Loss: 5561.8696 Recon Loss: 5567.87 Gen ADV Loss: -442.75354 Dis Loss: -225.01292 |||| 452.03253 439.67047 454.05988
+Iter: 683 Gen Loss: 1281.0594 Recon Loss: 1282.776 Gen ADV Loss: -444.35583 Dis Loss: -224.0905 |||| 450.1877 418.28674 469.75165
+Iter: 684 Gen Loss: 4718.508 Recon Loss: 4723.665 Gen ADV Loss: -443.88596 Dis Loss: -225.37065 |||| 452.74802 437.70587 457.21243
+Iter: 685 Gen Loss: 1210.2526 Recon Loss: 1211.8994 Gen ADV Loss: -445.38123 Dis Loss: -224.53781 |||| 451.0823 420.88022 475.29413
+Iter: 686 Gen Loss: 5281.2046 Recon Loss: 5286.9253 Gen ADV Loss: -444.8459 Dis Loss: -225.7747 |||| 453.5561 440.99905 454.08237
+Iter: 687 Gen Loss: 1364.2344 Recon Loss: 1366.0361 Gen ADV Loss: -446.242 Dis Loss: -224.98587 |||| 451.9785 422.72745 468.26508
+Iter: 688 Gen Loss: 5168.1685 Recon Loss: 5173.7773 Gen ADV Loss: -445.7489 Dis Loss: -226.23697 |||| 454.48062 442.58405 454.4404
+Iter: 689 Gen Loss: 1371.2749 Recon Loss: 1373.0847 Gen ADV Loss: -447.313 Dis Loss: -225.4565 |||| 452.9197 420.33957 470.23868
+Iter: 690 Gen Loss: 4763.311 Recon Loss: 4768.515 Gen ADV Loss: -446.3072 Dis Loss: -226.78862 |||| 455.58392 444.04855 455.65683
+Iter: 691 Gen Loss: 1332.2705 Recon Loss: 1334.0415 Gen ADV Loss: -447.6724 Dis Loss: -225.9131 |||| 453.8329 426.6895 471.16867
+Iter: 692 Gen Loss: 5181.225 Recon Loss: 5186.848 Gen ADV Loss: -447.00073 Dis Loss: -227.17673 |||| 456.3601 444.02435 460.8965
+Iter: 693 Gen Loss: 1262.269 Recon Loss: 1263.971 Gen ADV Loss: -448.55365 Dis Loss: -226.24652 |||| 454.49976 427.6684 476.45944
+Iter: 694 Gen Loss: 5249.3706 Recon Loss: 5255.062 Gen ADV Loss: -447.2535 Dis Loss: -227.57928 |||| 457.16522 442.47272 457.3083
+Iter: 695 Gen Loss: 1253.124 Recon Loss: 1254.8174 Gen ADV Loss: -449.20898 Dis Loss: -226.64793 |||| 455.3025 418.1231 480.1482
+Iter: 696 Gen Loss: 5138.9517 Recon Loss: 5144.534 Gen ADV Loss: -448.87192 Dis Loss: -227.93515 |||| 457.87695 442.67685 464.33722
+Iter: 697 Gen Loss: 1292.8077 Recon Loss: 1294.542 Gen ADV Loss: -450.26746 Dis Loss: -227.09505 |||| 456.1968 423.6959 477.69943
+Iter: 698 Gen Loss: 5207.775 Recon Loss: 5213.4272 Gen ADV Loss: -449.5126 Dis Loss: -228.38387 |||| 458.7744 445.82083 461.64716
+Iter: 699 Gen Loss: 1269.5864 Recon Loss: 1271.298 Gen ADV Loss: -450.90555 Dis Loss: -227.52724 |||| 457.06113 424.92126 473.38345
+========================================================================
+13.173482 -0.83602923
+7.876704 -0.7979083
+7.209376 -0.7862194
+5.1782193 -0.55459803
+4.6256995 -0.47183886
+6.2358174 -0.6358325
+11.780486 0.0
+16.536087 0.0
+11.882067 0.0
+10.300157 0.0
+29.147945 0.024324832
+1.0 0.024320036
+1306.3004 -216.86478
+=========================================================================
+Iter: 700 Gen Loss: 5134.232 Recon Loss: 5139.811 Gen ADV Loss: -450.14133 Dis Loss: -228.8544 |||| 459.71548 446.6149 462.27078
+Iter: 701 Gen Loss: 1332.3151 Recon Loss: 1334.0905 Gen ADV Loss: -451.9971 Dis Loss: -227.96611 |||| 457.93893 431.24197 476.97916
+Iter: 702 Gen Loss: 4984.4087 Recon Loss: 4989.8384 Gen ADV Loss: -450.80676 Dis Loss: -229.28078 |||| 460.56824 446.5074 460.029
+Iter: 703 Gen Loss: 1340.1235 Recon Loss: 1341.9071 Gen ADV Loss: -452.36548 Dis Loss: -228.44531 |||| 458.8973 428.8655 483.87714
+Iter: 704 Gen Loss: 5221.9834 Recon Loss: 5227.6523 Gen ADV Loss: -452.24316 Dis Loss: -229.68163 |||| 461.37 447.4499 467.06555
+Iter: 705 Gen Loss: 1240.0004 Recon Loss: 1241.6847 Gen ADV Loss: -453.5409 Dis Loss: -228.89064 |||| 459.78796 430.7667 481.4586
+Iter: 706 Gen Loss: 5104.446 Recon Loss: 5109.998 Gen ADV Loss: -453.15137 Dis Loss: -230.20488 |||| 462.41647 448.88586 463.09497
+Iter: 707 Gen Loss: 1381.2372 Recon Loss: 1383.0641 Gen ADV Loss: -454.67596 Dis Loss: -229.21275 |||| 460.43225 427.91156 478.49033
+Iter: 708 Gen Loss: 5128.4478 Recon Loss: 5134.025 Gen ADV Loss: -454.0065 Dis Loss: -230.61493 |||| 463.2365 450.3261 463.25494
+Iter: 709 Gen Loss: 1284.25 Recon Loss: 1285.9802 Gen ADV Loss: -455.03775 Dis Loss: -229.69514 |||| 461.397 429.50775 479.96936
+Iter: 710 Gen Loss: 5235.9077 Recon Loss: 5241.5933 Gen ADV Loss: -454.39304 Dis Loss: -231.03993 |||| 464.0866 446.1361 471.29813
+Iter: 711 Gen Loss: 1394.4895 Recon Loss: 1396.3308 Gen ADV Loss: -455.80106 Dis Loss: -230.12473 |||| 462.25613 430.00467 482.29852
+Iter: 712 Gen Loss: 5284.681 Recon Loss: 5290.4165 Gen ADV Loss: -455.38922 Dis Loss: -231.47458 |||| 464.9558 452.45416 463.37497
+Iter: 713 Gen Loss: 1202.4719 Recon Loss: 1204.1217 Gen ADV Loss: -456.6941 Dis Loss: -230.49281 |||| 462.99228 429.88638 481.45203
+Iter: 714 Gen Loss: 4794.787 Recon Loss: 4800.032 Gen ADV Loss: -456.097 Dis Loss: -231.75583 |||| 465.5183 448.99478 473.91583
+Iter: 715 Gen Loss: 1257.8466 Recon Loss: 1259.5524 Gen ADV Loss: -457.31277 Dis Loss: -230.91829 |||| 463.84326 430.00583 483.80872
+Iter: 716 Gen Loss: 4743.577 Recon Loss: 4748.771 Gen ADV Loss: -456.62683 Dis Loss: -232.19653 |||| 466.39975 452.7419 466.03217
+Iter: 717 Gen Loss: 1252.0455 Recon Loss: 1253.7471 Gen ADV Loss: -458.7001 Dis Loss: -231.27649 |||| 464.55963 433.23157 481.2016
+Iter: 718 Gen Loss: 5336.128 Recon Loss: 5341.916 Gen ADV Loss: -457.71906 Dis Loss: -232.68486 |||| 467.3764 451.6507 470.79407
+Iter: 719 Gen Loss: 1372.0514 Recon Loss: 1373.8737 Gen ADV Loss: -459.33768 Dis Loss: -231.76189 |||| 465.5305 433.24045 488.2547
+Iter: 720 Gen Loss: 5283.1714 Recon Loss: 5288.9077 Gen ADV Loss: -458.3404 Dis Loss: -233.12033 |||| 468.2473 452.41504 466.17404
+Iter: 721 Gen Loss: 1262.8042 Recon Loss: 1264.518 Gen ADV Loss: -460.27704 Dis Loss: -232.17021 |||| 466.34714 433.2405 489.35025
+Iter: 722 Gen Loss: 5223.318 Recon Loss: 5228.995 Gen ADV Loss: -459.6706 Dis Loss: -233.53183 |||| 469.07037 453.71637 473.79468
+Iter: 723 Gen Loss: 1249.3613 Recon Loss: 1251.0623 Gen ADV Loss: -460.99365 Dis Loss: -232.69125 |||| 467.38925 430.95514 488.4278
+Iter: 724 Gen Loss: 5332.041 Recon Loss: 5337.827 Gen ADV Loss: -459.6869 Dis Loss: -233.89165 |||| 469.79 456.20474 468.7702
+Iter: 725 Gen Loss: 1318.7067 Recon Loss: 1320.4775 Gen ADV Loss: -461.56784 Dis Loss: -233.0353 |||| 468.07724 436.50134 486.35208
+Iter: 726 Gen Loss: 4872.0034 Recon Loss: 4877.3306 Gen ADV Loss: -460.92627 Dis Loss: -234.35008 |||| 470.70682 456.7627 474.50717
+Iter: 727 Gen Loss: 1297.3773 Recon Loss: 1299.1273 Gen ADV Loss: -462.07123 Dis Loss: -233.51236 |||| 469.03137 437.25098 488.67252
+Iter: 728 Gen Loss: 5196.1987 Recon Loss: 5201.851 Gen ADV Loss: -461.79413 Dis Loss: -234.8043 |||| 471.61533 457.08807 473.23975
+Iter: 729 Gen Loss: 1262.8052 Recon Loss: 1264.5216 Gen ADV Loss: -463.1705 Dis Loss: -233.903 |||| 469.81268 437.38574 489.48062
+Iter: 730 Gen Loss: 5175.272 Recon Loss: 5180.9033 Gen ADV Loss: -462.11646 Dis Loss: -235.15182 |||| 472.31033 458.74457 472.64575
+Iter: 731 Gen Loss: 1330.1544 Recon Loss: 1331.9392 Gen ADV Loss: -464.1637 Dis Loss: -234.39276 |||| 470.7922 437.4133 488.2803
+Iter: 732 Gen Loss: 5405.2295 Recon Loss: 5411.093 Gen ADV Loss: -463.1389 Dis Loss: -235.61778 |||| 473.24225 459.30478 474.01575
+Iter: 733 Gen Loss: 1209.335 Recon Loss: 1210.9996 Gen ADV Loss: -464.98944 Dis Loss: -234.64078 |||| 471.2882 440.42688 492.2003
+Iter: 734 Gen Loss: 4737.378 Recon Loss: 4742.573 Gen ADV Loss: -464.07733 Dis Loss: -235.90582 |||| 473.81833 459.56503 476.0824
+Iter: 735 Gen Loss: 1245.7224 Recon Loss: 1247.424 Gen ADV Loss: -465.447 Dis Loss: -235.11998 |||| 472.24667 438.5055 495.4777
+Iter: 736 Gen Loss: 5113.064 Recon Loss: 5118.636 Gen ADV Loss: -464.8329 Dis Loss: -236.36061 |||| 474.7279 460.775 477.53903
+Iter: 737 Gen Loss: 1370.262 Recon Loss: 1372.0892 Gen ADV Loss: -466.55466 Dis Loss: -235.63646 |||| 473.27963 442.5293 495.07428
+Iter: 738 Gen Loss: 5067.903 Recon Loss: 5073.431 Gen ADV Loss: -466.0985 Dis Loss: -236.7824 |||| 475.57147 462.7828 475.9755
+Iter: 739 Gen Loss: 1264.3734 Recon Loss: 1266.0957 Gen ADV Loss: -467.55533 Dis Loss: -235.801 |||| 473.60867 435.17188 495.32867
+Iter: 740 Gen Loss: 4856.002 Recon Loss: 4861.319 Gen ADV Loss: -466.6767 Dis Loss: -237.25085 |||| 476.50842 463.06525 475.11655
+Iter: 741 Gen Loss: 1358.9601 Recon Loss: 1360.7775 Gen ADV Loss: -468.01526 Dis Loss: -236.38339 |||| 474.7735 444.6247 492.6006
+Iter: 742 Gen Loss: 5021.764 Recon Loss: 5027.2476 Gen ADV Loss: -467.1148 Dis Loss: -237.5835 |||| 477.17365 463.1454 477.66116
+Iter: 743 Gen Loss: 1234.5421 Recon Loss: 1236.236 Gen ADV Loss: -469.06595 Dis Loss: -236.78055 |||| 475.56778 442.96353 497.8077
+Iter: 744 Gen Loss: 4805.2227 Recon Loss: 4810.49 Gen ADV Loss: -468.29434 Dis Loss: -237.99254 |||| 477.99176 461.76465 481.3724
+Iter: 745 Gen Loss: 1241.6724 Recon Loss: 1243.374 Gen ADV Loss: -469.7242 Dis Loss: -237.10643 |||| 476.21954 436.80493 501.02673
+Iter: 746 Gen Loss: 5489.703 Recon Loss: 5495.656 Gen ADV Loss: -468.61755 Dis Loss: -238.45618 |||| 478.919 463.1146 479.57974
+Iter: 747 Gen Loss: 1307.3038 Recon Loss: 1309.0715 Gen ADV Loss: -470.1398 Dis Loss: -237.53209 |||| 477.07086 438.02322 501.96924
+Iter: 748 Gen Loss: 5078.497 Recon Loss: 5084.0396 Gen ADV Loss: -470.01 Dis Loss: -238.8419 |||| 479.69046 465.16086 482.31424
+Iter: 749 Gen Loss: 1195.8237 Recon Loss: 1197.4811 Gen ADV Loss: -471.41888 Dis Loss: -237.96756 |||| 477.9418 444.07175 499.2987
+Iter: 750 Gen Loss: 5117.9175 Recon Loss: 5123.5 Gen ADV Loss: -470.53738 Dis Loss: -239.20021 |||| 480.4071 467.01385 481.23294
+Iter: 751 Gen Loss: 1274.5123 Recon Loss: 1276.2494 Gen ADV Loss: -472.39 Dis Loss: -238.40366 |||| 478.814 444.48685 501.0538
+Iter: 752 Gen Loss: 5129.27 Recon Loss: 5134.8647 Gen ADV Loss: -471.45386 Dis Loss: -239.64407 |||| 481.29483 467.8014 482.7498
+Iter: 753 Gen Loss: 1377.5647 Recon Loss: 1379.4056 Gen ADV Loss: -473.1681 Dis Loss: -238.76433 |||| 479.53534 446.22864 497.472
+Iter: 754 Gen Loss: 5135.2188 Recon Loss: 5140.8193 Gen ADV Loss: -471.76324 Dis Loss: -240.04974 |||| 482.1061 468.10187 481.5669
+Iter: 755 Gen Loss: 1295.0372 Recon Loss: 1296.7963 Gen ADV Loss: -473.92944 Dis Loss: -239.17877 |||| 480.3643 444.7887 500.57913
+Iter: 756 Gen Loss: 5396.363 Recon Loss: 5402.226 Gen ADV Loss: -472.67578 Dis Loss: -240.39804 |||| 482.8028 467.36124 486.6188
+Iter: 757 Gen Loss: 1135.084 Recon Loss: 1136.6832 Gen ADV Loss: -474.07828 Dis Loss: -239.58215 |||| 481.17096 443.12415 502.9905
+Iter: 758 Gen Loss: 4760.205 Recon Loss: 4765.4316 Gen ADV Loss: -473.30658 Dis Loss: -240.76 |||| 483.5267 469.1803 485.25137
+Iter: 759 Gen Loss: 1311.5294 Recon Loss: 1313.3065 Gen ADV Loss: -475.43237 Dis Loss: -239.9536 |||| 481.91388 450.97296 502.66083
+Iter: 760 Gen Loss: 5487.7944 Recon Loss: 5493.7505 Gen ADV Loss: -474.15295 Dis Loss: -241.2972 |||| 484.6011 467.92377 484.85507
+Iter: 761 Gen Loss: 1292.1312 Recon Loss: 1293.8889 Gen ADV Loss: -475.52942 Dis Loss: -240.37823 |||| 482.76315 452.58273 504.03168
+Iter: 762 Gen Loss: 5547.6045 Recon Loss: 5553.6216 Gen ADV Loss: -475.01883 Dis Loss: -241.68193 |||| 485.37057 470.15002 488.42215
+Iter: 763 Gen Loss: 1254.3242 Recon Loss: 1256.0452 Gen ADV Loss: -476.69672 Dis Loss: -240.72556 |||| 483.45782 455.16 500.15982
+Iter: 764 Gen Loss: 4877.12 Recon Loss: 4882.467 Gen ADV Loss: -476.08008 Dis Loss: -241.90388 |||| 485.8145 470.65375 487.5454
+Iter: 765 Gen Loss: 1196.8644 Recon Loss: 1198.5287 Gen ADV Loss: -477.68985 Dis Loss: -241.0893 |||| 484.18527 450.18945 503.26736
+Iter: 766 Gen Loss: 4898.1816 Recon Loss: 4903.55 Gen ADV Loss: -476.45032 Dis Loss: -242.41573 |||| 486.83817 471.7792 488.0856
+Iter: 767 Gen Loss: 1257.5258 Recon Loss: 1259.2516 Gen ADV Loss: -478.42078 Dis Loss: -241.53285 |||| 485.07245 447.96207 505.0855
+Iter: 768 Gen Loss: 4937.6035 Recon Loss: 4943.012 Gen ADV Loss: -477.40942 Dis Loss: -242.72139 |||| 487.4495 473.69614 487.11853
+Iter: 769 Gen Loss: 1295.0414 Recon Loss: 1296.8055 Gen ADV Loss: -479.3069 Dis Loss: -241.97221 |||| 485.95117 454.21793 506.92328
+Iter: 770 Gen Loss: 5147.871 Recon Loss: 5153.49 Gen ADV Loss: -477.47333 Dis Loss: -243.17 |||| 488.34674 473.80777 490.5874
+Iter: 771 Gen Loss: 1235.0896 Recon Loss: 1236.7943 Gen ADV Loss: -479.8419 Dis Loss: -242.39214 |||| 486.79102 457.1501 508.92264
+Iter: 772 Gen Loss: 5365.0317 Recon Loss: 5370.8687 Gen ADV Loss: -478.2316 Dis Loss: -243.59216 |||| 489.19107 473.76825 490.78152
+Iter: 773 Gen Loss: 1322.7268 Recon Loss: 1324.52 Gen ADV Loss: -480.76007 Dis Loss: -242.66655 |||| 487.33978 454.77005 503.68988
+Iter: 774 Gen Loss: 4816.207 Recon Loss: 4821.496 Gen ADV Loss: -479.9957 Dis Loss: -244.00838 |||| 490.02344 474.2199 493.98468
+Iter: 775 Gen Loss: 1260.2213 Recon Loss: 1261.9524 Gen ADV Loss: -481.07138 Dis Loss: -243.10141 |||| 488.20956 453.24 508.47504
+Iter: 776 Gen Loss: 4988.4395 Recon Loss: 4993.9004 Gen ADV Loss: -479.61688 Dis Loss: -244.39659 |||| 490.79987 476.19748 492.55
+Iter: 777 Gen Loss: 1189.6011 Recon Loss: 1191.2622 Gen ADV Loss: -481.82333 Dis Loss: -243.40863 |||| 488.82394 460.4006 508.56223
+Iter: 778 Gen Loss: 5195.2095 Recon Loss: 5200.879 Gen ADV Loss: -480.8542 Dis Loss: -244.8282 |||| 491.66315 476.28857 493.31024
+Iter: 779 Gen Loss: 1329.2412 Recon Loss: 1331.0426 Gen ADV Loss: -482.48282 Dis Loss: -243.75629 |||| 489.51926 459.5562 503.93658
+Iter: 780 Gen Loss: 5439.9644 Recon Loss: 5445.8794 Gen ADV Loss: -481.35495 Dis Loss: -245.20021 |||| 492.40717 474.32547 491.36386
+Iter: 781 Gen Loss: 1363.278 Recon Loss: 1365.1146 Gen ADV Loss: -483.614 Dis Loss: -244.2837 |||| 490.5741 457.7671 511.34232
+Iter: 782 Gen Loss: 5060.861 Recon Loss: 5066.398 Gen ADV Loss: -482.93854 Dis Loss: -245.41592 |||| 492.83862 476.06223 498.87305
+Iter: 783 Gen Loss: 1188.5073 Recon Loss: 1190.1693 Gen ADV Loss: -483.92447 Dis Loss: -244.48416 |||| 490.975 447.67505 516.672
+Iter: 784 Gen Loss: 5002.8423 Recon Loss: 5008.321 Gen ADV Loss: -482.5183 Dis Loss: -245.84819 |||| 493.70312 478.36804 494.63452
+Iter: 785 Gen Loss: 1260.5854 Recon Loss: 1262.3201 Gen ADV Loss: -484.32065 Dis Loss: -245.10959 |||| 492.22598 454.1566 516.3884
+Iter: 786 Gen Loss: 4805.394 Recon Loss: 4810.677 Gen ADV Loss: -484.56693 Dis Loss: -246.29782 |||| 494.6023 479.5336 497.34784
+Iter: 787 Gen Loss: 1231.3207 Recon Loss: 1233.0272 Gen ADV Loss: -485.76883 Dis Loss: -245.44333 |||| 492.8933 464.698 515.9156
+Iter: 788 Gen Loss: 5439.365 Recon Loss: 5445.282 Gen ADV Loss: -484.11966 Dis Loss: -246.78458 |||| 495.5759 481.02423 495.7815
+Iter: 789 Gen Loss: 1289.3018 Recon Loss: 1291.0675 Gen ADV Loss: -486.8961 Dis Loss: -245.76257 |||| 493.5319 453.92575 517.7158
+Iter: 790 Gen Loss: 5340.649 Recon Loss: 5346.4683 Gen ADV Loss: -485.5717 Dis Loss: -247.09848 |||| 496.2037 481.71286 498.06763
+Iter: 791 Gen Loss: 1277.9038 Recon Loss: 1279.6582 Gen ADV Loss: -486.92773 Dis Loss: -246.2186 |||| 494.44388 458.2365 515.5158
+Iter: 792 Gen Loss: 4964.217 Recon Loss: 4969.6606 Gen ADV Loss: -486.1636 Dis Loss: -247.52733 |||| 497.0614 479.5258 499.58145
+Iter: 793 Gen Loss: 1299.239 Recon Loss: 1301.0157 Gen ADV Loss: -487.87357 Dis Loss: -246.60008 |||| 495.20685 457.37912 516.4582
+Iter: 794 Gen Loss: 5250.2773 Recon Loss: 5256.0083 Gen ADV Loss: -487.19955 Dis Loss: -247.88986 |||| 497.7864 483.68964 501.5914
+Iter: 795 Gen Loss: 1281.9427 Recon Loss: 1283.7029 Gen ADV Loss: -488.64102 Dis Loss: -246.98856 |||| 495.98386 462.27692 517.17377
+Iter: 796 Gen Loss: 5183.2295 Recon Loss: 5188.894 Gen ADV Loss: -487.82944 Dis Loss: -248.23657 |||| 498.47977 481.8231 501.2677
+Iter: 797 Gen Loss: 1264.938 Recon Loss: 1266.6819 Gen ADV Loss: -489.3427 Dis Loss: -247.32372 |||| 496.65417 456.13315 515.5978
+Iter: 798 Gen Loss: 4975.59 Recon Loss: 4981.048 Gen ADV Loss: -489.11783 Dis Loss: -248.61935 |||| 499.24545 484.9711 499.57874
+Iter: 799 Gen Loss: 1249.4547 Recon Loss: 1251.184 Gen ADV Loss: -490.37564 Dis Loss: -247.68869 |||| 497.3842 457.39282 511.8104
+========================================================================
+11.619192 -1.0326563
+6.5657825 -0.8664528
+7.9092765 -0.72714573
+6.5825715 -0.5437029
+4.5151634 -0.44848916
+4.782402 -0.5267548
+9.915197 0.0
+16.48907 0.0
+20.202116 0.0
+18.414938 0.0
+57.972195 0.014460434
+1.0 0.0144594265
+1305.7881 -235.63356
+=========================================================================
+Iter: 800 Gen Loss: 5187.102 Recon Loss: 5192.7715 Gen ADV Loss: -488.8899 Dis Loss: -249.0073 |||| 500.0213 484.80002 501.40118
+Iter: 801 Gen Loss: 1248.4171 Recon Loss: 1250.1459 Gen ADV Loss: -490.9213 Dis Loss: -248.21426 |||| 498.43527 459.68692 518.493
+Iter: 802 Gen Loss: 5324.2124 Recon Loss: 5330.02 Gen ADV Loss: -489.94427 Dis Loss: -249.41843 |||| 500.84348 485.22195 503.98596
+Iter: 803 Gen Loss: 1267.7365 Recon Loss: 1269.4849 Gen ADV Loss: -491.32788 Dis Loss: -248.43237 |||| 498.87143 458.6925 521.2419
+Iter: 804 Gen Loss: 5062.8765 Recon Loss: 5068.4233 Gen ADV Loss: -490.5429 Dis Loss: -249.80832 |||| 501.62338 486.83624 504.25226
+Iter: 805 Gen Loss: 1421.2957 Recon Loss: 1423.1984 Gen ADV Loss: -491.8737 Dis Loss: -248.87068 |||| 499.7481 467.33994 522.16547
+Iter: 806 Gen Loss: 4955.112 Recon Loss: 4960.5522 Gen ADV Loss: -492.0039 Dis Loss: -250.03221 |||| 502.07117 487.0536 503.34085
+Iter: 807 Gen Loss: 1233.5217 Recon Loss: 1235.2382 Gen ADV Loss: -493.6808 Dis Loss: -249.11948 |||| 500.2457 463.49353 521.08966
+Iter: 808 Gen Loss: 4846.096 Recon Loss: 4851.4277 Gen ADV Loss: -492.36353 Dis Loss: -250.50063 |||| 503.008 487.92764 503.5605
+Iter: 809 Gen Loss: 1337.014 Recon Loss: 1338.8345 Gen ADV Loss: -494.0711 Dis Loss: -249.58813 |||| 501.183 466.10382 521.4238
+Iter: 810 Gen Loss: 5437.4106 Recon Loss: 5443.335 Gen ADV Loss: -493.05682 Dis Loss: -250.92017 |||| 503.84702 486.8559 503.9157
+Iter: 811 Gen Loss: 1251.9844 Recon Loss: 1253.721 Gen ADV Loss: -495.3769 Dis Loss: -250.01671 |||| 502.04016 463.51074 522.1361
+Iter: 812 Gen Loss: 4962.2764 Recon Loss: 4967.725 Gen ADV Loss: -493.76666 Dis Loss: -251.29175 |||| 504.5903 490.777 508.17374
+Iter: 813 Gen Loss: 1252.4028 Recon Loss: 1254.14 Gen ADV Loss: -495.50757 Dis Loss: -250.35262 |||| 502.71198 465.2142 524.4252
+Iter: 814 Gen Loss: 4995.354 Recon Loss: 5000.837 Gen ADV Loss: -494.58542 Dis Loss: -251.6197 |||| 505.2461 489.83972 505.75916
+Iter: 815 Gen Loss: 1331.7491 Recon Loss: 1333.5667 Gen ADV Loss: -496.44537 Dis Loss: -250.81613 |||| 503.63895 468.53223 524.5145
+Iter: 816 Gen Loss: 4894.06 Recon Loss: 4899.442 Gen ADV Loss: -495.06802 Dis Loss: -251.92664 |||| 505.85995 489.16086 508.8612
+Iter: 817 Gen Loss: 1419.6256 Recon Loss: 1421.5317 Gen ADV Loss: -497.13403 Dis Loss: -251.24425 |||| 504.49518 465.58682 523.2787
+Iter: 818 Gen Loss: 4948.28 Recon Loss: 4953.7163 Gen ADV Loss: -495.65912 Dis Loss: -252.38257 |||| 506.77188 489.5315 507.0692
+Iter: 819 Gen Loss: 1198.7351 Recon Loss: 1200.4204 Gen ADV Loss: -497.47443 Dis Loss: -251.47726 |||| 504.96127 469.51132 526.02856
+Iter: 820 Gen Loss: 5018.6543 Recon Loss: 5024.162 Gen ADV Loss: -496.77902 Dis Loss: -252.74588 |||| 507.49857 492.04993 509.15286
+Iter: 821 Gen Loss: 1381.8276 Recon Loss: 1383.6969 Gen ADV Loss: -498.13776 Dis Loss: -251.9382 |||| 505.88315 467.73727 528.9758
+Iter: 822 Gen Loss: 5131.6987 Recon Loss: 5137.3213 Gen ADV Loss: -497.8597 Dis Loss: -253.11641 |||| 508.2396 493.4836 511.2999
+Iter: 823 Gen Loss: 1206.915 Recon Loss: 1208.6099 Gen ADV Loss: -498.86655 Dis Loss: -252.17146 |||| 506.3496 470.2698 531.5062
+Iter: 824 Gen Loss: 4511.834 Recon Loss: 4516.836 Gen ADV Loss: -497.98163 Dis Loss: -253.37692 |||| 508.7605 492.22934 513.26117
+Iter: 825 Gen Loss: 1306.5273 Recon Loss: 1308.323 Gen ADV Loss: -499.98563 Dis Loss: -252.57468 |||| 507.156 462.80072 529.1714
+Iter: 826 Gen Loss: 5139.4795 Recon Loss: 5145.1104 Gen ADV Loss: -498.62817 Dis Loss: -253.72702 |||| 509.4607 493.55957 510.33762
+Iter: 827 Gen Loss: 1235.4955 Recon Loss: 1237.2201 Gen ADV Loss: -500.06256 Dis Loss: -252.9754 |||| 507.95755 468.00006 532.21985
+Iter: 828 Gen Loss: 5251.4854 Recon Loss: 5257.2295 Gen ADV Loss: -499.50598 Dis Loss: -254.18407 |||| 510.37482 494.17862 513.2686
+Iter: 829 Gen Loss: 1283.5266 Recon Loss: 1285.3002 Gen ADV Loss: -500.97702 Dis Loss: -253.30779 |||| 508.62225 466.58444 530.97455
+Iter: 830 Gen Loss: 4970.4146 Recon Loss: 4975.877 Gen ADV Loss: -499.63547 Dis Loss: -254.55284 |||| 511.11243 492.86316 512.58014
+Iter: 831 Gen Loss: 1282.7585 Recon Loss: 1284.5323 Gen ADV Loss: -501.89224 Dis Loss: -253.64891 |||| 509.30457 480.3095 532.581
+Iter: 832 Gen Loss: 5054.69 Recon Loss: 5060.238 Gen ADV Loss: -500.68027 Dis Loss: -254.87045 |||| 511.7477 495.89255 513.83435
+Iter: 833 Gen Loss: 1207.059 Recon Loss: 1208.7573 Gen ADV Loss: -502.32898 Dis Loss: -254.04024 |||| 510.0872 472.7208 530.774
+Iter: 834 Gen Loss: 5239.64 Recon Loss: 5245.374 Gen ADV Loss: -501.3966 Dis Loss: -255.32397 |||| 512.65466 495.7704 514.3829
+Iter: 835 Gen Loss: 1255.4838 Recon Loss: 1257.2313 Gen ADV Loss: -503.12805 Dis Loss: -254.49217 |||| 510.99103 468.89255 526.736
+Iter: 836 Gen Loss: 4988.954 Recon Loss: 4994.4375 Gen ADV Loss: -502.05136 Dis Loss: -255.70502 |||| 513.4168 496.4612 514.6441
+Iter: 837 Gen Loss: 1292.7938 Recon Loss: 1294.5798 Gen ADV Loss: -504.25195 Dis Loss: -254.83224 |||| 511.6713 472.98492 533.519
+Iter: 838 Gen Loss: 5340.7295 Recon Loss: 5346.5664 Gen ADV Loss: -502.95123 Dis Loss: -256.0708 |||| 514.1483 494.8669 515.1319
+Iter: 839 Gen Loss: 1215.3013 Recon Loss: 1217.0098 Gen ADV Loss: -504.2987 Dis Loss: -255.21762 |||| 512.44196 474.50208 535.1011
+Iter: 840 Gen Loss: 5271.793 Recon Loss: 5277.561 Gen ADV Loss: -503.3901 Dis Loss: -256.39746 |||| 514.8015 498.89062 516.08966
+Iter: 841 Gen Loss: 1286.002 Recon Loss: 1287.7823 Gen ADV Loss: -505.54745 Dis Loss: -255.56094 |||| 513.1286 471.3264 532.7648
+Iter: 842 Gen Loss: 4837.9316 Recon Loss: 4843.2666 Gen ADV Loss: -504.53442 Dis Loss: -256.66968 |||| 515.3461 500.16034 518.6781
+Iter: 843 Gen Loss: 1306.4017 Recon Loss: 1308.2031 Gen ADV Loss: -505.9568 Dis Loss: -255.90245 |||| 513.81165 475.70395 533.94995
+Iter: 844 Gen Loss: 5062.174 Recon Loss: 5067.734 Gen ADV Loss: -505.1235 Dis Loss: -257.10867 |||| 516.22406 499.4576 518.2985
+Iter: 845 Gen Loss: 1248.7482 Recon Loss: 1250.4929 Gen ADV Loss: -507.14914 Dis Loss: -256.19882 |||| 514.4043 480.953 534.54535
+Iter: 846 Gen Loss: 5318.068 Recon Loss: 5323.8853 Gen ADV Loss: -506.11224 Dis Loss: -257.46085 |||| 516.92834 501.29794 522.7876
+Iter: 847 Gen Loss: 1306.8746 Recon Loss: 1308.678 Gen ADV Loss: -507.52252 Dis Loss: -256.66782 |||| 515.3423 472.8672 531.368
+Iter: 848 Gen Loss: 4594.936 Recon Loss: 4600.0303 Gen ADV Loss: -506.71362 Dis Loss: -257.7514 |||| 517.5095 501.13614 518.2204
+Iter: 849 Gen Loss: 1252.9315 Recon Loss: 1254.6812 Gen ADV Loss: -507.92792 Dis Loss: -257.0925 |||| 516.1917 477.68665 535.88574
+Iter: 850 Gen Loss: 5233.8267 Recon Loss: 5239.56 Gen ADV Loss: -507.36398 Dis Loss: -258.20032 |||| 518.4072 503.00766 520.4231
+Iter: 851 Gen Loss: 1155.1888 Recon Loss: 1156.8419 Gen ADV Loss: -509.1172 Dis Loss: -257.2684 |||| 516.5435 476.5463 538.55005
+Iter: 852 Gen Loss: 5135.4106 Recon Loss: 5141.047 Gen ADV Loss: -508.4636 Dis Loss: -258.5143 |||| 519.0354 504.23172 522.0556
+Iter: 853 Gen Loss: 1259.1542 Recon Loss: 1260.9121 Gen ADV Loss: -510.00464 Dis Loss: -257.55026 |||| 517.10736 475.65683 538.8535
+Iter: 854 Gen Loss: 5240.281 Recon Loss: 5246.022 Gen ADV Loss: -508.20795 Dis Loss: -258.9288 |||| 519.8643 502.81842 523.2673
+Iter: 855 Gen Loss: 1349.2539 Recon Loss: 1351.1023 Gen ADV Loss: -510.36984 Dis Loss: -258.14026 |||| 518.2872 482.71643 538.67395
+Iter: 856 Gen Loss: 5266.0845 Recon Loss: 5271.8516 Gen ADV Loss: -508.41263 Dis Loss: -259.38458 |||| 520.7759 503.3684 520.919
+Iter: 857 Gen Loss: 1251.0153 Recon Loss: 1252.7656 Gen ADV Loss: -510.66367 Dis Loss: -258.48016 |||| 518.9671 482.89615 541.70874
+Iter: 858 Gen Loss: 5464.9263 Recon Loss: 5470.894 Gen ADV Loss: -510.44974 Dis Loss: -259.60315 |||| 521.2131 505.0468 526.40955
+Iter: 859 Gen Loss: 1355.9976 Recon Loss: 1357.8534 Gen ADV Loss: -511.04993 Dis Loss: -258.77753 |||| 519.5619 483.6427 541.56354
+Iter: 860 Gen Loss: 5045.9766 Recon Loss: 5051.525 Gen ADV Loss: -510.16177 Dis Loss: -259.94055 |||| 521.8879 505.73264 522.6879
+Iter: 861 Gen Loss: 1306.0793 Recon Loss: 1307.8856 Gen ADV Loss: -511.61707 Dis Loss: -259.2252 |||| 520.45715 483.8505 538.5341
+Iter: 862 Gen Loss: 5026.066 Recon Loss: 5031.595 Gen ADV Loss: -510.71127 Dis Loss: -260.26862 |||| 522.5439 507.19644 524.34406
+Iter: 863 Gen Loss: 1201.5802 Recon Loss: 1203.2826 Gen ADV Loss: -512.28375 Dis Loss: -259.49704 |||| 521.0008 482.98276 541.68
+Iter: 864 Gen Loss: 5214.0044 Recon Loss: 5219.723 Gen ADV Loss: -512.36237 Dis Loss: -260.67984 |||| 523.3664 505.56015 525.7709
+Iter: 865 Gen Loss: 1292.1777 Recon Loss: 1293.972 Gen ADV Loss: -513.5658 Dis Loss: -259.9077 |||| 521.8222 483.0223 540.9077
+Iter: 866 Gen Loss: 5064.505 Recon Loss: 5070.0737 Gen ADV Loss: -512.01013 Dis Loss: -261.06985 |||| 524.1465 504.49304 524.99304
+Iter: 867 Gen Loss: 1284.3145 Recon Loss: 1286.1012 Gen ADV Loss: -513.94635 Dis Loss: -260.28293 |||| 522.57263 486.01154 542.6642
+Iter: 868 Gen Loss: 4992.6743 Recon Loss: 4998.173 Gen ADV Loss: -513.85596 Dis Loss: -261.40622 |||| 524.8192 507.7886 528.3809
+Iter: 869 Gen Loss: 1296.0184 Recon Loss: 1297.8184 Gen ADV Loss: -515.38477 Dis Loss: -260.59048 |||| 523.18774 484.43005 543.1547
+Iter: 870 Gen Loss: 4714.9976 Recon Loss: 4720.2183 Gen ADV Loss: -513.74634 Dis Loss: -261.73816 |||| 525.48303 509.23312 523.9735
+Iter: 871 Gen Loss: 1348.8533 Recon Loss: 1350.7064 Gen ADV Loss: -515.70856 Dis Loss: -260.93564 |||| 523.878 485.87796 543.6161
+Iter: 872 Gen Loss: 5144.3896 Recon Loss: 5150.041 Gen ADV Loss: -514.7327 Dis Loss: -262.11978 |||| 526.2463 509.76065 529.1754
+Iter: 873 Gen Loss: 1266.1125 Recon Loss: 1267.8835 Gen ADV Loss: -516.4671 Dis Loss: -261.34888 |||| 524.70447 487.57236 544.9668
+Iter: 874 Gen Loss: 4978.823 Recon Loss: 4984.3096 Gen ADV Loss: -515.272 Dis Loss: -262.4208 |||| 526.84827 510.87988 528.83887
+Iter: 875 Gen Loss: 1303.6572 Recon Loss: 1305.4662 Gen ADV Loss: -516.8063 Dis Loss: -261.50745 |||| 525.02167 487.24094 545.53015
+Iter: 876 Gen Loss: 5244.5005 Recon Loss: 5250.2544 Gen ADV Loss: -516.9901 Dis Loss: -262.7663 |||| 527.53937 510.19577 530.612
+Iter: 877 Gen Loss: 1254.5243 Recon Loss: 1256.2845 Gen ADV Loss: -517.32446 Dis Loss: -262.0325 |||| 526.0717 488.96448 546.87634
+Iter: 878 Gen Loss: 5041.0137 Recon Loss: 5046.5635 Gen ADV Loss: -516.38794 Dis Loss: -263.15976 |||| 528.3262 510.03058 528.3468
+Iter: 879 Gen Loss: 1433.783 Recon Loss: 1435.7233 Gen ADV Loss: -518.1064 Dis Loss: -262.40018 |||| 526.80707 491.4988 542.4319
+Iter: 880 Gen Loss: 5390.01 Recon Loss: 5395.91 Gen ADV Loss: -517.5039 Dis Loss: -263.5254 |||| 529.0575 512.2816 529.3962
+Iter: 881 Gen Loss: 1192.3561 Recon Loss: 1194.0563 Gen ADV Loss: -519.4872 Dis Loss: -262.51413 |||| 527.0349 490.0996 552.0626
+Iter: 882 Gen Loss: 4942.4453 Recon Loss: 4947.898 Gen ADV Loss: -517.9535 Dis Loss: -263.83762 |||| 529.682 510.52386 531.9322
+Iter: 883 Gen Loss: 1338.1206 Recon Loss: 1339.9669 Gen ADV Loss: -519.7167 Dis Loss: -262.9782 |||| 527.96313 490.2267 547.3341
+Iter: 884 Gen Loss: 5060.412 Recon Loss: 5065.983 Gen ADV Loss: -518.6929 Dis Loss: -264.11835 |||| 530.24347 514.4564 532.9218
+Iter: 885 Gen Loss: 1296.9366 Recon Loss: 1298.7423 Gen ADV Loss: -520.3671 Dis Loss: -263.30743 |||| 528.6216 495.33786 546.71106
+Iter: 886 Gen Loss: 4674.0034 Recon Loss: 4679.189 Gen ADV Loss: -519.96014 Dis Loss: -264.4062 |||| 530.81903 513.7611 530.4379
+Iter: 887 Gen Loss: 1307.085 Recon Loss: 1308.9011 Gen ADV Loss: -520.7614 Dis Loss: -263.60553 |||| 529.2177 491.18124 541.6232
+Iter: 888 Gen Loss: 5321.8037 Recon Loss: 5327.6367 Gen ADV Loss: -519.2811 Dis Loss: -264.89114 |||| 531.78894 507.486 532.4566
+Iter: 889 Gen Loss: 1348.0581 Recon Loss: 1349.9154 Gen ADV Loss: -520.9568 Dis Loss: -264.0104 |||| 530.0276 491.5094 549.8697
+Iter: 890 Gen Loss: 4817.961 Recon Loss: 4823.291 Gen ADV Loss: -520.6342 Dis Loss: -265.23337 |||| 532.4733 513.9527 532.7016
+Iter: 891 Gen Loss: 1257.3698 Recon Loss: 1259.1371 Gen ADV Loss: -521.7427 Dis Loss: -264.3262 |||| 530.6592 487.9032 547.3534
+Iter: 892 Gen Loss: 5343.853 Recon Loss: 5349.71 Gen ADV Loss: -520.93274 Dis Loss: -265.52368 |||| 533.0542 513.7083 534.0809
+Iter: 893 Gen Loss: 1445.284 Recon Loss: 1447.2402 Gen ADV Loss: -522.40857 Dis Loss: -264.73755 |||| 531.48175 494.4302 550.99274
+Iter: 894 Gen Loss: 5290.716 Recon Loss: 5296.5195 Gen ADV Loss: -521.01636 Dis Loss: -265.8912 |||| 533.7891 515.72876 535.13855
+Iter: 895 Gen Loss: 1334.3328 Recon Loss: 1336.1788 Gen ADV Loss: -523.3786 Dis Loss: -265.05096 |||| 532.10864 499.18243 545.3509
+Iter: 896 Gen Loss: 4985.9194 Recon Loss: 4991.419 Gen ADV Loss: -521.8939 Dis Loss: -266.20068 |||| 534.4081 516.22345 535.60706
+Iter: 897 Gen Loss: 1434.1959 Recon Loss: 1436.1422 Gen ADV Loss: -523.71533 Dis Loss: -265.44305 |||| 532.89276 493.39014 550.39105
+Iter: 898 Gen Loss: 5057.2075 Recon Loss: 5062.779 Gen ADV Loss: -522.58057 Dis Loss: -266.59366 |||| 535.194 513.9549 536.4289
+Iter: 899 Gen Loss: 1258.0137 Recon Loss: 1259.7847 Gen ADV Loss: -524.8491 Dis Loss: -265.64758 |||| 533.3019 494.6216 549.8294
+========================================================================
+12.416537 -1.0726959
+7.70265 -0.99474585
+6.043586 -0.70395476
+5.2710624 -0.50728923
+4.2581115 -0.44466525
+5.404386 -0.58640677
+10.091906 0.0
+19.983625 0.0
+22.032093 0.0
+23.059998 0.0
+73.354675 0.0047608186
+1.0 0.0047607827
+1305.8752 -253.02078
+=========================================================================
+Iter: 900 Gen Loss: 4845.046 Recon Loss: 4850.4062 Gen ADV Loss: -523.59845 Dis Loss: -266.9057 |||| 535.818 518.3318 534.87286
+Iter: 901 Gen Loss: 1412.997 Recon Loss: 1414.9235 Gen ADV Loss: -525.2202 Dis Loss: -266.20126 |||| 534.4091 491.48724 549.9504
+Iter: 902 Gen Loss: 4927.7485 Recon Loss: 4933.1934 Gen ADV Loss: -525.2024 Dis Loss: -267.2072 |||| 536.421 520.073 539.9222
+Iter: 903 Gen Loss: 1340.0741 Recon Loss: 1341.9287 Gen ADV Loss: -526.33203 Dis Loss: -266.40707 |||| 534.82086 505.40195 552.43616
+Iter: 904 Gen Loss: 5066.441 Recon Loss: 5072.0234 Gen ADV Loss: -524.61707 Dis Loss: -267.58188 |||| 537.1704 516.69165 538.339
+Iter: 905 Gen Loss: 1258.6144 Recon Loss: 1260.3884 Gen ADV Loss: -527.4034 Dis Loss: -266.7698 |||| 535.5463 499.88724 549.5581
+Iter: 906 Gen Loss: 5303.5254 Recon Loss: 5309.347 Gen ADV Loss: -526.46704 Dis Loss: -267.89032 |||| 537.7874 519.68365 540.1818
+Iter: 907 Gen Loss: 1291.4116 Recon Loss: 1293.2186 Gen ADV Loss: -527.4901 Dis Loss: -267.14447 |||| 536.2956 496.60864 554.8189
+Iter: 908 Gen Loss: 5046.285 Recon Loss: 5051.8486 Gen ADV Loss: -525.4036 Dis Loss: -268.24707 |||| 538.5008 517.4272 542.30707
+Iter: 909 Gen Loss: 1315.6594 Recon Loss: 1317.4915 Gen ADV Loss: -528.369 Dis Loss: -267.4105 |||| 536.82764 498.80618 560.47296
+Iter: 910 Gen Loss: 5055.3677 Recon Loss: 5060.942 Gen ADV Loss: -527.01984 Dis Loss: -268.56345 |||| 539.1336 521.4409 540.5788
+Iter: 911 Gen Loss: 1352.8868 Recon Loss: 1354.7572 Gen ADV Loss: -529.37 Dis Loss: -267.8517 |||| 537.71027 496.91428 558.81647
+Iter: 912 Gen Loss: 5109.1387 Recon Loss: 5114.7676 Gen ADV Loss: -527.7538 Dis Loss: -268.85898 |||| 539.7247 523.55334 539.5133
+Iter: 913 Gen Loss: 1278.313 Recon Loss: 1280.1086 Gen ADV Loss: -529.31964 Dis Loss: -268.1294 |||| 538.2655 508.61105 555.6243
+Iter: 914 Gen Loss: 4867.1724 Recon Loss: 4872.56 Gen ADV Loss: -528.64606 Dis Loss: -269.2482 |||| 540.50323 521.8273 541.59644
+Iter: 915 Gen Loss: 1305.1415 Recon Loss: 1306.9648 Gen ADV Loss: -530.1433 Dis Loss: -268.30298 |||| 538.6127 498.2614 555.9626
+Iter: 916 Gen Loss: 5288.862 Recon Loss: 5294.6714 Gen ADV Loss: -528.60004 Dis Loss: -269.5937 |||| 541.1941 521.14716 541.6139
+Iter: 917 Gen Loss: 1261.1542 Recon Loss: 1262.9343 Gen ADV Loss: -530.9575 Dis Loss: -268.65536 |||| 539.3173 507.41226 557.7985
+Iter: 918 Gen Loss: 5126.3174 Recon Loss: 5131.966 Gen ADV Loss: -530.0327 Dis Loss: -269.85175 |||| 541.7102 522.8274 543.3733
+Iter: 919 Gen Loss: 1276.5155 Recon Loss: 1278.3116 Gen ADV Loss: -531.61346 Dis Loss: -269.106 |||| 540.21857 499.87274 561.25006
+Iter: 920 Gen Loss: 4883.5864 Recon Loss: 4888.992 Gen ADV Loss: -530.3157 Dis Loss: -270.27396 |||| 542.5545 524.50836 544.6239
+Iter: 921 Gen Loss: 1271.8223 Recon Loss: 1273.6145 Gen ADV Loss: -532.4247 Dis Loss: -269.4497 |||| 540.9061 499.0519 557.7526
+Iter: 922 Gen Loss: 5111.8823 Recon Loss: 5117.5166 Gen ADV Loss: -530.33813 Dis Loss: -270.5917 |||| 543.1901 524.65857 544.10266
+Iter: 923 Gen Loss: 1259.6608 Recon Loss: 1261.4419 Gen ADV Loss: -533.58777 Dis Loss: -269.8663 |||| 541.7394 494.2767 561.6422
+Iter: 924 Gen Loss: 4928.5195 Recon Loss: 4933.9717 Gen ADV Loss: -531.9712 Dis Loss: -270.91864 |||| 543.84393 526.6161 543.5746
+Iter: 925 Gen Loss: 1440.886 Recon Loss: 1442.8486 Gen ADV Loss: -533.69867 Dis Loss: -270.12994 |||| 542.2665 507.65558 559.9644
+Iter: 926 Gen Loss: 5577.125 Recon Loss: 5583.226 Gen ADV Loss: -531.69165 Dis Loss: -271.24493 |||| 544.4966 520.5585 545.264
+Iter: 927 Gen Loss: 1230.3804 Recon Loss: 1232.1322 Gen ADV Loss: -533.71844 Dis Loss: -270.28137 |||| 542.56946 510.0543 562.4483
+Iter: 928 Gen Loss: 5318.3784 Recon Loss: 5324.221 Gen ADV Loss: -532.93823 Dis Loss: -271.5491 |||| 545.1049 524.8643 551.06464
+Iter: 929 Gen Loss: 1319.5188 Recon Loss: 1321.3607 Gen ADV Loss: -534.5792 Dis Loss: -270.75058 |||| 543.50775 505.7519 558.7333
+Iter: 930 Gen Loss: 4875.935 Recon Loss: 4881.3354 Gen ADV Loss: -533.13654 Dis Loss: -271.8368 |||| 545.68024 525.4128 545.4747
+Iter: 931 Gen Loss: 1355.5437 Recon Loss: 1357.423 Gen ADV Loss: -535.7204 Dis Loss: -271.00427 |||| 544.01514 506.2845 565.60803
+Iter: 932 Gen Loss: 4779.1006 Recon Loss: 4784.4053 Gen ADV Loss: -534.9065 Dis Loss: -272.2094 |||| 546.4255 528.1306 547.6707
+Iter: 933 Gen Loss: 1336.7775 Recon Loss: 1338.6382 Gen ADV Loss: -535.96216 Dis Loss: -271.4267 |||| 544.86005 498.22348 563.25134
+Iter: 934 Gen Loss: 4812.17 Recon Loss: 4817.5083 Gen ADV Loss: -535.1309 Dis Loss: -272.48935 |||| 546.98535 528.9625 546.8689
+Iter: 935 Gen Loss: 1221.3167 Recon Loss: 1223.0619 Gen ADV Loss: -536.216 Dis Loss: -271.77994 |||| 545.5666 500.52 563.2354
+Iter: 936 Gen Loss: 5140.8496 Recon Loss: 5146.5176 Gen ADV Loss: -535.7884 Dis Loss: -272.87866 |||| 547.764 529.01636 550.43787
+Iter: 937 Gen Loss: 1321.8115 Recon Loss: 1323.6582 Gen ADV Loss: -537.1067 Dis Loss: -272.07843 |||| 546.1636 509.74188 563.3737
+Iter: 938 Gen Loss: 5299.413 Recon Loss: 5305.2397 Gen ADV Loss: -535.63666 Dis Loss: -273.18625 |||| 548.3793 529.8847 552.3705
+Iter: 939 Gen Loss: 1199.3488 Recon Loss: 1201.0739 Gen ADV Loss: -538.08014 Dis Loss: -272.2974 |||| 546.60144 499.652 563.76404
+Iter: 940 Gen Loss: 5089.672 Recon Loss: 5095.29 Gen ADV Loss: -537.0166 Dis Loss: -273.468 |||| 548.9427 530.8946 552.1153
+Iter: 941 Gen Loss: 1287.7468 Recon Loss: 1289.561 Gen ADV Loss: -538.66644 Dis Loss: -272.67978 |||| 547.3663 510.99524 563.2667
+Iter: 942 Gen Loss: 4818.399 Recon Loss: 4823.7456 Gen ADV Loss: -537.1072 Dis Loss: -273.8895 |||| 549.78564 531.4277 551.0882
+Iter: 943 Gen Loss: 1301.1046 Recon Loss: 1302.9325 Gen ADV Loss: -539.0929 Dis Loss: -273.15985 |||| 548.3264 503.83932 564.87897
+Iter: 944 Gen Loss: 4946.8613 Recon Loss: 4952.338 Gen ADV Loss: -538.438 Dis Loss: -274.19043 |||| 550.3875 531.73914 553.0135
+Iter: 945 Gen Loss: 1374.1345 Recon Loss: 1376.0367 Gen ADV Loss: -540.28625 Dis Loss: -273.3986 |||| 548.8039 512.9001 564.5211
+Iter: 946 Gen Loss: 5498.4927 Recon Loss: 5504.5215 Gen ADV Loss: -538.51984 Dis Loss: -274.51324 |||| 551.0332 533.48834 551.4082
+Iter: 947 Gen Loss: 1299.7848 Recon Loss: 1301.6123 Gen ADV Loss: -539.9483 Dis Loss: -273.73557 |||| 549.4779 503.1253 563.45636
+Iter: 948 Gen Loss: 4984.437 Recon Loss: 4989.952 Gen ADV Loss: -539.31586 Dis Loss: -274.808 |||| 551.6227 533.2815 552.6928
+Iter: 949 Gen Loss: 1353.9252 Recon Loss: 1355.8079 Gen ADV Loss: -540.9745 Dis Loss: -274.09967 |||| 550.206 504.75803 565.64905
+Iter: 950 Gen Loss: 4753.081 Recon Loss: 4758.3643 Gen ADV Loss: -538.9173 Dis Loss: -275.07928 |||| 552.16534 533.3886 551.62085
+Iter: 951 Gen Loss: 1284.2993 Recon Loss: 1286.1125 Gen ADV Loss: -541.2897 Dis Loss: -274.23288 |||| 550.4724 511.1966 566.49304
+Iter: 952 Gen Loss: 5549.511 Recon Loss: 5555.5933 Gen ADV Loss: -540.2994 Dis Loss: -275.49597 |||| 552.99866 533.89624 553.2598
+Iter: 953 Gen Loss: 1237.0986 Recon Loss: 1238.8651 Gen ADV Loss: -541.7451 Dis Loss: -274.71463 |||| 551.43604 510.92297 564.7766
+Iter: 954 Gen Loss: 5235.135 Recon Loss: 5240.902 Gen ADV Loss: -540.4595 Dis Loss: -275.72202 |||| 553.4507 535.3897 553.0451
+Iter: 955 Gen Loss: 1221.1628 Recon Loss: 1222.9143 Gen ADV Loss: -542.7078 Dis Loss: -274.7833 |||| 551.5733 517.2387 565.10266
+Iter: 956 Gen Loss: 5088.82 Recon Loss: 5094.4414 Gen ADV Loss: -541.57385 Dis Loss: -276.02515 |||| 554.057 534.1904 554.9001
+Iter: 957 Gen Loss: 1204.9122 Recon Loss: 1206.6484 Gen ADV Loss: -543.7089 Dis Loss: -275.22046 |||| 552.4476 510.0048 569.96246
+Iter: 958 Gen Loss: 5302.9844 Recon Loss: 5308.8203 Gen ADV Loss: -541.66565 Dis Loss: -276.4502 |||| 554.90704 533.15204 555.9063
+Iter: 959 Gen Loss: 1325.0023 Recon Loss: 1326.8593 Gen ADV Loss: -544.25867 Dis Loss: -275.5295 |||| 553.0658 513.37225 571.80945
+Iter: 960 Gen Loss: 5341.997 Recon Loss: 5347.873 Gen ADV Loss: -542.34467 Dis Loss: -276.7411 |||| 555.48883 536.83417 555.5605
+Iter: 961 Gen Loss: 1317.7646 Recon Loss: 1319.615 Gen ADV Loss: -544.93274 Dis Loss: -275.82587 |||| 553.6585 511.9318 569.1239
+Iter: 962 Gen Loss: 5127.4517 Recon Loss: 5133.113 Gen ADV Loss: -542.598 Dis Loss: -277.00455 |||| 556.0158 536.61914 559.35535
+Iter: 963 Gen Loss: 1290.4454 Recon Loss: 1292.269 Gen ADV Loss: -545.65186 Dis Loss: -276.1387 |||| 554.284 517.1987 569.9085
+Iter: 964 Gen Loss: 4776.4053 Recon Loss: 4781.716 Gen ADV Loss: -543.0344 Dis Loss: -277.32928 |||| 556.66547 534.32733 556.4887
+Iter: 965 Gen Loss: 1254.1637 Recon Loss: 1255.9512 Gen ADV Loss: -545.7905 Dis Loss: -276.509 |||| 555.0247 519.0572 569.3429
+Iter: 966 Gen Loss: 5049.646 Recon Loss: 5055.2305 Gen ADV Loss: -543.67706 Dis Loss: -277.60654 |||| 557.21985 538.3029 557.4402
+Iter: 967 Gen Loss: 1177.1646 Recon Loss: 1178.8755 Gen ADV Loss: -546.34985 Dis Loss: -276.80362 |||| 555.6139 523.6385 570.95087
+Iter: 968 Gen Loss: 4947.505 Recon Loss: 4952.989 Gen ADV Loss: -545.13153 Dis Loss: -277.88983 |||| 557.78625 537.67523 561.34845
+Iter: 969 Gen Loss: 1304.1227 Recon Loss: 1305.9617 Gen ADV Loss: -547.3792 Dis Loss: -277.1506 |||| 556.308 514.5167 569.369
+Iter: 970 Gen Loss: 4859.302 Recon Loss: 4864.6978 Gen ADV Loss: -545.20984 Dis Loss: -278.24612 |||| 558.49884 537.93695 558.7293
+Iter: 971 Gen Loss: 1335.1821 Recon Loss: 1337.0529 Gen ADV Loss: -547.9849 Dis Loss: -277.51874 |||| 557.0443 514.2283 569.182
+Iter: 972 Gen Loss: 5267.731 Recon Loss: 5273.5356 Gen ADV Loss: -545.5383 Dis Loss: -278.5659 |||| 559.1383 538.14795 566.06683
+Iter: 973 Gen Loss: 1330.8636 Recon Loss: 1332.7303 Gen ADV Loss: -548.1771 Dis Loss: -277.90073 |||| 557.8081 515.7925 567.8453
+Iter: 974 Gen Loss: 5074.262 Recon Loss: 5079.8745 Gen ADV Loss: -547.0527 Dis Loss: -278.85657 |||| 559.71985 539.5237 562.8415
+Iter: 975 Gen Loss: 1304.3955 Recon Loss: 1306.2372 Gen ADV Loss: -549.68866 Dis Loss: -277.94577 |||| 557.89825 514.942 575.04706
+Iter: 976 Gen Loss: 5341.7876 Recon Loss: 5347.668 Gen ADV Loss: -546.9746 Dis Loss: -279.1336 |||| 560.2739 538.74927 557.56335
+Iter: 977 Gen Loss: 1245.2872 Recon Loss: 1247.0693 Gen ADV Loss: -549.28955 Dis Loss: -278.3458 |||| 558.69824 520.19696 571.70605
+Iter: 978 Gen Loss: 5102.9785 Recon Loss: 5108.621 Gen ADV Loss: -548.3981 Dis Loss: -279.47324 |||| 560.9532 541.043 564.6121
+Iter: 979 Gen Loss: 1189.4752 Recon Loss: 1191.2026 Gen ADV Loss: -550.5841 Dis Loss: -278.6296 |||| 559.26587 518.8094 571.14825
+Iter: 980 Gen Loss: 4916.3237 Recon Loss: 4921.78 Gen ADV Loss: -548.3763 Dis Loss: -279.75098 |||| 561.5086 540.55963 562.32733
+Iter: 981 Gen Loss: 1351.867 Recon Loss: 1353.7574 Gen ADV Loss: -551.0263 Dis Loss: -279.0508 |||| 560.1083 522.6544 575.45386
+Iter: 982 Gen Loss: 5269.728 Recon Loss: 5275.5376 Gen ADV Loss: -548.4816 Dis Loss: -280.1915 |||| 562.3897 540.6891 562.40735
+Iter: 983 Gen Loss: 1239.3011 Recon Loss: 1241.0795 Gen ADV Loss: -551.6524 Dis Loss: -279.31805 |||| 560.6428 525.75885 573.7094
+Iter: 984 Gen Loss: 4778.2363 Recon Loss: 4783.556 Gen ADV Loss: -550.2392 Dis Loss: -280.40845 |||| 562.82367 544.982 563.37244
+Iter: 985 Gen Loss: 1214.6176 Recon Loss: 1216.3721 Gen ADV Loss: -552.6174 Dis Loss: -279.72955 |||| 561.46576 517.7286 576.3037
+Iter: 986 Gen Loss: 4965.549 Recon Loss: 4971.057 Gen ADV Loss: -551.0535 Dis Loss: -280.7291 |||| 563.4648 542.04913 564.23566
+Iter: 987 Gen Loss: 1312.8079 Recon Loss: 1314.6611 Gen ADV Loss: -552.97217 Dis Loss: -279.8616 |||| 561.7299 522.6662 574.67004
+Iter: 988 Gen Loss: 5077.105 Recon Loss: 5082.723 Gen ADV Loss: -550.0469 Dis Loss: -281.0568 |||| 564.12024 543.61584 563.44714
+Iter: 989 Gen Loss: 1244.1451 Recon Loss: 1245.9307 Gen ADV Loss: -553.98 Dis Loss: -280.20062 |||| 562.40796 525.72144 576.1752
+Iter: 990 Gen Loss: 4919.619 Recon Loss: 4925.0806 Gen ADV Loss: -551.2505 Dis Loss: -281.3115 |||| 564.62976 544.31525 568.77155
+Iter: 991 Gen Loss: 1350.6324 Recon Loss: 1352.5243 Gen ADV Loss: -553.72046 Dis Loss: -280.45953 |||| 562.9257 522.6637 580.35205
+Iter: 992 Gen Loss: 5238.053 Recon Loss: 5243.8335 Gen ADV Loss: -551.1697 Dis Loss: -281.7158 |||| 565.4383 542.07404 563.01886
+Iter: 993 Gen Loss: 1259.0508 Recon Loss: 1260.8525 Gen ADV Loss: -555.28503 Dis Loss: -280.80508 |||| 563.61694 522.4355 577.936
+Iter: 994 Gen Loss: 5430.6616 Recon Loss: 5436.636 Gen ADV Loss: -552.7816 Dis Loss: -281.9639 |||| 565.93463 545.6438 570.7281
+Iter: 995 Gen Loss: 1317.4606 Recon Loss: 1319.321 Gen ADV Loss: -555.5921 Dis Loss: -281.22186 |||| 564.4506 525.25867 575.81714
+Iter: 996 Gen Loss: 4941.967 Recon Loss: 4947.452 Gen ADV Loss: -552.7307 Dis Loss: -282.2394 |||| 566.48566 545.2641 565.2034
+Iter: 997 Gen Loss: 1235.665 Recon Loss: 1237.4438 Gen ADV Loss: -555.8951 Dis Loss: -281.4422 |||| 564.8911 525.2628 577.00336
+Iter: 998 Gen Loss: 5297.6543 Recon Loss: 5303.4956 Gen ADV Loss: -552.94604 Dis Loss: -282.59152 |||| 567.18976 545.89386 568.5604
+Iter: 999 Gen Loss: 1337.434 Recon Loss: 1339.3147 Gen ADV Loss: -555.92755 Dis Loss: -281.75037 |||| 565.50745 531.0347 578.64246
+========================================================================
+12.794498 -0.82896966
+8.0992155 -1.0398607
+7.926279 -0.6570074
+6.994131 -0.60967433
+4.7976875 -0.44482446
+6.398741 -0.57615393
+11.120963 0.0
+24.391382 0.0
+26.645445 0.0
+23.64807 0.0
+82.80156 -0.0017593652
+1.0 -0.0017593633
+1306.7834 -265.61438
+=========================================================================
+Iter: 1000 Gen Loss: 5006.422 Recon Loss: 5011.973 Gen ADV Loss: -554.2407 Dis Loss: -282.82718 |||| 567.6611 548.06885 566.72943
+Iter: 1001 Gen Loss: 1240.7389 Recon Loss: 1242.5234 Gen ADV Loss: -556.53986 Dis Loss: -282.05762 |||| 566.12195 534.87506 584.22076
+Iter: 1002 Gen Loss: 5072.7295 Recon Loss: 5078.3467 Gen ADV Loss: -553.7408 Dis Loss: -283.19174 |||| 568.39014 545.77106 567.683
+Iter: 1003 Gen Loss: 1330.2924 Recon Loss: 1332.1676 Gen ADV Loss: -557.5694 Dis Loss: -282.36166 |||| 566.73004 529.8213 580.48145
+Iter: 1004 Gen Loss: 5509.34 Recon Loss: 5515.395 Gen ADV Loss: -554.7237 Dis Loss: -283.5155 |||| 569.0377 550.0824 570.5338
+Iter: 1005 Gen Loss: 1217.492 Recon Loss: 1219.2543 Gen ADV Loss: -557.703 Dis Loss: -282.65002 |||| 567.3069 540.3788 580.198
+Iter: 1006 Gen Loss: 5032.8315 Recon Loss: 5038.4106 Gen ADV Loss: -555.2454 Dis Loss: -283.80734 |||| 569.6215 548.3893 571.46533
+Iter: 1007 Gen Loss: 1378.0184 Recon Loss: 1379.9427 Gen ADV Loss: -559.0487 Dis Loss: -282.94797 |||| 567.9027 524.36255 581.02136
+Iter: 1008 Gen Loss: 5038.921 Recon Loss: 5044.5073 Gen ADV Loss: -556.44775 Dis Loss: -284.05746 |||| 570.1217 550.7703 568.3341
+Iter: 1009 Gen Loss: 1371.2578 Recon Loss: 1373.1752 Gen ADV Loss: -558.89325 Dis Loss: -283.3273 |||| 568.66144 528.3029 583.6979
+Iter: 1010 Gen Loss: 4980.2197 Recon Loss: 4985.747 Gen ADV Loss: -556.2756 Dis Loss: -284.39594 |||| 570.7985 550.1926 570.721
+Iter: 1011 Gen Loss: 1268.5344 Recon Loss: 1270.3496 Gen ADV Loss: -559.4748 Dis Loss: -283.65 |||| 569.30676 536.78094 579.2121
+Iter: 1012 Gen Loss: 4876.311 Recon Loss: 4881.736 Gen ADV Loss: -557.47015 Dis Loss: -284.77963 |||| 571.566 550.1661 570.83124
+Iter: 1013 Gen Loss: 1188.1948 Recon Loss: 1189.9303 Gen ADV Loss: -560.2253 Dis Loss: -283.70435 |||| 569.4155 530.24097 582.96466
+Iter: 1014 Gen Loss: 5246.931 Recon Loss: 5252.727 Gen ADV Loss: -558.01465 Dis Loss: -285.02823 |||| 572.0631 550.80383 578.6133
+Iter: 1015 Gen Loss: 1333.145 Recon Loss: 1335.026 Gen ADV Loss: -560.6652 Dis Loss: -284.201 |||| 570.4087 531.27875 582.68353
+Iter: 1016 Gen Loss: 5188.0024 Recon Loss: 5193.741 Gen ADV Loss: -559.4735 Dis Loss: -285.3133 |||| 572.6333 549.8144 575.04034
+Iter: 1017 Gen Loss: 1426.5796 Recon Loss: 1428.5543 Gen ADV Loss: -560.90424 Dis Loss: -284.5235 |||| 571.0537 533.4145 580.17474
+Iter: 1018 Gen Loss: 5539.0435 Recon Loss: 5545.133 Gen ADV Loss: -559.1858 Dis Loss: -285.60406 |||| 573.21497 551.1239 574.52594
+Iter: 1019 Gen Loss: 1141.802 Recon Loss: 1143.4922 Gen ADV Loss: -561.5637 Dis Loss: -284.5212 |||| 571.0492 544.62476 584.64484
+Iter: 1020 Gen Loss: 4788.168 Recon Loss: 4793.5063 Gen ADV Loss: -559.6903 Dis Loss: -285.79144 |||| 573.58954 551.8664 573.42865
+Iter: 1021 Gen Loss: 1287.0317 Recon Loss: 1288.8677 Gen ADV Loss: -561.947 Dis Loss: -284.90906 |||| 571.8248 533.28735 581.99915
+Iter: 1022 Gen Loss: 4908.961 Recon Loss: 4914.4214 Gen ADV Loss: -560.5486 Dis Loss: -286.12698 |||| 574.2607 555.7719 576.3153
+Iter: 1023 Gen Loss: 1261.8627 Recon Loss: 1263.6744 Gen ADV Loss: -562.9155 Dis Loss: -285.3755 |||| 572.7578 532.9668 585.0579
+Iter: 1024 Gen Loss: 4894.4316 Recon Loss: 4899.8784 Gen ADV Loss: -561.7386 Dis Loss: -286.51437 |||| 575.0355 553.34235 573.9043
+Iter: 1025 Gen Loss: 1306.7933 Recon Loss: 1308.6514 Gen ADV Loss: -564.1814 Dis Loss: -285.59055 |||| 573.18787 531.9425 587.9065
+Iter: 1026 Gen Loss: 5331.234 Recon Loss: 5337.1187 Gen ADV Loss: -562.63434 Dis Loss: -286.7865 |||| 575.5797 556.03033 576.5135
+Iter: 1027 Gen Loss: 1203.9381 Recon Loss: 1205.6942 Gen ADV Loss: -565.1962 Dis Loss: -285.74847 |||| 573.5037 547.40076 587.55176
+Iter: 1028 Gen Loss: 5036.5137 Recon Loss: 5042.104 Gen ADV Loss: -562.7878 Dis Loss: -286.96667 |||| 575.9402 554.59784 576.1838
+Iter: 1029 Gen Loss: 1260.9988 Recon Loss: 1262.8114 Gen ADV Loss: -564.63293 Dis Loss: -286.2623 |||| 574.5313 539.1725 582.2204
+Iter: 1030 Gen Loss: 5156.952 Recon Loss: 5162.663 Gen ADV Loss: -563.0239 Dis Loss: -287.3746 |||| 576.756 556.7256 577.3006
+Iter: 1031 Gen Loss: 1224.669 Recon Loss: 1226.446 Gen ADV Loss: -565.3865 Dis Loss: -286.52542 |||| 575.0575 537.8096 582.2427
+Iter: 1032 Gen Loss: 5172.453 Recon Loss: 5178.179 Gen ADV Loss: -562.3941 Dis Loss: -287.7519 |||| 577.51056 556.6981 577.70184
+Iter: 1033 Gen Loss: 1315.136 Recon Loss: 1317.0039 Gen ADV Loss: -565.68256 Dis Loss: -286.751 |||| 575.5088 537.70764 587.2647
+Iter: 1034 Gen Loss: 4968.6 Recon Loss: 4974.124 Gen ADV Loss: -564.28986 Dis Loss: -287.97736 |||| 577.9614 554.9865 576.6894
+Iter: 1035 Gen Loss: 1188.9198 Recon Loss: 1190.6617 Gen ADV Lo
